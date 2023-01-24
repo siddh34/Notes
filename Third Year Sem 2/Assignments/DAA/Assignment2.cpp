@@ -41,22 +41,20 @@ class KnapSnackDP{
         cout << endl;
 
         // TODO: check whether element is available in previous row, print vector of 1/0
-        // for(){
+        vector<int> selected(n);
+        int temp = K[n][W];
+        // for(int i = 0; i <= n; i++){
+        //     for(int j = 0; j <= W; j++){
+        //         if(){
 
+        //         }
+        //     }
         // }
+
 
         cout << endl;
         cout << "The max value is: "; 
         return K[n][W];
-    }
-
-    static int contains(int k[][256],int col,int row,int element){
-        for(int i = 0; i < col;i++){
-            if(k[row][i] == element){
-                return 1;
-            }
-        }
-        return 0;
     }
 };
 

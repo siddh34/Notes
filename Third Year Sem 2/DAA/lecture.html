@@ -366,105 +366,107 @@ code {
     });
   </script>
 <h1 id="daa-lecture-notes">DAA Lecture Notes</h1>
-<h2 id="lecture-3">Lecture 3</h2>
-<h2 id="classifying-problems">Classifying Problems</h2>
+<h2 id="lecture-4">Lecture 4</h2>
+<h3 id="classification-of-time-complexities">Classification of Time Complexities</h3>
 <ol>
 <li>
-<p>P-Class</p>
-<pre><code> i. Time complexity is O(n**k)
- ii. They are Tracktable Problems
- iii. This class contains many natural problems like:
-         a. Calculating the greatest common divisor.
-         b. Finding a maximum matching.
-         c. Decision versions of linear programming.
+<p>O(1) – Constant Time Complexity</p>
+<pre><code> It does not matter, how many input elements a problem have, it takes constant number of steps to solve the problem
 </code></pre>
 </li>
 <li>
-<p>NP-Class (Non-deterministic Polynomial Class)</p>
-<pre><code> i. The solutions of the NP class are hard to find since they are being solved by a non-deterministic machine but the solutions are easy to verify
- ii. Problems of NP can be verified by a Turing machine in polynomial time
- iii. Examples
-         a. Boolean Satisfiability Problem (SAT).
-         b. Hamiltonian Path Problem.
-         c. Graph coloring.
+<p>O(log n) – Logarithmic Time complexity</p>
+<pre><code> In every step, halves the input size in logarithmic algorithm, log2 n is equals to the number of times n must be divided by 2 to get 1.
+
+ Let us take an array with 16 elements input size, that is - log2 16
+
+ step 1: 16/2 = 8 will become input size
+
+ step 2: 8/2 = 4 will become input size
+
+ step 3: 4/2 =2 will become input size
+
+ step 4: 2/2 =1 calculation completed.
+
+ The calculation will be performed till we get a value 1.
 </code></pre>
 </li>
 <li>
-<p>Co-NP Class</p>
-<pre><code> i. Co-NP stands for the complement of NP Class
- ii. If a problem X is in NP, then its complement X’ is also is in CoNP.
- iii. For an NP and CoNP problem, there is no need to verify all the answers at once in polynomial time, there is a need to verify only one particular answer “yes” or “no” in polynomial time for a problem to be in NP or CoNP.
- iv. Examples
-         a.To check prime number
-         b. Integer Factorization
+<p>O(n) = Linear Complexity</p>
+<pre><code> The number of steps and time required to solve a problem is based on input size. If you want to print a statement for n number of times, it is a linear complexity. Linear Search is an example for Linear Time Complexity
 </code></pre>
 </li>
 <li>
-<p>NP-hard class</p>
-<pre><code> i. All NP-hard problems are not in NP. 
- ii. It takes a long time to check them. This means if a solution for an NP-hard problem is given then it takes a long time to check whether it is right or not
- iii. A problem A is in NP-hard if, for every problem L in NP, there exists a polynomial-time reduction from L to A
- iv. Example
-         a. Halting problem
-         b. Qualified Boolean formulas
-         c. No Hamiltonian cycle
+<p>O(n log n) - (n * log n) complexity</p>
+<pre><code> Divide and Conquer algorithms are generally considered under n log n time complexity. 
 </code></pre>
 </li>
 <li>
-<p>NP-complete class</p>
-<pre><code> i. NP-complete problems are special as any problem in NP class can be transformed or reduced into NP-complete problems in polynomial time
- ii. If one could solve an NP-complete problem in polynomial time, then one could also solve any NP problem in polynomial time
- iii. A problem is NP-complete if it is both NP and NP-hard
- iv. Example
-         a. Decision version of 0/1 Knapsack
-         b. Hamiltonian Cycle
-         c. Satisfiability
-         d. Vertex cover
+<p>O(n^2) – Quadratic time complexity</p>
+<pre><code> If we use nested loop, that means a loop with in an another loop, is a quadratic complexity.
+
+ Outer loop runs n number of times, inner loop runs n*n number of times, that is O(n2).
+</code></pre>
+</li>
+<li>
+<p>O(n^n) – A n complexity</p>
+<pre><code> In quadratic algorithm, we used two nested loops. In cubic algorithm we use n nested loops.
+</code></pre>
+</li>
+<li>
+<p>O(2^n) – Subset of input elements.</p>
+<pre><code> The algorithm must run through all possible subsets of given input.
+
+ Ex:
+
+ {A, B, C} – possibilities of subsets are 2^3
+
+ { }, {A}, {B}, {C}, {A,B}, {A, C}, {B,C}, {A,B,C}
+</code></pre>
+</li>
+<li>
+<p>O(n!) – Factorial complexity</p>
+<pre><code> Example All permutations of input elements.
 </code></pre>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>Complexity Class</th>
-<th>Characteristic feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>P</td>
-<td>Easily solvable in polynomial time.</td>
-</tr>
-<tr>
-<td>NP</td>
-<td>Yes, answers can be checked in polynomial time.</td>
-</tr>
-<tr>
-<td>Co-NP</td>
-<td>No, answers can be checked in polynomial time.</td>
-</tr>
-<tr>
-<td>NP-hard</td>
-<td>All NP-hard problems are not in NP and it takes a long time to check them.</td>
-</tr>
-<tr>
-<td>NP-complete</td>
-<td>A problem that is NP and NP-hard is NP-complete.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="problem-solving">Problem  Solving</h3>
-<p>Important <strong>Steps</strong> to solve problems</p>
-<pre><code>1. Understanding the Problem Statement
-2. Figure Out Sample Inputs and Expected Outputs
-3. Divide the Problem Into Small Chunks
-4. Explore Important Existing Algorithms for Inspiration
-5. Write Pseudocode First
-6. Write Simple Code and Generalize It
-7. Try to Improve Your Algorithmic Creation
-8. Find a Suitable Data Structure
-9. Problem Solving via Design Patterns
-10. Practice Make a Developer Perfect
+<h2 id="divide-and-conquer">Divide and conquer</h2>
+<p>Concepts are broken into 2 parts from each problem related to the problem statement itself.</p>
+<pre><code>Suppose
+
+n = 2^k
+
+In first iteration we divide it as n = 2^(n-1)
+
+In second iteration we divide it as n = 2^(n-2)
+
+In third iteration we divide it as n = 2^(n-3)
+
+Then for combining we also need time of
+
+F(n) = (2^3) * (2^(n-3)) + k (time required for combining the problem)
+</code></pre>
+<p>Simple problem</p>
+<pre><code>T(n) = T(n/2) + T(n/2) + n
+
+T(n) = 2 * T(n/2) + n
+
+also T(n/2) = 2 * T(n/4) + n/2
+
+by Substituition 
+
+T(n) = 2[2*T(n/2) + n/2 ] + n
+
+T(n) = 4T(n/4) + 2n. 
+</code></pre>
+<p>we can expand it so on</p>
+<pre><code>Finally it would look like T(n) = nT(1) + kn
+
+T(n) = k(n)
+</code></pre>
+<p>why divide and conquer?</p>
+<pre><code>1. Easy to use
+2. Solves problem in ease
 </code></pre>
 
 </body>
