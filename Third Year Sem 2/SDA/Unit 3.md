@@ -1,6 +1,4 @@
-# Lecture 4
-
-## Design Pattern
+# Unit 3 Design Pattern
 
     1. General repeatable pattern
     2. Not mandatory to always implement design pattern
