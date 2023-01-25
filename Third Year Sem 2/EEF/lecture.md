@@ -1,44 +1,42 @@
-# Lecture 4
+# Lecture 5
 
-## GDP is affected by
+## Cost
 
-1. Investment
-2. Government spending
-3. Net exports
-4. Consumption
+While speaking about **Cost** can have two meanings:
 
-## The Nature of the effects
+* Money
+* Resource/Requirement
 
-### When prices lower
+Cost is affected by
 
-* The *Wealth* effect --> Due to more money in hand people consume more thus GDP increases
+* Factors of production
+* Benefits of the product
 
-* The *Interest* effect --> It decreases
+Types
 
-* Export effect  -->  Export increases
+1. Explicit
 
-As a result GDP increases
+        a. They are actually recorded 
 
-### When prices increases
+2. Implicit
 
-* The *Wealth* effect --> less wealth in hand
+        a. Not recorded
+        b. Intangible
 
-* The *Interest* effect --> It increases
+3. Opportunity/Alternative Cost
 
-* Export effect  -->  Export decreases
+        a. Forgone cost in which we do not invest but were willing to invest that amount is called as Opportunity/Alternative Cost
+        b. It is second best investment option
 
-## GDP Types
+4. Accounting Cost
 
-### Real GDP
+        a. Refers only to money.
+        b. Anything that is brought by giving the money and have a record is called as accounting cost
+        c. All  Explicit cost are accounting cost
+        d. Example interest on loans
 
-    1. Does not considers the time value of money
-    2. More Accurate than nominal GDP
+5. Depreciation Cost
 
-### Nominal GDP
-
-    1. Does not considers the time value of money
-    2. Less Accurate than real GDP
-
-## Year on Year development
-
-* The development of companies are in yearly quaters
+        a. Asset cost goes on decreasing that cost is depreciation cost
+        b. Example depreciation cost in electronics is 33% per year
+        c. It depends on the depreciation rate set by govt and the current financial year

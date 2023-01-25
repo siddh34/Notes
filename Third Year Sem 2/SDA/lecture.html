@@ -365,34 +365,56 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-4">Lecture 4</h1>
-<h2 id="design-pattern">Design Pattern</h2>
-<pre><code>1. General repeatable pattern
-2. Not mandatory to always implement design pattern
-3. They are generic, simple,  well tested, resuable and object oriented in nature
-4. We need to pick the right pattern for our project as there are 23 design patterns
-5. It requires communicating object that includes name, abstract and key aspects and focuses on OOC Problems (Object Oriented Concepts)
+<h1 id="lecture-5">Lecture 5</h1>
+<p>The <em>Creational Design Pattern</em> Type</p>
+<ol>
+<li>
+<p>Prototype Design pattern</p>
+<pre><code> a. Here we are cloning the existing object instead of creating a new instance
+ b. We can customized it 
+ c. We can add or remove objects at runtime
+
+ Example:
 </code></pre>
-<p>The <em>Gang of four</em> (GOF)</p>
-<ul>
-<li>Four authors Erich Gamma, Richard Helm,  Ralph Johnson and John V publish a book Design Pattern - Elements of reusable Object Oriented Software</li>
-<li>There design pattern are categorised. These are known as <em>gang of four</em>.</li>
-</ul>
-<p>The <em>Design pattern</em> can be <strong>Categorised</strong> as follows:</p>
-<p><img src="./Images/Design Patterns.jpg" alt="Img 8"></p>
-<pre><code>1. Creational Design Patterns
-    a. provides a way to create objects while hiding the creational logic rather than instantiating objects yourself directly
-    b. It gives more flexibility
-    c. It can be furthur categorized as singleton, builder, prototype, factory
-2. Structual Design Patterns
-    a. These design patterns concern class and object composition
-    b. Those design patterns are about organizing classes and objects to a larger structure
-    c. It uses Inheritance between classes
-    d. Furthur divided as Bridge, Adapter
-3. Behavioral Design Pattern
-    a. Concerned with communication between objects
-    b. Example chain of responsibilty, Command, Interpreter, Iterator, Mediator, Memento etc
+<p><img src="./Images/prototype.jpg" alt="Img 9"></p>
+<p><img src="./Images/prototype2.jpg" alt="Img 10"></p>
+<p>The <strong>Advantage</strong>:</p>
+<pre><code> a. We can add or delete object at runtime
 </code></pre>
+</li>
+<li>
+<p>Builder Design</p>
+<pre><code> a. It helps us build complex java object in an easy and readable manner
+ b. It is used when we want to hide internal complex structure from external entities which use interface to create object
+ c. It separates object construction from its representation
+ d. It has 3 major parts
+     i. Product (This is the actual object that we are trying to construct)
+     ii. Builder (Builds complex part)
+     iii. Executor (Executes complex part)
+</code></pre>
+<p>Example</p>
+<p><img src="./Images/builder.jpg" alt="img 10"></p>
+</li>
+<li>
+<p>Factory Design Pattern</p>
+<pre><code> a. Define an interface or abs class for creating an object but let the subclasses decide which class to instantiate
+ b. The main purpose is to return objects at runtime
+ c. Helps us to separate the object creation code from the one which is using it.
+ d. Reuses the same memory
+</code></pre>
+<p>Example</p>
+<p><img src="./Images/factoryDesign.jpg" alt="img 11"></p>
+</li>
+<li>
+<p>Abstract Factory Design Pattern</p>
+<pre><code> a. Similar to Factory Design Pattern
+ b. Add another level of abstraction layer to factory design pattern
+ c. It creates factory of factory i.e super factory
+</code></pre>
+<p>Example</p>
+<p><img src="./Images/AbsFactory.jpg" alt="img 12"></p>
+</li>
+</ol>
 
 </body>
 </html>

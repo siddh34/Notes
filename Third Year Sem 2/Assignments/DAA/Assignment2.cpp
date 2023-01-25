@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Author: Siddharth Sutar
+// Date: 25 January 2023
+
 // function 
 
 class KnapSnackDP{
@@ -12,7 +15,7 @@ class KnapSnackDP{
 
     static int knapSack(int W, int wt[], int val[], int n) {
         int i, w;
-        int K[n + 1][W + 1];
+        vector<vector<int>> K(n+1,vector<int>(W+1));
         for(i = 0; i <=n; i++) {
             for(w = 0; w<=W; w++) {
                 if(i == 0 || w == 0){
@@ -40,21 +43,47 @@ class KnapSnackDP{
         }
         cout << endl;
 
-        // TODO: check whether element is available in previous row, print vector of 1/0
         vector<int> selected(n);
         int temp = K[n][W];
-        // for(int i = 0; i <= n; i++){
-        //     for(int j = 0; j <= W; j++){
-        //         if(){
+        for(int i = n; i >= 0; i--){
+            if(temp <= 0){
+                break;
+            }
 
-        //         }
-        //     }
-        // }
+            if(isPresent(K,i,W,temp)){
+                continue;
+            }
+            else{
+                if(val[i] > temp){
+                    continue;
+                }
+                else{
+                    temp = temp - val[i];
+                    selected[i] = 1;
+                }
+            }
+        }
 
+        cout << "Selected matrix" << endl;
+
+        for(int i: selected){
+            cout << i << " ";
+        }
+
+        cout << endl;
 
         cout << endl;
         cout << "The max value is: "; 
         return K[n][W];
+    }
+
+    static bool isPresent(vector<vector<int>> arr,int row,int col,int element){
+        for(int i = 0; i <= col; i++){
+            if(arr[row - 1][i] == element){
+                return true;
+            }
+        }
+        return false;        
     }
 };
 
@@ -81,6 +110,8 @@ int main(int argc, char **argv){
     KnapSnackDP ks;
 
     cout << ks.knapSack(W,wt,val,n) << endl;
+    cout << "Time Complexity: n^2" << endl;
+    cout << "Space Complexity: n^2" << endl;
 
     return 0;
 }
