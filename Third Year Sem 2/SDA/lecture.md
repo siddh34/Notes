@@ -1,53 +1,41 @@
-# Lecture 5
+# Lecture 6
 
 The *Creational Design Pattern* Type
 
-1. Prototype Design pattern
+1. Singleton Design Pattern
 
-        a. Here we are cloning the existing object instead of creating a new instance
-        b. We can customized it 
-        c. We can add or remove objects at runtime
-
-        Example:
-
-    ![Img 9](./Images/prototype.jpg)
-
-    ![Img 10](./Images/prototype2.jpg)
-
-    The **Advantage**:
-
-        a. We can add or delete object at runtime
-
-2. Builder Design
-
-        a. It helps us build complex java object in an easy and readable manner
-        b. It is used when we want to hide internal complex structure from external entities which use interface to create object
-        c. It separates object construction from its representation
-        d. It has 3 major parts
-            i. Product (This is the actual object that we are trying to construct)
-            ii. Builder (Builds complex part)
-            iii. Executor (Executes complex part)
-    Example
-
-    ![img 10](./Images/builder.jpg)
-
-3. Factory Design Pattern
-
-        a. Define an interface or abs class for creating an object but let the subclasses decide which class to instantiate
-        b. The main purpose is to return objects at runtime
-        c. Helps us to separate the object creation code from the one which is using it.
-        d. Reuses the same memory
+        a. private constructor
+        b. Instance private
+        c. Global Method
 
     Example
 
-    ![img 11](./Images/factoryDesign.jpg)
+        Public static Singleton getInstance(){
+            if(instance == null){
+                instance = new Singleton();
+                return instance;
+                }
+            }
 
-4. Abstract Factory Design Pattern
+    ![Img 13](./Images/singleton.jpg)
 
-        a. Similar to Factory Design Pattern
-        b. Add another level of abstraction layer to factory design pattern
-        c. It creates factory of factory i.e super factory
+2. Object pool
 
-    Example
+    ![Img 14](./Images/reusable.jpg)
 
-    ![img 12](./Images/AbsFactory.jpg)
+The *Structural Design* Patterns
+
+1. Adapter
+
+        a. Adapter is between two objects
+        b. Alternate from of class creation is possible
+        c. The pattern converts the incompatible interface of a class into another interface that client requires
+
+    ![Img 15](./Images/adapter.jpg)
+
+2. Decorator
+
+        a. Used to extend the functionality of the base class
+        b. It offers wrapper to existing class
+        c. Example In pizza class toppings can be added
+        d. It does not affects the behaviour of  other objects in the class

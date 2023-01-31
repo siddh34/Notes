@@ -365,49 +365,106 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-6">Lecture 6</h1>
-<p>The <em>Creational Design Pattern</em> Type</p>
+<h1 id="lecture-2">Lecture 2</h1>
 <ol>
 <li>
-<p>Singleton Design Pattern</p>
-<pre><code> a. private constructor
- b. Instance private
- c. Global Method
-</code></pre>
-<p>Example</p>
-<pre><code> Public static Singleton getInstance(){
-     if(instance == null){
-         instance = new Singleton();
-         return instance;
-         }
-     }
-</code></pre>
-<p><img src="./Images/singleton.jpg" alt="Img 13"></p>
+<p>The <em>Agile software development is group of software development methods based on iterative and incremental</em> where requirments and solution was through collaboration between self organizing cross functional teams.</p>
 </li>
 <li>
-<p>Object pool</p>
-<p><img src="./Images/reusable.jpg" alt="Img 14"></p>
+<p><em>Agile software development promotes adaptive planning, evolutionary development, timebox iterative approach</em> and encourages rapid and flexinle response to change</p>
 </li>
 </ol>
-<p>The <em>Structural Design</em> Patterns</p>
+<h2 id="different-types-of-agile-methodologies">Different Types of Agile Methodologies</h2>
 <ol>
 <li>
-<p>Adapter</p>
-<pre><code> a. Adapter is between two objects
- b. Alternate from of class creation is possible
- c. The pattern converts the incompatible interface of a class into another interface that client requires
+<p>The Kanban system</p>
+<pre><code> a. The phrase ‘Kanban,' which comes from the Japanese language, means “visual board or signboard” and is linked to the concept of “just in time”! 
+ b. Initially established as a lean manufacturing method, the Kanban concept has gradually found its way into agile software development teams. 
+ c. This method develops and manages projects using visual methods
+ d. Kanban projects are managed with the use of a Kanban Board, which is separated into columns to illustrate the software development process flow. 
+ e. This increases team visibility by allowing them to see progress through each stage of production and prepare for impending activities in order to deliver the product &quot;just in time&quot;!
 </code></pre>
-<p><img src="./Images/adapter.jpg" alt="Img 15"></p>
+<p><img src="./Image/kanban.jpg" alt="Img 1"></p>
 </li>
 <li>
-<p>Decorator</p>
-<pre><code> a. Used to extend the functionality of the base class
- b. It offers wrapper to existing class
- c. Example In pizza class toppings can be added
- d. It does not affects the behaviour of  other objects in the class
+<p>Scrum: A software development methodology</p>
+<pre><code> a. The agile scrum development approach, which is portrayed through numerous development cycles, is one of the most common agile methodology examples. 
+ b. Scrum, like Kanban, divides the development process into stages or cycles called sprints. Each sprint's development time is maximised and devoted, allowing only one sprint to be managed at a time. 
+ c. Scrum and agile techniques emphasise ongoing deliverables, therefore this strategy allows designers to alter priorities to guarantee that any sprints that are incomplete or overdue receive further attention. 
+ d. The Scrum Team has dedicated project responsibilities such as a scrum master and a product owner, with daily scrums where activities are harmonised to determine the best method to implement the sprint
 </code></pre>
 </li>
+<li>
+<p>XP (Extreme Programming)</p>
+<pre><code> a. Extreme Programming (XP) is a software development process that prioritises collaboration, communication, and feedback. 
+ b. It emphasises continuous improvement and client happiness. This strategy, like scrum, makes use of sprints, or short development cycles. This is created by a group of people in order to produce a productive and efficient workplace
+ c. In Extreme Programming, the project is tested from the beginning by gathering input that improves the system's output. This also serves as a spot check to ensure that any consumer requests are easily implemented.
+ d. In a circumstance where clients have frequent and fluctuating expectations, the Extreme Programming technique comes in handy.
+</code></pre>
+</li>
+<li>
+<p>Crystal</p>
+<pre><code> a. Crystal is a series of smaller agile development approaches that include Crystal Yellow, Crystal Clear, Crystal Red, Crystal Orange, and more, and was introduced by Mr Alistair Cockburn, one of the key figures in establishing the Agile credo for software development. 
+ b. Each has its own unique structure, which is defined by criteria including system criticality, team size, and project priorities. 
+ c. The type of crystal agile methodology is chosen according to the nature of the project or system criticalities, such as Comfort (C), Essential Money (E), Discretionary Money (D), and Life (L). Crystal, like other Agile approaches, focuses on timely product delivery, regularity, minimal administration with high user interaction, and customer satisfaction. 
+ d. The Crystal family believes that each system or project is unique, necessitating the use of a variety of techniques, processes, and policies to obtain the best results, giving them the title of agile methodology's lightest approaches.
+</code></pre>
+</li>
+<li>
+<p>Dynamic Systems Development Method (DSDM)</p>
+<pre><code> a. The Dynamic Systems Development Method was created in response to the demand for a common industry charter for the rapid delivery of software. 
+ b. DSDM provides a comprehensive structure that can be developed and adjusted to plan, execute, manage, and expand software development processes. 
+ c. The DSDM believes that project modifications should always be expected, and quality and timely delivery should never be negotiated, based on a business-driven strategy and eight principles.
+</code></pre>
+</li>
+<li>
+<p>Lean</p>
+<pre><code> a. Although it is a deeply adaptive, evolving methodology with the absence of fixed principles, laws, or techniques.
+ b. It is an iterative, agile methodology that leads the team on addressing client values through persuasive value stream mapping
+ c. In comparison to the hierarchical flow of control, Lean offers each individual and small team decision-making authority
+</code></pre>
+<p>The <strong>Core Lean Principles</strong> are</p>
+<ul>
+<li>Uninterrupted advancement</li>
+<li>Respect for other people</li>
+<li>Eradicate waste</li>
+<li>Rapid delivery</li>
+<li>Knowledge-making and</li>
+<li>Defer commitment</li>
+</ul>
+</li>
 </ol>
+<h2 id="agile-manifesto-and-principles">Agile Manifesto and Principles</h2>
+<p>Manifesto for <strong>Agile Software Development</strong></p>
+<pre><code>    Individuals and interactions over processes and tools
+    Working software over comprehensive documentation
+    Customer collaboration over contract negotiation
+    Responding to change over following a plan
+</code></pre>
+<p>The <strong>Agile principles</strong></p>
+<pre><code>    a. Welcome changing requirements, even late in development. 
+    
+    b. Agile processes harness change for the customer's competitive advantage.
+
+    c. Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
+
+    d. Business people and developers must work together daily throughout the project.
+
+    e. Build projects around motivated individuals. 
+    
+    f. Give them the environment and support they need, and trust them to get the job done.
+
+    g. The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
+
+    h. Working software is the primary measure of progress. Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+
+    i. Continuous attention to technical excellence and good design enhances agility.
+
+    j. Simplicity--the art of maximizing the amount of work not done--is essential.
+
+    k. The best architectures, requirements, and designs emerge from self-organizing teams.
+
+    l. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly</code></pre>
 
 </body>
 </html>

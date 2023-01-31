@@ -1,6 +1,4 @@
-# DAA Lecture Notes
-
-## Lecture 7
+# Unit 2
 
 ## KnapSack problem
 
