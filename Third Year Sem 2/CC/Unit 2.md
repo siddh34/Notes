@@ -1,6 +1,4 @@
-# Lecture 4 (As lecture 3 was based on practical)
-
-## Unit 2 **AWS**
+# Unit 2 **AWS**
 
 Cloud has
 

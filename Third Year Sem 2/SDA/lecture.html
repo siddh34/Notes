@@ -365,47 +365,28 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-6">Lecture 6</h1>
-<p>The <em>Creational Design Pattern</em> Type</p>
+<h1 id="lecture-8">Lecture 8</h1>
+<p>The <em>Behavioural design pattern</em></p>
 <ol>
 <li>
-<p>Singleton Design Pattern</p>
-<pre><code> a. private constructor
- b. Instance private
- c. Global Method
+<p>Chain of responsibility pattern</p>
+<pre><code> a. There is a handler that handels the respnsibility of the objects which are in process
 </code></pre>
-<p>Example</p>
-<pre><code> Public static Singleton getInstance(){
-     if(instance == null){
-         instance = new Singleton();
-         return instance;
-         }
-     }
+<p><img src="./Images/handler.jpg" alt="Img 18"></p>
+<pre><code> b. Request can be handeled with one handler or many handlers
+ c. Example
+     i. One full note of 200 rs can paid the sum of 200 rs (One handler)
+     ii. Multiple notes of 10,20,50 can pay the sum of 200 rs (Multiple handlers)
+ d. This design pattern is to be used when sender doesn't have enough idea about it.
 </code></pre>
-<p><img src="./Images/singleton.jpg" alt="Img 13"></p>
 </li>
 <li>
-<p>Object pool</p>
-<p><img src="./Images/reusable.jpg" alt="Img 14"></p>
-</li>
-</ol>
-<p>The <em>Structural Design</em> Patterns</p>
-<ol>
-<li>
-<p>Adapter</p>
-<pre><code> a. Adapter is between two objects
- b. Alternate from of class creation is possible
- c. The pattern converts the incompatible interface of a class into another interface that client requires
+<p>Mediator</p>
+<pre><code> a. It says that &quot;to define an object that encapsulates how a set of object interacts&quot;
+ b. Used to reduce communication complexity between multiple objects
+ c. It is more generic
 </code></pre>
-<p><img src="./Images/adapter.jpg" alt="Img 15"></p>
-</li>
-<li>
-<p>Decorator</p>
-<pre><code> a. Used to extend the functionality of the base class
- b. It offers wrapper to existing class
- c. Example In pizza class toppings can be added
- d. It does not affects the behaviour of  other objects in the class
-</code></pre>
+<p><img src="./Images/mediator.jpg" alt="Img 19"></p>
 </li>
 </ol>
 

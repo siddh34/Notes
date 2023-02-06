@@ -4,6 +4,12 @@
 
 2. *Agile software development promotes adaptive planning, evolutionary development, timebox iterative approach* and encourages rapid and flexinle response to change
 
+## History of Agile
+
+    a. Some developers reacted against the traditional ways of developing software
+    b. New methods were dveloped and tested
+    c. "Representatives" from several of these methods got together in Utah in 2001. They termed it as "Agile" and called themselves as "Agile Alliance. Later they developed a manifesto
+
 ## Theories for Agile Management
 
 Why Agile?
@@ -182,8 +188,70 @@ Iteractions can be done by,
 
 1. Agility in design
 
+        a. Every team works differently, and many create their own workflow with practices borrowed from frameworks that have worked well for them in the past
+        b. If your team is already practicing Scrum, transitioning to this approach should be fairly simple
+        c. The idea here is to incorporate Scrum for the prototyping and testing part of the design thinking process
+
+    ![Img 2](./Image/design.jpg)
+
 2. Agility in testing
+
+        a. Agile testing is an iterative and incremental method, and the necessities, which develop during the cooperation between the customer and self-establish teams
+        b. In agile testing, the word "Agile" primarily signifies something that can be performed quickly and immediately, but also in the area of software development
+
+    ![Img 3](./Image/testing.jpg)
+
+        c. Let's see the principles
+            i. Constant Response (The implementation of Agile testing delivers a response or feedback on an ongoing basis. Therefore, our product can meet the business needs)
+            ii. Less Documentation (The execution of agile testing requires less documentation as the Agile teams or all the test engineers use a reusable specification or a checklist)
+            iii. Continuous Testing (The agile test engineers execute the testing endlessly as this is the only technique to make sure that the constant improvement of the product)
+            iv. Customer Satisfaction (In any project delivery, customer satisfaction is important as the customers are exposed to their product throughout the development process)
+            v. Easy and clean code (When the bugs or defects occurred by the agile team or the testing team are fixed in a similar iteration, which leads us to get the easy and clean code)
+            vi. Involvement of the entire team (As we know that, the testing team is the only team who is responsible for a testing process in the Software Development Life Cycle)
+            viii. Test-Driven (While doing the agile testing, we need to execute the testing process during the implementation that helps us to decrease the development time)
+            ix. Quick response (In each iteration of agile testing, the business team is involved. Therefore, we can get continuous feedback that helps us to reduces the time of feedback response on development work)
+
+    ![Img 4](./Image/agiletestinglifecycle.jpg)
+
+        d. Agile Testing lifecycle
+            i. Phase1: Impact Assessment (we collect the inputs and responses from users and stakeholders to execute the impact assessment phase. This phase is also known as the feedback phase)
+            ii. Phase2: Agile Testing Planning (The second phase of the Agile testing life cycle is agile testing planning.In this phase, the developers, test engineers, stakeholders, customers, and end-users team up to plan the testing process schedules, regular meetings, and deliverables)
+            iii. Phase3: Release Readiness (The next phase of the Agile testing life cycle is release readiness, where test engineers have to review the features which have been created entirely and test if they are ready to go live or not and which ones need to go back to the previous development phase)
+            iv. Phase4: Daily Scrums (Daily scrums are the next phase of the Agile testing life cycle, which involves the daily morning meetings to check on testing and determine the objectives for the day)
+            v. Phase5: Test Agility Review (The last and final phase of the Agile life cycle is the test agility review. The test agility phase encompasses the weekly meetings with the stakeholders to evaluate and assess the progress against goals)
 
 ## Agile Documentations
 
+        a. Agile Documentation Strategies
+            i. Invest in quality over documentation. The better designed our solution is, the easier it will be for stakeholders to understand it, and therefore generally less documentation will be required
+        b. Write documentation that is just barely good enough (JBGE). When we do create documentation it should be JBGE, or just barely sufficient, to fulfill the needs of our stakeholders and no more.
+        c. Document stable concepts, not speculative ideas. Speculative ideas, such as requirements, are likely to evolve over time. This in turn requires you to update your documentation. Whenever possible, wait until the material that you are describing is stable before you capture it in documentation.
+        d. Find better ways to communicate. If the purpose of a document is to communicate information to others, it is important to recognize that detailed documentation is one of the least effective means to accomplish that purpose. You have other communication options available to you to choose from.
+        e. Recognize that you need some documentation. A common, and unfortunately enduring, misunderstanding about agile is that agile teams don’t write documentation.
+        f. Work closely with stakeholders. The only way we can write effective documentation is if we know what our stakeholders need and how they will work with the documentation that we produce.
+
+![Img 4](./Image/documentation.jpg)
+
 ## Agile Drivers, Capabilities and Values
+
+1. Agile Drivers
+
+    ![Img 5](./Image/agile%20working%20drivers.jpg)
+
+2. Agile Capabilities
+
+        a. Capabilities exhibit the same characteristics and practices as features.
+        b. they Are described using a phrase and benefit hypothesis
+        c. Are sized to fit within a PI, however, they often take multiple ARTs to implement
+        d. Are reasoned about and approved using the Solution Kanban
+        e. The Solution Backlog holds approved capabilities ciated enablers to describe and bring visibility to all the technical work necessary to support efficient development
+        f. Capabilities may originate in the local context of the solution or occur as a result of splitting portfolio epics that may cut across more than one Value Stream
+
+3. Values
+
+        Agile Values are:
+
+            a. Individuals and interactions over processes and tools
+            b. Working software over comprehensive documentation
+            c. Customer collaboration over contract negotiation
+            d. Responding to change over following a plan

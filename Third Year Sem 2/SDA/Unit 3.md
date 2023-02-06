@@ -97,7 +97,7 @@ The **Creational Design Pattern* Type
 
     ![Img 13](./Images/singleton.jpg)
 
-6. Object pool
+6. Object pool (Collection of objects)
 
     ![Img 14](./Images/reusable.jpg)
 
@@ -117,3 +117,64 @@ The *Structural Design* Patterns
         b. It offers wrapper to existing class
         c. Example In pizza class toppings can be added
         d. It does not affects the behaviour of  other objects in the class
+
+3. Bridge Design Pattern
+
+        a. It is used to split large class into two separate inheritance hierarchies
+        b. One is for implimentations and one for abstraction
+        c. This pattern is known as bridge design pattern
+
+    ![Img 16](./Images/bridgeDesign.jpg)
+
+4. Poxy Design Pattern
+
+        a. In proxy pattern a class functionality of another class.
+        b. Here we create object having original object to interface its outer world functionality
+        c. According to GOF (Gang oF Four) it provide interface to access information of original object
+        d. Types 
+            i. Virtual proxy (Avoids duplication of memory)
+            ii. Remote proxy (Provides local representaion of object)
+            iii. Protective proxy (Checks whether proper content is served)
+            iv. Smart proxy (Provides additional layer of security)
+
+    ![Img 17](./Images/proxyDesign.jpg)
+
+5. Flyweight design pattern
+
+        a. It is used to reduce the number of objects created and improves performance
+        b. It reuses similar existing kind of objects
+        c. Provides good solution to reducing memory load by sharing objects
+        d. Has two states
+            i. Intrinsic states (It is constant for over all state)
+            ii. Extrinsic states (Changing part)
+        e. Example Car object
+            i. Intrinsic (Color,Image)
+            ii. Extrinsic (x,y,z co-ordinates)
+
+    ![Img 19](./Images/flyweight.jpg)
+
+The *Behavioural design pattern*
+
+1. Chain of responsibility pattern
+
+        a. There is a handler that handels the respnsibility of the objects which are in process
+
+    ![Img 18](./Images/handler.jpg)
+
+        b. Request can be handeled with one handler or many handlers
+        c. Example
+            i. One full note of 200 rs can paid the sum of 200 rs (One handler)
+            ii. Multiple notes of 10,20,50 can pay the sum of 200 rs (Multiple handlers)
+        d. This design pattern is to be used when sender doesn't have enough idea about it.
+
+2. Mediator
+
+        a. It says that "to define an object that encapsulates how a set of object interacts"
+        b. Used to reduce communication complexity between multiple objects
+        c. It is more generic
+
+    ![Img 19](./Images/mediator.jpg)
+
+3. Observer
+
+4. Obsence

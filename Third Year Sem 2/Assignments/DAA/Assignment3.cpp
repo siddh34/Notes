@@ -1,89 +1,113 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#define N 4
 using namespace std;
 
-# define n 4
+/* A utility function to print solution */
+void printSolution(int board[N][N])
+{
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+            if (board[i][j])
+                cout << "Q ";
+            else
+                cout << ". ";
+        printf("\n");
+    }
+}
 
-class NQueens{
-    public:
-        void printSolution(vector<vector<int>> board){
-            for(int i = 0; i < board.size();i++){
-                for(int j = 0;j < board[i].size(); j++){
-                    if(board[i][j]){
-                        cout << "Q ";
-                    }
-                    else{
-                        cout << ". ";
-                    }
-                }
-                cout << endl;
-            }
-        }
+/* A utility function to check if a queen can
+   be placed on board[row][col]. Note that this
+   function is called when "col" queens are
+   already placed in columns from 0 to col -1.
+   So we need to check only left side for
+   attacking queens */
+bool isSafe(int board[N][N], int row, int col)
+{
+    int i, j;
 
-        bool isSafe(vector<vector<int>> board,int row,int col){
-            int i, j;
-
-            // check on left side
-            for(i = 0; i < col; i++){
-                if(board[row][i]){
-                    return false;
-                }
-            }
-
-            // check on uppper diagonal side
-            for(i = row, j = col; i >= 0 && j >= 0; i--, j--){
-                if(board[i][j]){
-                    return false;
-                }
-            }
-
-            // check on lower diagonal side
-            for(i = row, j = col; j >= 0 && i < n; i++, j--){
-                if(board[i][j]){
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        bool rSolve(vector<vector<int>> board, int col){
-            if(col >= n){
-                return true;
-            }
-
-            for(int i = 0; i < n; i++) {
-                if(isSafe(board,i,col)){
-
-                    board[i][col] = 1;
-
-                    if(rSolve(board,col+1)){
-                        return true;
-                    }
-
-                    board[i][col] = 0;
-                }
-
-            }
-
+    /* Check this row on left side */
+    for (i = 0; i < col; i++)
+        if (board[row][i])
             return false;
+
+    /* Check upper diagonal on left side */
+    for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i][j])
+            return false;
+
+    /* Check lower diagonal on left side */
+    for (i = row, j = col; j >= 0 && i < N; i++, j--)
+        if (board[i][j])
+            return false;
+
+    return true;
+}
+
+/* A recursive utility function to solve N
+   Queen problem */
+bool solveNQUtil(int board[N][N], int col)
+{
+    /* base case: If all queens are placed
+      then return true */
+    if (col >= N)
+        return true;
+
+    /* Consider this column and try placing
+       this queen in all rows one by one */
+    for (int i = 0; i < N; i++)
+    {
+        /* Check if the queen can be placed on
+          board[i][col] */
+        if (isSafe(board, i, col))
+        {
+            /* Place this queen in board[i][col] */
+            board[i][col] = 1;
+
+            /* recur to place rest of the queens */
+            if (solveNQUtil(board, col + 1))
+                return true;
+
+            /* If placing queen in board[i][col]
+               doesn't lead to a solution, then
+               remove queen from board[i][col] */
+            board[i][col] = 0; // BACKTRACK
         }
+    }
 
-        bool solution(){
-            vector<vector<int>> board(n,vector<int>(n,0));
+    /* If the queen cannot be placed in any row in
+        this column col  then return false */
+    return false;
+}
 
-            if (rSolve(board,0) == false){
-                cout << "Solution doesn't exist" << endl;
-                return false;
-            } 
+/* This function solves the N Queen problem using
+   Backtracking. It mainly uses solveNQUtil() to
+   solve the problem. It returns false if queens
+   cannot be placed, otherwise, return true and
+   prints placement of queens in the form of 1s.
+   Please note that there may be more than one
+   solutions, this function prints one  of the
+   feasible solutions.*/
+bool solveNQ()
+{
+    int board[N][N] = {{0, 0, 0, 0},
+                       {0, 0, 0, 0},
+                       {0, 0, 0, 0},
+                       {0, 0, 0, 0}};
 
-            printSolution(board);
-            return true;
-        }
-};
+    if (solveNQUtil(board, 0) == false)
+    {
+        cout << "Solution does not exist";
+        return false;
+    }
 
-int main(int argc, char **argv){
-    //type your code below
-    NQueens nq;
-    nq.solution();
+    printSolution(board);
+    return true;
+}
+
+// driver program to test above function
+int main()
+{
+    solveNQ();
     return 0;
 }

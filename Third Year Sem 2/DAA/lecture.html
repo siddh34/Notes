@@ -366,21 +366,13 @@ code {
     });
   </script>
 <h1 id="daa-lecture-notes">DAA Lecture Notes</h1>
-<h2 id="lecture-7">Lecture 7</h2>
-<h2 id="knapsack-problem">KnapSack problem</h2>
-<p>The knapsack problem is the following problem in combinatorial optimization:</p>
-<pre><code>Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible
-</code></pre>
-<p>Lets see it in a boarder view</p>
-<pre><code>Suppose
-n (no of objects) = 7
-m (max weight) = 15
-</code></pre>
+<h2 id="lecture-8">Lecture 8</h2>
+<h2 id="job-sequencing-with-deadlines">Job Sequencing with deadlines</h2>
+<p>For the following sequence of a job find out final sequence and max profit</p>
 <table>
 <thead>
 <tr>
-<th>Object</th>
-<th>O</th>
+<th>Job</th>
 <th>1</th>
 <th>2</th>
 <th>3</th>
@@ -393,304 +385,175 @@ m (max weight) = 15
 <tbody>
 <tr>
 <td>Profit</td>
-<td>P</td>
-<td>10</td>
+<td>3</td>
 <td>5</td>
-<td>15</td>
-<td>7</td>
-<td>6</td>
+<td>20</td>
 <td>18</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>W</td>
-<td>2</td>
-<td>3</td>
-<td>5</td>
-<td>7</td>
-<td>1</td>
-<td>4</td>
-<td>1</td>
-</tr>
-<tr>
-<td>P/W</td>
-<td>R</td>
-<td>5</td>
-<td>1.66</td>
-<td>3</td>
-<td>1</td>
+<td>0</td>
 <td>6</td>
-<td>4.5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Deadline</td>
+<td>1</td>
 <td>3</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
-<p>Let's see what object we can put</p>
+<p>Solution</p>
+<p>Step 1</p>
 <table>
 <thead>
 <tr>
-<th>Remaining weight</th>
-<th>15</th>
-<th>14</th>
-<th>12</th>
-<th>8</th>
+<th>Job</th>
+<th>7</th>
 <th>3</th>
+<th>4</th>
+<th>6</th>
 <th>2</th>
+<th>1</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profit</td>
+<td>30</td>
+<td>20</td>
+<td>18</td>
+<td>6</td>
+<td>5</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Deadline</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Step 2</p>
+<table>
+<thead>
+<tr>
 <th>0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Weight added</td>
-<td>1</td>
-<td>2</td>
-<td>4</td>
-<td>5</td>
-<td>1</td>
-<td>2</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>Selected elements</p>
-<table>
-<thead>
-<tr>
-<th>x1</th>
-<th>x2</th>
-<th>x3</th>
-<th>x4</th>
-<th>x5</th>
-<th>x6</th>
-<th>x7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>2/3</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>SUM(xiwi) = 1 x 2 + 2/3 x 3 + 1 x 5 + 1 x 1 + 1 x 4 + 1 x 1  = 15</p>
-<p>SUM(xipi) = 1 x 10 + 2/3 x 5 + 1 x 6 + 1 x 18 + 1 x 3 = 55.3</p>
-<p>Q. Let's see the same problem but with steps again</p>
-<pre><code>n = 7
-m = 5
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Object</th>
-<th>O</th>
 <th>1</th>
 <th>2</th>
 <th>3</th>
 <th>4</th>
-<th>5</th>
-<th>6</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>as deadline values are from 0 to 4</p>
+<p>Step 3</p>
+<table>
+<thead>
+<tr>
+<th>JOB</th>
 <th>7</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Profit</td>
-<td>P</td>
-<td>10</td>
-<td>5</td>
-<td>15</td>
-<td>7</td>
-<td>6</td>
-<td>18</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>W</td>
-<td>2</td>
-<td>3</td>
-<td>5</td>
-<td>7</td>
-<td>1</td>
-<td>4</td>
-<td>1</td>
-</tr>
-<tr>
-<td>P/W</td>
-<td>R</td>
-<td>5</td>
-<td>1.66</td>
-<td>3</td>
-<td>1</td>
-<td>6</td>
-<td>4.5</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-<p>Selection with max profit</p>
-<table>
-<thead>
-<tr>
-<th>Obj</th>
-<th>profit</th>
-<th>weight</th>
-<th>remaining weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>15</td>
-</tr>
-<tr>
-<td>6</td>
-<td>18</td>
-<td>4</td>
-<td>15 - 4 = 11</td>
-</tr>
-<tr>
-<td>3</td>
-<td>15</td>
-<td>5</td>
-<td>11 - 5 = 6</td>
-</tr>
-<tr>
-<td>1</td>
-<td>10</td>
-<td>2</td>
-<td>6 - 2 = 4</td>
-</tr>
-<tr>
-<td>Assumed</td>
-<td>4 * 1 = 4</td>
-<td>4</td>
-<td>4 - 4 = 0</td>
-</tr>
-</tbody>
-</table>
-<p>max profit = 47</p>
-<p>Selection with min weight</p>
-<table>
-<thead>
-<tr>
-<th>Obj</th>
-<th>profit</th>
-<th>weight</th>
-<th>remaining weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>15</td>
-</tr>
-<tr>
-<td>5</td>
-<td>6</td>
-<td>1</td>
-<td>15 - 1 = 14</td>
-</tr>
-<tr>
-<td>7</td>
-<td>3</td>
-<td>1</td>
-<td>14 - 1 = 13</td>
-</tr>
-<tr>
-<td>1</td>
-<td>10</td>
-<td>2</td>
-<td>13 - 2 = 11</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-<td>3</td>
-<td>11 - 3 = 8</td>
-</tr>
-<tr>
-<td>6</td>
-<td>18</td>
-<td>4</td>
-<td>8 - 4 = 4</td>
-</tr>
-<tr>
+<td>30</td>
 <td></td>
-<td>4 * 3 = 12</td>
-<td>4</td>
-<td>4 - 4 = 0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Deadline</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>max profit = 54</p>
-<p>Select  object with maximum pi/wi</p>
+<p>Step 4</p>
 <table>
 <thead>
 <tr>
-<th>Obj</th>
-<th>profit</th>
-<th>weight</th>
-<th>remaining weight</th>
+<th>JOB</th>
+<th>7</th>
+<th>3</th>
+<th>4</th>
+<th>6</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>15</td>
-</tr>
-<tr>
-<td>5</td>
-<td>6</td>
-<td>1</td>
-<td>15 - 1 = 14</td>
-</tr>
-<tr>
-<td>1</td>
-<td>10</td>
-<td>2</td>
-<td>14 - 2 = 12</td>
-</tr>
-<tr>
-<td>6</td>
+<td>Profit</td>
+<td>30</td>
+<td>20</td>
 <td>18</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Deadline</td>
+<td>2</td>
 <td>4</td>
-<td>12 - 4 = 8</td>
-</tr>
-<tr>
-<td>3</td>
-<td>15</td>
-<td>5</td>
-<td>8 - 5 = 3</td>
-</tr>
-<tr>
-<td>7</td>
 <td>3</td>
 <td>1</td>
-<td>3 - 1 = 2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2 * 1.66</td>
-<td>2</td>
-<td>2 - 2 = 0</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>max profit = 55.34</p>
-<p>Because of max pi/wi we will get maximum value</p>
+<p>Step 5</p>
+<table>
+<thead>
+<tr>
+<th>Job</th>
+<th>6</th>
+<th>7</th>
+<th>4</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profit</td>
+<td>6</td>
+<td>30</td>
+<td>18</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Deadline</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Max profit is 74</p>
 
 </body>
 </html>
