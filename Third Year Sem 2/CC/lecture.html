@@ -365,41 +365,58 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-4-as-lecture-3-was-based-on-practical">Lecture 4 (As lecture 3 was based on practical)</h1>
+<h1 id="lecture-5">Lecture 5</h1>
 <h2 id="unit-2-aws">Unit 2 <strong>AWS</strong></h2>
-<p>Cloud has</p>
+<h2 id="nat">NAT</h2>
+<pre><code>    1. IPs are not exposed to outside world
+    2. NAT always should be in public
+</code></pre>
+<h2 id="vpc">VPC</h2>
+<pre><code>    1. Region based service
+    2. According to need we create VPC
+</code></pre>
+<h2 id="sg">SG</h2>
+<pre><code>    1. Instance level
+    2. Stateful
+</code></pre>
+<p>Note: Inbound: Goes towards to machine, Outbound: Goes away from the machine</p>
+<h2 id="nacal">NACAL</h2>
+<pre><code>    1. Subnet level rules
+    2. Stateless
+</code></pre>
+<h2 id="vpc-paring">VPC paring</h2>
+<pre><code>    1. Comunicates between VPCs
+</code></pre>
+<p>Note: AWS has 5 address reserved</p>
+<h2 id="case-study">Case Study</h2>
+<h3 id="cloud-architecture">Cloud architecture</h3>
+<p><img src="./Images/architecture.jpg" alt="Img 1"></p>
 <ol>
 <li>
-<p>Services</p>
-<pre><code> It can be 
-     i. Software as service
-     ii. Platform as service
-     iii. Infrastructure as service
-</code></pre>
+<p>Make a VPC</p>
 </li>
 <li>
-<p>Deploy models</p>
-<pre><code> a. They can be 
-     i. Public
-     ii. Private
-     iii. Hybrid (Public + Private)
-     iv. Community
-</code></pre>
+<p>Create subnets</p>
 </li>
 <li>
-<p>5-Essential characteristics</p>
-<pre><code> a. On demand useage
- b. Ubiquitoues access
- c. Multitenancy (and resource pooling)
- d. Elasticity
- e. Measured usage
- f. Resiliency (Robust to its own failure)
-</code></pre>
+<p>Create route tables. Link route to subnets</p>
+</li>
+<li>
+<p>Create security groups</p>
+</li>
+<li>
+<p>Create instances</p>
+</li>
+<li>
+<p>Create a common SG to be assigned to both</p>
+</li>
+<li>
+<p>Create load balancer and Target Group</p>
+</li>
+<li>
+<p>Add rules HTTP to SG</p>
 </li>
 </ol>
-<h2 id="on-premise--cloud">On-Premise &amp; Cloud</h2>
-<p>On-Premises means we own the server</p>
-<p>Cloud means someone else owns the server</p>
 
 </body>
 </html>

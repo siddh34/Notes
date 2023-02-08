@@ -1,35 +1,53 @@
-# Lecture 4 (As lecture 3 was based on practical)
+# Lecture 5
 
 ## Unit 2 **AWS**
 
-Cloud has
+## NAT
 
-1. Services
+        1. IPs are not exposed to outside world
+        2. NAT always should be in public
 
-        It can be 
-            i. Software as service
-            ii. Platform as service
-            iii. Infrastructure as service
+## VPC
 
-2. Deploy models
+        1. Region based service
+        2. According to need we create VPC
 
-        a. They can be 
-            i. Public
-            ii. Private
-            iii. Hybrid (Public + Private)
-            iv. Community
+## SG
 
-3. 5-Essential characteristics
+        1. Instance level
+        2. Stateful
 
-        a. On demand useage
-        b. Ubiquitoues access
-        c. Multitenancy (and resource pooling)
-        d. Elasticity
-        e. Measured usage
-        f. Resiliency (Robust to its own failure)
+Note: Inbound: Goes towards to machine, Outbound: Goes away from the machine
 
-## On-Premise & Cloud
+## NACAL
 
-On-Premises means we own the server
+        1. Subnet level rules
+        2. Stateless
 
-Cloud means someone else owns the server
+## VPC paring
+
+        1. Comunicates between VPCs
+
+Note: AWS has 5 address reserved
+
+## Case Study
+
+### Cloud architecture
+
+![Img 1](./Images/architecture.jpg)
+
+1. Make a VPC
+
+2. Create subnets
+
+3. Create route tables. Link route to subnets
+
+4. Create security groups
+
+5. Create instances
+
+6. Create a common SG to be assigned to both
+
+7. Create load balancer and Target Group
+
+8. Add rules HTTP to SG
