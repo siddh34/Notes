@@ -365,58 +365,31 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-5">Lecture 5</h1>
+<h1 id="lecture-6">Lecture 6</h1>
 <h2 id="unit-2-aws">Unit 2 <strong>AWS</strong></h2>
-<h2 id="nat">NAT</h2>
-<pre><code>    1. IPs are not exposed to outside world
-    2. NAT always should be in public
+<h2 id="s3">S3</h2>
+<pre><code>    1. Storage
+    2. It uses cloudfront (Edge location) &amp; cloudformation (But we will be using Teraform)
 </code></pre>
-<h2 id="vpc">VPC</h2>
-<pre><code>    1. Region based service
-    2. According to need we create VPC
+<h2 id="important-cloud-service">Important cloud service</h2>
+<ul>
+<li>
+<p>Compute (EC2 and lambda)</p>
+</li>
+<li>
+<p>Storage (EFS, EBS, S3)</p>
+</li>
+<li>
+<p>N/W (VPC, SH)</p>
+</li>
+<li>
+<p>Database</p>
+</li>
+</ul>
+<h2 id="lambda-service">Lambda service</h2>
+<pre><code>    a. It is serverless service
+    b. Server's cost is saved 
 </code></pre>
-<h2 id="sg">SG</h2>
-<pre><code>    1. Instance level
-    2. Stateful
-</code></pre>
-<p>Note: Inbound: Goes towards to machine, Outbound: Goes away from the machine</p>
-<h2 id="nacal">NACAL</h2>
-<pre><code>    1. Subnet level rules
-    2. Stateless
-</code></pre>
-<h2 id="vpc-paring">VPC paring</h2>
-<pre><code>    1. Comunicates between VPCs
-</code></pre>
-<p>Note: AWS has 5 address reserved</p>
-<h2 id="case-study">Case Study</h2>
-<h3 id="cloud-architecture">Cloud architecture</h3>
-<p><img src="./Images/architecture.jpg" alt="Img 1"></p>
-<ol>
-<li>
-<p>Make a VPC</p>
-</li>
-<li>
-<p>Create subnets</p>
-</li>
-<li>
-<p>Create route tables. Link route to subnets</p>
-</li>
-<li>
-<p>Create security groups</p>
-</li>
-<li>
-<p>Create instances</p>
-</li>
-<li>
-<p>Create a common SG to be assigned to both</p>
-</li>
-<li>
-<p>Create load balancer and Target Group</p>
-</li>
-<li>
-<p>Add rules HTTP to SG</p>
-</li>
-</ol>
 
 </body>
 </html>

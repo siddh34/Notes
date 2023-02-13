@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<chrono>
 using namespace std;
 
 // Author: Siddharth Sutar
@@ -79,6 +80,7 @@ void quickSort(int arr[],int low,int high){
         // partitionIndex = partition(arr,low,high);  // sorts by taking pivot as first element
         partitionIndex = Highpartition(arr,low,high); // sorts by taking pivot as last element
         quickSort(arr,low,partitionIndex-1);
+
         quickSort(arr,partitionIndex+1,high);
     }
 }
@@ -87,7 +89,8 @@ void quickSort(int arr[],int low,int high){
 
 void merge(int arr[],int low,int mid, int high){
     int i, j, k;
-    int* Brr = (int *)malloc((high - low + 10)*sizeof(int)); 
+    int* Brr = (int *)malloc((high - low + 10000)*sizeof(int)); 
+    // vector<int> Brr;
     i = low;
     j = mid + 1;
     k = low;
@@ -121,6 +124,8 @@ void merge(int arr[],int low,int mid, int high){
     for(int i = low; i <= high; i++){
         arr[i] = Brr[i];
     }
+
+    // Brr.clear();
 }
 
 void mergeSort(int arr[],int low,int high){

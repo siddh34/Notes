@@ -1,53 +1,23 @@
-# Lecture 5
+# Lecture 6
 
 ## Unit 2 **AWS**
 
-## NAT
+## S3
 
-        1. IPs are not exposed to outside world
-        2. NAT always should be in public
+        1. Storage
+        2. It uses cloudfront (Edge location) & cloudformation (But we will be using Teraform)
 
-## VPC
+## Important cloud service
 
-        1. Region based service
-        2. According to need we create VPC
+* Compute (EC2 and lambda)
 
-## SG
+* Storage (EFS, EBS, S3)
 
-        1. Instance level
-        2. Stateful
+* N/W (VPC, SH)
 
-Note: Inbound: Goes towards to machine, Outbound: Goes away from the machine
+* Database
 
-## NACAL
+## Lambda service
 
-        1. Subnet level rules
-        2. Stateless
-
-## VPC paring
-
-        1. Comunicates between VPCs
-
-Note: AWS has 5 address reserved
-
-## Case Study
-
-### Cloud architecture
-
-![Img 1](./Images/architecture.jpg)
-
-1. Make a VPC
-
-2. Create subnets
-
-3. Create route tables. Link route to subnets
-
-4. Create security groups
-
-5. Create instances
-
-6. Create a common SG to be assigned to both
-
-7. Create load balancer and Target Group
-
-8. Add rules HTTP to SG
+        a. It is serverless service
+        b. Server's cost is saved 

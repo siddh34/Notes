@@ -3,6 +3,7 @@
 <head>
 <title>lecture.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
 <style>
 /* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
 /*---------------------------------------------------------------------------------------------
@@ -364,13 +365,33 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-9">Lecture 9</h1>
-<h2 id="observer">Observer</h2>
-<pre><code>    a. Observer is a behavioral design pattern. It specifies communication between objects: observables and observers. An observable is an object which notifies observers about the changes in its state
-    b. We can implement the code using two classes in java. One is Observer/Observable, Other is PCL (PropertyChangeListener)
-    c.Observer Pattern *looks* like this
+<h1 id="lecture-10">Lecture 10</h1>
+<h2 id="visitor-design-pattern">Visitor Design Pattern</h2>
+<pre><code>a. Represent an operation to be performed on the elements of object
+b. Visitor let's you define a new operation without changing the class elements on which it operates
+c. We use a visitor which changes the executing algorithm of an element object
 </code></pre>
-<p><img src="./Images/observation.jpg" alt="Img 20"></p>
+<p><img src="./Images/visitor.jpg" alt="Img 21"></p>
+<p><img src="./Images/compVis.jpg" alt="Img 22"></p>
+<h2 id="state-design-pattern">State Design Pattern</h2>
+<pre><code>a. It is behavioural design pattern that lets an object alter its behaviour when its internal state changes. It appears as if the object changed its class
+b. Here class Behaviour changes based on its state. This type of design pattern comes under behviour pattern
+c. State pattern is know as object pattern
+</code></pre>
+<h2 id="iterator-design-pattern">Iterator design pattern</h2>
+<pre><code>a. It is used ti access the elements of an aggregate object sequentially wwithout exposing its underlying implimentation
+b. In OOP this pattern is used to traverse a container and access the containers elements
+c. Used when there are multiple traversal of objects
+</code></pre>
+<p><img src="./Images/iterator.jpg" alt="Img 22"></p>
+<h2 id="memento-design-pattern">Memento Design Pattern</h2>
+<pre><code>a. It is used to restore the state of object to previous state. Memento pattern falls under behavioural pattern
+b. It uses three actors
+    a. State of an object that has to be restored
+    b. Originator creates and stores in memento objects and caretaker restores object state
+c. It is used in undo/redo operations
+</code></pre>
+<p><img src="./Images/memento4.jpg" alt="Img 23"></p>
 
 </body>
 </html>

@@ -1,42 +1,68 @@
-# Lecture 5
+# Lecture 6
 
-## Cost
+## National Income
 
-While speaking about **Cost** can have two meanings:
+* GDP & GDP with cost factor
 
-* Money
-* Resource/Requirement
+* GNP & GNP with cost factor
 
-Cost is affected by
+* NNP (Net National Product)
 
-* Factors of production
-* Benefits of the product
+What affects National Income
 
-Types
+* Consumption
 
-1. Explicit
+* Investment
 
-        a. They are actually recorded 
+* Gross Expenditure
 
-2. Implicit
+* Ex-Impact
 
-        a. Not recorded
-        b. Intangible
+* Indirect Taxes
 
-3. Opportunity/Alternative Cost
+* Subsideries
 
-        a. Forgone cost in which we do not invest but were willing to invest that amount is called as Opportunity/Alternative Cost
-        b. It is second best investment option
+* Deprication of goods
 
-4. Accounting Cost
+### GDP (Gross Domestic Product)
 
-        a. Refers only to money.
-        b. Anything that is brought by giving the money and have a record is called as accounting cost
-        c. All  Explicit cost are accounting cost
-        d. Example interest on loans
+    a. Domestic means location dependent and whatever income/assets are in the region are counted in GDP
+    b. GDP = C + I + G + (X-M) + Income by foreign national - Income by national aboard
 
-5. Depreciation Cost
+### GNP (Gross National Product)
 
-        a. Asset cost goes on decreasing that cost is depreciation cost
-        b. Example depreciation cost in electronics is 33% per year
-        c. It depends on the depreciation rate set by govt and the current financial year
+    a. National means the nations assets regardless of location
+    b. GNP = C + I + G + (X-M) - Income by foreign national + Income by national aboard
+
+### Cost Factor
+
+    a. MRP
+        i. if tax are added prices of things goes up
+        ii. if subsidiaries are given then prices goes down
+    b. GDP cost factor = GDP - Indirect Taxes + subsidiary
+    c. Same can be applied for GNP
+
+### NNP
+
+    a. NNP = GNP - Depreciation
+    b. NDP = GDP - Depreciation
+    c. NDP with cost = GDP Cost Factor - Depreciation
+    d. NNP with cost = GNP Cost Factor - Depreciation
+
+### Percapita Income
+
+    a. PCI = GDP / Population
+
+## Inflation & Financial Ratios
+
+A. Inflation
+
+    a. Lets see the concepts of 
+        i. Time value of money e.g compound interest
+        ii. Annuity e.g transport vehicles has to pay taxes annually.
+    b. Increase in prices to lead the same life style is inflation
+    c. Inflation of 8% is good for nationa may lead to overall growth of nation's economy
+
+B. Deflation
+
+    a. Decrease in prices to lead to same life
