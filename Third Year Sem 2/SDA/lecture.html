@@ -365,33 +365,59 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-10">Lecture 10</h1>
-<h2 id="visitor-design-pattern">Visitor Design Pattern</h2>
-<pre><code>a. Represent an operation to be performed on the elements of object
-b. Visitor let's you define a new operation without changing the class elements on which it operates
-c. We use a visitor which changes the executing algorithm of an element object
+<h1 id="lecture-14-lecture-13-not-attended">Lecture 14 (Lecture 13 not attended)</h1>
+<h2 id="distributed-system-architecture">Distributed system architecture</h2>
+<ul>
+<li>Components are present on different platforms &amp; several components can co-operate with one another over a communication network in order to achieve a specific objective objective or goal</li>
+</ul>
+<h3 id="parallel--distributed-system">Parallel &amp; Distributed system</h3>
+<table>
+<thead>
+<tr>
+<th>Parallel</th>
+<th>Distributed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shared memory</td>
+<td>Separate memory</td>
+</tr>
+<tr>
+<td>Communication via shared memory</td>
+<td>Communication via messages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clint-server-architecture">Clint server architecture</h2>
+<p>Client: The one who requests</p>
+<p>Server: It receives the request &amp; replies the client</p>
+<p>Middlewares are in between client</p>
+<p>There are different types of client models</p>
+<p>Thick/fat client models</p>
+<pre><code>Server is the incharge of data
 </code></pre>
-<p><img src="./Images/visitor.jpg" alt="Img 21"></p>
-<p><img src="./Images/compVis.jpg" alt="Img 22"></p>
-<h2 id="state-design-pattern">State Design Pattern</h2>
-<pre><code>a. It is behavioural design pattern that lets an object alter its behaviour when its internal state changes. It appears as if the object changed its class
-b. Here class Behaviour changes based on its state. This type of design pattern comes under behviour pattern
-c. State pattern is know as object pattern
+<p>Thin client models</p>
+<pre><code>Applications processing &amp; data management is carried out by server
 </code></pre>
-<h2 id="iterator-design-pattern">Iterator design pattern</h2>
-<pre><code>a. It is used ti access the elements of an aggregate object sequentially wwithout exposing its underlying implimentation
-b. In OOP this pattern is used to traverse a container and access the containers elements
-c. Used when there are multiple traversal of objects
-</code></pre>
-<p><img src="./Images/iterator.jpg" alt="Img 22"></p>
-<h2 id="memento-design-pattern">Memento Design Pattern</h2>
-<pre><code>a. It is used to restore the state of object to previous state. Memento pattern falls under behavioural pattern
-b. It uses three actors
-    a. State of an object that has to be restored
-    b. Originator creates and stores in memento objects and caretaker restores object state
-c. It is used in undo/redo operations
-</code></pre>
-<p><img src="./Images/memento4.jpg" alt="Img 23"></p>
+<h2 id="dbms-architecture">DBMS Architecture</h2>
+<p>1st-tier</p>
+<ul>
+<li>The simple architecture is client server &amp; database</li>
+</ul>
+<p>2nd-tier</p>
+<ul>
+<li>Based on client server architecture application directly interact with database</li>
+</ul>
+<p>3rd-tier</p>
+<ul>
+<li>
+<p>Contains presentation layer, application layer &amp; database</p>
+</li>
+<li>
+<p>It is more scalable</p>
+</li>
+</ul>
 
 </body>
 </html>

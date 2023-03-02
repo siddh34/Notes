@@ -1,6 +1,4 @@
-# Lecture 5
-
-## Unit 2 *Agile Processes*
+# Unit 2 *Agile Processes*
 
 ## SCRUM
 

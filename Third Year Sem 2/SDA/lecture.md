@@ -1,33 +1,46 @@
-# Lecture 10
+# Lecture 14 (Lecture 13 not attended)
 
-## Visitor Design Pattern
+## Distributed system architecture
 
-    a. Represent an operation to be performed on the elements of object
-    b. Visitor let's you define a new operation without changing the class elements on which it operates
-    c. We use a visitor which changes the executing algorithm of an element object
+* Components are present on different platforms & several components can co-operate with one another over a communication network in order to achieve a specific objective objective or goal
 
-![Img 21](./Images/visitor.jpg)
+### Parallel & Distributed system
 
-![Img 22](./Images/compVis.jpg)
+| Parallel | Distributed |
+| - | - |
+| Shared memory | Separate memory |
+| Communication via shared memory | Communication via messages |
 
-## State Design Pattern
+## Clint server architecture
 
-    a. It is behavioural design pattern that lets an object alter its behaviour when its internal state changes. It appears as if the object changed its class
-    b. Here class Behaviour changes based on its state. This type of design pattern comes under behviour pattern
-    c. State pattern is know as object pattern
+Client: The one who requests
 
-## Iterator design pattern
+Server: It receives the request & replies the client
 
-    a. It is used ti access the elements of an aggregate object sequentially wwithout exposing its underlying implimentation
-    b. In OOP this pattern is used to traverse a container and access the containers elements
-    c. Used when there are multiple traversal of objects
-![Img 22](./Images/iterator.jpg)
+Middlewares are in between client
 
-## Memento Design Pattern
+There are different types of client models
 
-    a. It is used to restore the state of object to previous state. Memento pattern falls under behavioural pattern
-    b. It uses three actors
-        a. State of an object that has to be restored
-        b. Originator creates and stores in memento objects and caretaker restores object state
-    c. It is used in undo/redo operations
-![Img 23](./Images/memento4.jpg)
+Thick/fat client models
+
+    Server is the incharge of data
+
+Thin client models
+
+    Applications processing & data management is carried out by server
+
+## DBMS Architecture
+
+1st-tier
+
+* The simple architecture is client server & database
+
+2nd-tier
+
+* Based on client server architecture application directly interact with database
+
+3rd-tier
+
+* Contains presentation layer, application layer & database
+
+* It is more scalable

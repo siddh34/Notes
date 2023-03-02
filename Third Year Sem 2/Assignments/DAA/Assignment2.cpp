@@ -45,22 +45,38 @@ class KnapSnackDP{
 
         vector<int> selected(n);
         int temp = K[n][W];
-        for(int i = n; i >= 0; i--){
-            if(temp <= 0){
-                break;
-            }
 
-            if(isPresent(K,i,W,temp)){
-                continue;
+        // Previous algorithm
+        // for(int i = n; i >= 0; i--){
+        //     if(temp <= 0){
+        //         break;
+        //     }
+
+        //     if(isPresent(K,i,W,temp)){
+        //         continue;
+        //     }
+        //     else{
+        //         if(val[i] > temp){
+        //             continue;
+        //         }
+        //         else{
+        //             temp = temp - val[i];
+        //             selected[i] = 1;
+        //         }
+        //     }
+        // }
+
+        i = n;
+        int j = W;
+        while(i > 0 || j > 0){
+            if(K[i][j] == K[i - 1][j]){
+                selected[i - 1] = 0;
+                i--;
             }
             else{
-                if(val[i] > temp){
-                    continue;
-                }
-                else{
-                    temp = temp - val[i];
-                    selected[i] = 1;
-                }
+                selected[i - 1] = 1;
+                i--;
+                j = j - wt[i];
             }
         }
 
@@ -84,6 +100,16 @@ class KnapSnackDP{
             }
         }
         return false;        
+    }
+
+    int findSum(vector<int> weights, int n){
+    // Sum all array elements
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+            sum += weights[i];
+
+        // Result is sum * 2^(n-1)
+        return sum * (1 << (n - 1));
     }
 };
 
