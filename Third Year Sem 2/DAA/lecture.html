@@ -366,11 +366,7 @@ code {
     });
   </script>
 <h1 id="daa-lecture-notes">DAA Lecture Notes</h1>
-<h2 id="lecture-11">Lecture 11</h2>
-<h2 id="traveling-salesman-problem">Traveling Salesman Problem</h2>
-<pre><code>Given a set of cities and distances between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.
-</code></pre>
-<h3 id="solve-tsp-using-branch--bound">Solve TSP using Branch &amp; Bound</h3>
+<h2 id="lecture-12">Lecture 12</h2>
 <p>M = {</p>
 <pre><code>[INF,20,30,10,11],
 [15,INF,16,4,2],
@@ -449,8 +445,8 @@ code {
 <p>consider path 1-4-2 as infinity</p>
 <p>M = {</p>
 <pre><code>[INF,INF,INF,INF,INF],
-[INF,INF,11 ,2  ,  0],
-[0  ,INF,INF,0  ,  2],
+[INF,INF,11 ,INF,  0],
+[0  ,INF,INF,INF,  2],
 [INF,INF,INF,INF,INF],
 [11 ,INF, 0 ,INF,INF]
 </code></pre>
@@ -459,55 +455,55 @@ code {
 <p>consider path 1-4-3 as infinity</p>
 <p>M = {</p>
 <pre><code>[INF,INF,INF,INF,INF],
-[12 ,3  ,11 ,2  ,  0],
-[INF,INF,INF,0  ,  2],
-[INF,0  ,INF,INF,INF],
-[11 ,INF, 0 ,12 ,INF]
+[12 ,INF,INF,INF,  0],
+[INF,3  ,INF,INF,  2],
+[INF,INF,INF,INF,INF],
+[11 ,0  ,INF,INF,INF]
 </code></pre>
 <p>}</p>
-<p>val = 25 + 11 + 12 = 48</p>
+<p>val = 25 + 13 + 12 = 50</p>
 <p>consider path 1-4-5 as infinity</p>
 <p>M = {</p>
 <pre><code>[INF,INF,INF,INF,INF],
-[12 ,INF,11 ,2  ,INF],
-[0  , 3 ,INF,0  ,INF],
-[INF,INF,INF,INF,INF],
-[INF, 0 , 0 ,12 ,INF]
-</code></pre>
-<p>}</p>
-<p>val = 27</p>
-<p>consider path 1-4-5-2</p>
-<p>M = {</p>
-<pre><code>[INF,INF,INF,INF,INF],
 [12 ,INF,11 ,INF,INF],
-[0  ,INF,INF,INF,INF],
+[0  , 3 ,INF,INF,INF],
 [INF,INF,INF,INF,INF],
-[INF,INF,INF,INF,INF]
+[INF, 0 , 0 ,INF,INF]
 </code></pre>
 <p>}</p>
-<p>val = 22 + 25 = 47</p>
-<p>consider path 1-4-5-3</p>
-<p>M = {</p>
-<pre><code>[INF,INF,INF,INF,INF],
-[12 ,INF,INF,INF,INF],
-[INF,3  ,INF,INF,INF],
-[INF,INF,INF,INF,INF],
-[INF,INF,INF,INF,INF]
-</code></pre>
-<p>}</p>
-<p>val = 22 + 15 = 40</p>
-<p>consider path 1-4-5-3-2</p>
+<p>val = 25 + 11 + 0 = 36</p>
+<p>consider path 1-4-2-3</p>
 <p>M = {</p>
 <pre><code>[INF,INF,INF,INF,INF],
 [INF,INF,INF,INF,INF],
+[INF,INF,INF,INF,  2],
+[INF,INF,INF,INF,INF],
+[ 11,INF,INF,INF,INF]
+</code></pre>
+<p>}</p>
+<p>val = 28 + 13 + 11 = 52</p>
+<p>consider path 1-4-2-5</p>
+<p>M = {</p>
+<pre><code>[INF,INF,INF,INF,INF],
+[INF,INF,INF,INF,INF],
+[  0,INF,INF,INF,INF],
+[INF,INF,INF,INF,INF],
+[INF,INF,  0,INF,INF]
+</code></pre>
+<p>}</p>
+<p>val = 28 + 0 + 0 = 28</p>
+<p>consider path 1-4-2-5-3</p>
+<p>M = {</p>
+<pre><code>[INF,INF,INF,INF,INF],
+[INF,INF,INF,INF,INF],
 [INF,INF,INF,INF,INF],
 [INF,INF,INF,INF,INF],
 [INF,INF,INF,INF,INF]
 </code></pre>
 <p>}</p>
-<p>val = 25 + 3 = 28</p>
+<p>val = 28 + 0 + 0 = 28</p>
 <p>Final <strong>Tree</strong></p>
-<p><img src="./Images/treenew.png" alt="Img 1"></p>
+<p><img src="./Images/TREECOR.png" alt="Img 1"></p>
 
 </body>
 </html>

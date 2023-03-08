@@ -1,12 +1,6 @@
 # DAA Lecture Notes
 
-## Lecture 11
-
-## Traveling Salesman Problem
-
-    Given a set of cities and distances between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.
-
-### Solve TSP using Branch & Bound
+## Lecture 12
 
 M = {
 
@@ -113,8 +107,8 @@ consider path 1-4-2 as infinity
 M = {
 
     [INF,INF,INF,INF,INF],
-    [INF,INF,11 ,2  ,  0],
-    [0  ,INF,INF,0  ,  2],
+    [INF,INF,11 ,INF,  0],
+    [0  ,INF,INF,INF,  2],
     [INF,INF,INF,INF,INF],
     [11 ,INF, 0 ,INF,INF]
 
@@ -127,71 +121,71 @@ consider path 1-4-3 as infinity
 M = {
 
     [INF,INF,INF,INF,INF],
-    [12 ,3  ,11 ,2  ,  0],
-    [INF,INF,INF,0  ,  2],
-    [INF,0  ,INF,INF,INF],
-    [11 ,INF, 0 ,12 ,INF]
+    [12 ,INF,INF,INF,  0],
+    [INF,3  ,INF,INF,  2],
+    [INF,INF,INF,INF,INF],
+    [11 ,0  ,INF,INF,INF]
 
 }
 
-val = 25 + 11 + 12 = 48
+val = 25 + 13 + 12 = 50
 
 consider path 1-4-5 as infinity
 
 M = {
 
     [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,2  ,INF],
-    [0  , 3 ,INF,0  ,INF],
-    [INF,INF,INF,INF,INF],
-    [INF, 0 , 0 ,12 ,INF]
-
-}
-
-val = 27
-
-consider path 1-4-5-2
-
-M = {
-
-    [INF,INF,INF,INF,INF],
     [12 ,INF,11 ,INF,INF],
-    [0  ,INF,INF,INF,INF],
+    [0  , 3 ,INF,INF,INF],
     [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF]
+    [INF, 0 , 0 ,INF,INF]
 
 }
 
-val = 22 + 25 = 47
+val = 25 + 11 + 0 = 36
 
-consider path 1-4-5-3
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,INF,INF,INF],
-    [INF,3  ,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF]
-
-}
-
-val = 22 + 15 = 40
-
-consider path 1-4-5-3-2
+consider path 1-4-2-3
 
 M = {
 
     [INF,INF,INF,INF,INF],
     [INF,INF,INF,INF,INF],
+    [INF,INF,INF,INF,  2],
+    [INF,INF,INF,INF,INF],
+    [ 11,INF,INF,INF,INF]
+
+}
+
+val = 28 + 13 + 11 = 52
+
+consider path 1-4-2-5
+
+M = {
+
+    [INF,INF,INF,INF,INF],
+    [INF,INF,INF,INF,INF],
+    [  0,INF,INF,INF,INF],
+    [INF,INF,INF,INF,INF],
+    [INF,INF,  0,INF,INF]
+
+}
+
+val = 28 + 0 + 0 = 28
+
+consider path 1-4-2-5-3
+
+M = {
+
+    [INF,INF,INF,INF,INF],
+    [INF,INF,INF,INF,INF],
     [INF,INF,INF,INF,INF],
     [INF,INF,INF,INF,INF],
     [INF,INF,INF,INF,INF]
 
 }
 
-val = 25 + 3 = 28
+val = 28 + 0 + 0 = 28
 
 Final **Tree**
 
-![Img 1](./Images/treenew.png)
+![Img 1](./Images/TREECOR.png)

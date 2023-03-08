@@ -44,6 +44,20 @@ Objectives
 | Sub modules are present | Only overall model is designed |
 | Implmentation is there somewhat | Implimentation is hidden |
 
+## Architectural Design
+
+* System strucuring
+
+* Control Modelling
+
+* Modular decomposition
+
+## Subsystem & modules
+
+* Sub system: It is a system own its own doesn't depend on other sub system
+
+* Module: It is a component which provides services but it cannot provide services
+
 ## Architectural Design Process
 
 1. Understand the problem
