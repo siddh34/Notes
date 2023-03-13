@@ -1,5 +1,25 @@
 # Unit 2 *Agile Processes*
 
+## Agile on different levels
+
+A. Steering development
+
+B. Requirements Development
+
+    1. Requiremnt Analysis
+
+    2. Requiremnt Elication 
+
+For analysis of requirements UML Diagrams are used example **storyboard**, **Use Case Diagram**
+
+C. Architectures Design *implimentation*
+
+D. Testing
+
+## Some Agile practice
+
+* Team **Efforts**
+
 ## SCRUM
 
     1. Scrum is a framework for project management commonly used in software development, although it has been used in other fields including research, sales, marketing and advanced technologies
@@ -12,6 +32,10 @@ There are three roles in Scrum: Scrum Master, Product Owner, and Development Tea
 * The Product Owner ensures the Scrum team aligns with overall product goals. They understand the business needs and customer expectations, and prioritize the work for the Development Team.
 
 * The Development Team delivers the work through the sprint. They are self-organizing and cross-functional, meaning they decide how to do their work and have all the skills needed to complete it
+
+Very **Important**
+
+![Img 1](./Image/SystemContext.jpg)
 
 What is sprint?
 
@@ -33,6 +57,12 @@ The **SCRUM PRACTICES**
 * Scrum master + sprint
 
 ![Img 1](./Image/ScrumProcess.png)
+
+Note:
+
+* Sprint Backlog
+
+![Img 2](./Image/backlog.png)
 
 ## Crystal
 
@@ -91,3 +121,81 @@ ASD has a three-phase approach: speculate, collaborate and learn
         1. This is where the team reflects on their work and learns from their successes and failures. It involves reviewing, evaluating, measuring and reporting on project outcomes. 
         2. The team also learns from customer feedback and adapts their plans accordingly. 
         3. The learn phase emphasizes that continuous improvement is essential for delivering quality software.
+
+## Extreme Programming
+
+* Extreme programming (XP) is a software development methodology intended to improve software quality and responsiveness to changing customer requirements
+
+* It is a type of agile software development that advocates frequent releases in short development cycles, intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted
+
+* Some of the core values of XP are communication, simplicity, feedback, respect, and courage
+
+* XP also implements a set of engineering practices such as test-driven development, pair programming, refactoring, continuous integration, and collective ownership
+
+* XP aims to produce higher quality software and higher quality of life for the development team
+
+* XP Lifecycle
+
+    1. XP is an agile methodology that is based on the principle of iterative cycles
+
+    2. It repeats several times during a project until the final product is done
+
+    3. XP lifecycle includes
+
+        A. Planning: This is the first stage where the customer defines their requirements and priorities, and the development team estimates time and cost for each feature
+
+        B. Designing: This is the stage where the developers design simple and elegant solutions for each feature, using diagrams, models, prototypes, or code snippets
+
+        C. Coding: This is the stage where the developers write clean and testable code for each feature, following coding standards and conventions, using pair programming and refactoring techniques
+
+        D. Testing: This is the stage where the developers write automated unit tests and acceptance tests for each feature, using test-driven development approach, ensuring high code coverage and quality
+
+        E. Listening: This is the stage where the developers get feedback from the customer and stakeholders on each feature, using continuous integration and delivery tools, ensuring that they meet their expectations and needs
+
+        These stages are repeated for each iteration until all features are completed
+
+* XP Roles
+
+    1. These are the different types of stakeholders that participate in XP projects. They have different responsibilities and expectations
+
+    2. Some of the common roles are
+
+            A. The whole team: This is the self-organized, cross-functional, and co-located group of developers, testers, customers, and coaches that work together to deliver working software
+
+            B. XP coach: This is the person who guides and mentors the team on XP values, principles, and practices. They also help resolve conflicts and remove impediments
+
+            C. On-site customer: This is the person who represents the end-users’ needs and expectations. They write user stories, prioritize features, provide feedback, and accept working software
+
+            D. Programmer: This is the person who writes clean and testable code for each feature, following coding standards and conventions, using pair programming and refactoring techniques
+
+            E. Tester: This is the person who writes automated unit tests and acceptance tests for each feature, using test-driven development approach, ensuring high code coverage and quality
+
+            F. XP tracker: This is the person who monitors and measures the progress and performance of the team using metrics such as velocity, burn-down charts, defect rates etc
+
+            G. Sponsor: This is the person who provides funding and resources for the project. They also support the team’s decisions and protect them from external interference
+
+* XP Practices
+
+    1. There are 12 core practices in XP
+
+            A. Planning game: This is a practice where the customer defines their requirements as user stories with estimates provided by developers. The team then selects a subset of stories for each iteration based on their priorities
+
+            B. Small releases: This is a practice where the team delivers working software to customers frequently (every one or two weeks), with minimal features that provide value
+
+            C. Metaphor: This is a practice where the team uses a common vocabulary to describe the system architecture and design using simple analogies or examples
+
+            D. Simple design: This is a practice where the team designs simple solutions for each feature that meet current requirements without adding unnecessary complexity or functionality
+
+            E. Test-driven development (TDD): This is a practice where developers write automated tests before writing code, and then write code to pass those tests. TDD ensures high code quality and prevents defects
+
+            D. Refactoring: This is a practice where developers improve the structure of existing code without changing its behavior. Refactoring eliminates duplication, reduces complexity, and enhances readability of code
+
+            E. Pair programming: This is a practice where two developers work together on one computer, one writing code while the other reviewing it. Pair programming increases productivity, quality, and knowledge sharing among developers
+
+            F. Collective ownership: This is a practice where every developer can modify any part of the code base without asking for permission or approval. Collective ownership encourages collaboration, responsibility, and accountability among developers
+
+            G. Continuous integration: This is a practice where developers integrate their code changes into a shared repository several times a day, and run automated tests to ensure that the system works as expected. Continuous integration detects integration errors early, reduces rework, and speeds up delivery time
+
+            H. Coding standards: This is a practice where developers follow consistent rules for formatting, naming, commenting, and documenting their code. Coding standards improve readability, maintainability, and communication among developers
+
+            I. Customer feedback: This is a practice where customers provide frequent feedback on working software delivered by the team at regular intervals. Customer feedback helps validate requirements, adjust priorities, and improve quality of software products.
