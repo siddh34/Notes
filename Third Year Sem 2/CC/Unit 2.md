@@ -73,7 +73,7 @@ The cloud cube model is a framework for classifying cloud-based networks accordi
 
 * It is self-contained
 
-* It is a black box for its consumers, meaning the consumer does not have to be 
+* It is a black box for its consumers, meaning the consumer does not have to be
 aware of the service's inner workings
 
 * It may consist of other underlying services

@@ -1,6 +1,7 @@
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.Scanner;
 
 class PCLNewsAgency {
     private String news;
@@ -37,10 +38,15 @@ class PCLNewsChannel implements PropertyChangeListener {
 
 public class Assignment3 {
     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
         PCLNewsAgency observable = new PCLNewsAgency();
         PCLNewsChannel observer = new PCLNewsChannel();
         
         observable.addPropertyChangeListener(observer);
-        observable.setNews("news");
+        System.out.println("Please enter news");
+        String S = sc.nextLine();
+        observable.setNews(S);
+
+        sc.close();
     }
 }

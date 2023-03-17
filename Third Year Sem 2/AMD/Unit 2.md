@@ -43,6 +43,7 @@ What is sprint?
     2. The Scrum guide states that the sprint length should be limited to one calendar month (4 weeks), but there is no lower limit prescribed
     3. However, it is ideal to have 2-week sprints, as they allow for more frequent feedback and adaptation
     4.  A sprint should be long enough to produce a potentially releasable product increment, but short enough to limit risk
+    5. Sprint planning meet: product backlog -> Sprint backlog -> Task -> Development in Progress -> Done
 
 The **SCRUM PRACTICES**
 
