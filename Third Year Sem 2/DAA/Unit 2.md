@@ -45,6 +45,8 @@ Q. Let's see the same problem but with steps again
 Weight | W | 2 | 3 | 5 | 7 | 1 | 4 | 1
 P/W | R | 5 | 1.66 | 3 | 1 | 6 | 4.5 | 3 |
 
+Just plot the table like below to get answer quickly
+
 Selection with max profit
 
 | Obj | profit | weight | remaining weight |
@@ -85,7 +87,7 @@ Select  object with maximum pi/wi
 
 max profit = 55.34
 
-Because of max pi/wi we will get maximum value
+Because of max pi/wi we will get **maximum value**
 
 ## Job Sequencing with deadlines
 
