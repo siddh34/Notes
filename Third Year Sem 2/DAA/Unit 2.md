@@ -1,5 +1,36 @@
 # Unit 2
 
+## Greedy method
+
+1. An Optimization problem is one in which the aim is to either maximize or minimize a given objective function w. r. t. some constraints or conditions, given a set of input values
+
+2. Greedy algorithm always makes the choice (greedy criteria) that looks best at the moment, to optimize a given objective function.
+
+3. It makes a locally optimal choice
+
+4. The greedy algorithm does not always guarantee the optimal solution but it generally produces solutions that are very close in value to the optimal
+
+## Dynamic Programming
+
+1. Dynamic Programming is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and stores the results of subproblems to avoid computing the same results again
+
+2. There are two main properties of a problem
+
+    a. Overlapping Sub problems
+
+            In dynamic programming, computed solutions to subproblems are stored in a table so that these don’t have to be recomputed. So Dynamic Programming is not useful when there are no common (overlapping) subproblems because there is no point storing the solutions if they are not needed again
+
+    b. Optimal Substructure
+
+            A given problems has Optimal Substructure Property if optimal solution of the given problem can be obtained by using optimal solutions of its subproblems
+
+            a. Memoization (Top Down)
+                i. The memoized program for a problem is similar to the recursive version with a small modification that it looks into a lookup table before computing solutions
+                ii. Whenever we need the solution to a subproblem, we first look into the lookup table. If the precomputed value is there then we return that value, otherwise, we calculate the value and put the result in the lookup table so that it can be reused later
+
+            b. Tabulation (Bottom Up)
+                i. The tabulated program for a given problem builds a table in bottom up fashion and returns the last entry from table
+
 ## KnapSack problem
 
 The knapsack problem is the following problem in combinatorial optimization:
@@ -136,6 +167,10 @@ Step 5
 | Deadline | 1 | 2 | 3 | 4 |  
 
 Max profit is 74
+
+Example 2
+
+![Img](./Images/Job%20Scheduling.png)
 
 ## 0/1 KnapSack  using DP
 
@@ -544,236 +579,99 @@ VALUES --> 12, 10, 20, 15
 | 3 | 0 | 10 | 12 | 22 | 30 | 32 |
 | 4 | 0 | 10 | 15 | 25 | 30 | 37 |
 
-## Traveling Salesman Problem
+### Analysis of Knapsnack Algo
 
-    Given a set of cities and distances between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.
+1. To sort the objects in non-increasing order of pi/wi,computation time = O(nlogn)
+2. While loop will be executed ‘n’ times in worst case, so the
+computation time = O(n)
+3. Time complexity = O(nlogn)
+4. Space complexity = c + space required for x[1:n] = O(n)
 
-### Solve TSP using Branch & Bound
+## OBST ( An Optimal Binary Search Tree )
 
-M = {
+* An Optimal Binary Search Tree (OBST), also known as a Weighted Binary Search Tree, is a binary search tree that minimizes the expected search cost
 
-    [INF,20,30,10,11],
-    [15,INF,16,4,2],
-    [3,5,INF,2,4],
-    [19, 6, 18, INF, 3],
-    [18,4,7,16,INF]
+* In a binary search tree, the search cost is the number of comparisons required to search for a given key
 
-}
+* In an OBST, each node is assigned a weight that represents the probability of the key being searched for being present in the subtree rooted at that node. The tree is constructed such that the expected search cost is minimized
 
-MIN ROW values = [10,2,2,3,4]
+* The optimal binary search tree is generally divided into two types:
 
-reducing the matrix
+        1. Static 
+            a. In the static optimality problem, the tree cannot be modified after it has been constructed
+            b. In this case, there exists some particular layout of the tree that minimizes the expected search cost
+        2. Dynamic
+            a. In the dynamic optimality problem, the tree can be modified after it has been constructed
+            b. In this case, the tree is constructed incrementally, and the goal is to minimize the expected search cost at each step
 
-M = {
+IMP *Note*: Cost contribution of internal node ai is p(i) * level(ai)
 
-    [INF,10,20,0,1],
-    [13,INF,14,2,0],
-    [1,3,INF,0,2],
-    [16, 3, 15, INF, 0],
-    [13,0,3,12,INF]
+> How to construct OBST?
 
-}
+    •To apply DP approach for obtaining OBST, we need to view the
+    construction of such a tree as the result of sequence of decisions
+    and observe that the principle of optimality holds.
+    •A possible approach to this would be to decide which of the ai’s
+    (with weights pi’s) should be selected as the root node of the tree.
+    •If we choose ak as the root node from a1, a2, …, an (sorted in non decreasing order) , then it is clear that the internal nodes a1, a2, …,
+    ak-1 and external nodes for classes E0, E1, E2, …, Ek-1 will be in
+    the left sub tree l and the internal nodes ak+1, ak+2, …, an and
+    external nodes for classes Ek+1, Ek+2, …, En will be in the right
+    sub tree r. Let root ak be at level 1
 
-MIN Colum values = [1,0,3,0,0]
+Note:
 
-M = {
+    Probability of unsuccessful searches = Σ q[i]
 
-    [INF,10 ,17 ,0  ,  1],
-    [12 ,INF,11 ,2  ,  0],
-    [0  , 3 ,INF,0  ,  2],
-    [15 , 3 ,12 ,INF,  0],
-    [11 , 0 , 0 ,12 ,INF]
+    Probability of successful searches = Σ p[i]
 
-}
+    Σ p[i] + Σ q[i] = 1
 
-consider path 1-2 make 1st row & 2nd column INF
+## Huffman Coding
 
-    that is m[2][1] = INF
+    Suppose certain string cost 180 bits to send but with the help of huffman coding we can encode it to less than 180 bits
 
-M = {
+    Consider the following text:
+    ABBCDBCCDAABBEEEBEAB – 20 characters
+    Now we know that the characters (A B C D E) are repeated in the message. 
+    
+    If there are 4 characters we can represent them with fixed 2 bits as 2 2 = 4 codes.
+    But we have 5 different characters , thus we will require 3 bit code to represent 
+    them as 2 3 = 8.
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,11 ,2  ,  0],
-    [0  ,INF,INF,0  ,  2],
-    [15 ,INF,12 ,INF,  0],
-    [11 ,INF, 0 ,12 ,INF]
+    Thus we can have code as below:
+    A - 000 B – 001 C – 010 D – 011 E – 100 
+    So now how many bits will be required 20 * 3 = 60 bits
 
-}
+    But now along with this 60 bits of encoding the sender will also have to send 
+    characters and their codes for receiver to decode the message.
 
-val = 25 + 0 + 10 = 35
+    Therefore 8 bits ASCII code for 5 characters = 40
+    + Total No. of bits required for encoding ( 5 * 3) =15 
 
-consider path 1-3 make 1st row & 2nd column INF
+    Total = 40 + 15 = 55 bits
+    
+    Hence the total number of bits that will be sent is 60 + 55 = 115 bits
 
-    that is m[3][1] = INF
+## Multistage graphs
 
-M = {
+* Its like dijikstra's algorithm
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,INF,2  ,  0],
-    [INF, 3 ,INF,0  ,  2],
-    [15 , 3 ,INF,INF,  0],
-    [11 , 0 ,INF,12 ,INF]
+* Finding a minimum cost path from suppose ‘s’ to ‘t’
 
-}
+ Solution by DP
 
-val = 25 + 11 + 17 = 53
+    Forward Approach :
+    •cost (i, j) = min{c(j, l) + cost(i+1, l)}
+    l Є Vi+1 and < j, l > Є E
 
-consider path 1-4 make 1st row & 2nd column INF
+    Backward Approach :
+    •bcost (i, j) = min{c(l, j) + bcost(i-1, l)}
+    l Є Vi-1 and < l, j > Є E
 
-    that is m[4][1] = INF
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,INF,  0],
-    [0  , 3 ,INF,INF,  2],
-    [INF, 3 ,12 ,INF,  0],
-    [11 , 0 , 0 ,INF,INF]
-
-}
-
-val = 25
-
-consider path 1-5 make 1st row & 2nd column INF
-
-    that is m[5][1] = INF
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,2  ,INF],
-    [0  , 3 ,INF,0  ,INF],
-    [15 , 3 ,12 ,INF,INF],
-    [INF, 0 , 0 ,12 ,INF]
-
-}
-
-val = 25 + 2 + 3 + 1 = 31
-
-consider path 1-4-2 as infinity
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [INF,INF,11 ,INF,  0],
-    [0  ,INF,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [11 ,INF, 0 ,INF,INF]
-
-}
-
-val = 25 + 0 + 3 = 28
-
-consider path 1-4-3 as infinity
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,INF,INF,  0],
-    [INF,3  ,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [11 ,0  ,INF,INF,INF]
-
-}
-
-val = 25 + 13 + 12 = 50
-
-consider path 1-4-5 as infinity
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,INF,INF],
-    [0  , 3 ,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF, 0 , 0 ,INF,INF]
-
-}
-
-val = 25 + 11 + 0 = 36
-
-consider path 1-4-2-3
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [ 11,INF,INF,INF,INF]
-
-}
-
-val = 28 + 13 + 11 = 52
-
-consider path 1-4-2-5
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [  0,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,  0,INF,INF]
-
-}
-
-val = 28 + 0 + 0 = 28
-
-consider path 1-4-2-5-3
-
-M = {
-
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF]
-
-}
-
-val = 28 + 0 + 0 = 28
-
-Final **Tree**
-
-![Img 1](./Images/TREECOR.png)
-
-Q2. Solve
-
-M = {
-
-    [INF,11 ,10 ,9  ,  6],
-    [8  ,INF,7  ,3  ,  4],
-    [8  ,4  ,INF,4  ,  8],
-    [11 ,10 ,5  ,INF,  6],
-    [6  ,9  ,5  ,5  ,INF],
-
-}
-
-min row val = [6,3,4,5,5]
-
-row reduction
-
-M = {
-
-    [INF,5  ,4  ,3  ,  0],
-    [5  ,INF,4  ,0  ,  1],
-    [4  ,0  ,INF,0  ,  4],
-    [6  ,5  ,0  ,INF,  1],
-    [1  ,4  ,0  ,0  ,INF],
-
-}
-
-min col values = [1,0,0,0,0]
-
-col reduction
-
-M = {
-
-    [INF,5  ,4  ,3  ,  0],
-    [4  ,INF,4  ,0  ,  1],
-    [3  ,0  ,INF,0  ,  4],
-    [5  ,5  ,0  ,INF,  1],
-    [0  ,4  ,0  ,0  ,INF],
-
-}
+    Example : Find shortest path from s to t for the above multi-stage graph 
+    using forward and backward approach.
+    Analysis (Fgraph and Bgraph):
+ 
+    Time Complexity = θ(|V| + |E|)
+    Space Complexity = θ(n+k) … k is number of stages.

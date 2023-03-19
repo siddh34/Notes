@@ -301,3 +301,65 @@ A merge sort consists of several passes over the input. The first pass merges se
                 f(4) = 40 + 16 + 2 = 58
                 g(4) = 16 * 4 = 64
                 so C = 16 and n >= 1 will statisfy our condition f(n^2) <= C * g(n^2)
+
+## Master's Theorem
+
+        Remember the equation T(n) = aT(n/b) + f(n)
+
+        where a >= 1 & b > 1
+
+        Solution is T(n) = n^(log a to the base b) * U(n)
+
+        U(n) depends on h(n)
+
+        where h(n) = f(n)/ (n^log a to the base b)
+
+        Relation between U(n) & h(n)
+
+        if h(n) then U(n)
+
+          n^r, r > 0 then U(n) =  O(n^r)
+
+          n^r, r < 0 then U(n) = O(1)
+
+          (log n)^i, i >= 0 then U(n) = ((log n)^(i+1))/(i+1)
+
+        Note: r is the power of h(n) function
+
+        Once U(n) is found then substitute it in T(n) formula
+
+Example
+
+        T(n) = 8 T (n/2) + n log n
+
+        a >= 1 & b > 1
+        8 >= 1 & 2 > 1
+
+        so we can use masters theorem here
+
+        T(n) = n^(log 8 to the base 2) + U(n)
+
+        T(n) = n^3 + U(n)
+
+        so h(n) = f(n)/n^(log 8 to the base 2)
+        h(n) = nlog(n) / n^3
+
+        h(n) = (n^(-2)) * log(n)
+
+        as we see -2 < 0
+        
+        U(n) = 1
+
+        therefore T(n) = n^3 * 1
+
+        T(n) = n^3
+
+## Quicksort & Mergesort difference
+
+QuickSort and Merge Sort are two popular sorting algorithms used in computer science. Here are some differences between the two:
+
+        1. QuickSort uses a pivot element to sort, while Merge Sort does not use the pivot element to sort an array.
+        2. QuickSort is an internal sorting method where the data is sorted in main memory, while Merge Sort is an external sorting method in which the data that is to be sorted cannot be accommodated in the memory and needs auxiliary memory for sorting.
+        3. Merge Sort is stable as two elements with equal value appear in the same order in the sorted output as they were in the input, while QuickSort is unstable.
+        4. QuickSort is mostly preferred for large unsorted arrays, while Merge Sort is mostly applicable for linked lists.
+        5. QuickSort is more efficient and works faster in smaller size arrays, as compared to Merge Sort. Merge Sort is more efficient and works faster in larger data sets or arrays, as compared to Quick Sort
