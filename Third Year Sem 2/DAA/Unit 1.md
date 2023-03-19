@@ -356,7 +356,7 @@ Example
 
 ## Quicksort & Mergesort difference
 
-QuickSort and Merge Sort are two popular sorting algorithms used in computer science. Here are some differences between the two:
+QuickSort and Merge Sort are two popular sorting algorithms. Here are some differences between the two:
 
         1. QuickSort uses a pivot element to sort, while Merge Sort does not use the pivot element to sort an array.
         2. QuickSort is an internal sorting method where the data is sorted in main memory, while Merge Sort is an external sorting method in which the data that is to be sorted cannot be accommodated in the memory and needs auxiliary memory for sorting.
