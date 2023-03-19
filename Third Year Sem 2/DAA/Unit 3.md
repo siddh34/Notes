@@ -1,5 +1,34 @@
 # Unit 3
 
+## Branch and Bound
+
+    • First we need to conceive a state-space tree for 
+    the given problem
+    • Then generate nodes such that E-node remains 
+    E-node till all it’s children are generated
+    • Each answer node x has cost c(x) associated with it, and a minimum
+
+### 3 common strategies for implementing the branch and bound
+
+    a. FIFO (First In, First Out): 
+        i.In this strategy, the subproblems are stored in a queue, and the first subproblem to be added to the queue is the first one to be removed for processing. 
+        ii.This strategy is also known as breadth-first search because it explores all the subproblems at a given level of the search tree before moving on to the next level.
+
+    b. LIFO (Last In, First Out): 
+        i.In this strategy, the subproblems are stored in a stack, and the last subproblem to be added to the stack is the first one to be removed for processing. 
+        ii.This strategy is also known as depth-first search because it explores the deepest branches of the search tree first before backtracking to shallower levels
+
+    c. LC (Least Cost): 
+        i.In this strategy, the subproblems are sorted by their estimated cost, and the subproblem with the lowest estimated cost is selected for processing first.
+        ii.This strategy is also known as best-first searchbecause it explores the most promising branches of the search tree first.
+        iii.The estimated cost can be based on factors such as the distance to the goal, the remaining time, or the number of unsatisfied constraints.
+
+Note:
+
+    • FIFO is useful when the solution space is relatively flat and uniform. 
+    • LIFO is useful when the solution space is deep and narrow. 
+    • LC is useful when there is a good heuristic estimate of the optimal solution.
+
 ## Traveling Salesman Problem
 
     Given a set of cities and distances between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.
@@ -283,3 +312,21 @@ Important Notes:
 * However using NQueens function we allow placement of 8 queens on distinct rows and columns, hence we require to examine of at most 8!
 
 * So time complexity N queens problem is O(N!)
+
+## Graph Coloring problem
+
+* Assign colors to vertices in a graph such that no two adjacent vertices have the same color
+
+Note:
+
+    The minimum number of colors required to color a graph such that no two adjacent vertices have the same color is called the chromatic number of the graph.
+
+* Real life applications:
+
+        Scheduling problems
+        Register allocation in compilers
+        Frequency assignment in wireless communication networks etc
+
+* The problem is known to be NP-complete, which means that there is no known polynomial-time algorithm that can solve the problem exactly for all possible inputs
+
+* However, the actual running time of backtracking algorithms can be much better than **O(k^n)** if the algorithm can prune large portions of the search space using heuristics or other techniques

@@ -324,7 +324,7 @@ A merge sort consists of several passes over the input. The first pass merges se
 
           (log n)^i, i >= 0 then U(n) = ((log n)^(i+1))/(i+1)
 
-        Note: r is the power of h(n) function
+        Note: r is the power of h(n) function4
 
         Once U(n) is found then substitute it in T(n) formula
 
