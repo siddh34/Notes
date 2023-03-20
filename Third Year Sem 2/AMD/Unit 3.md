@@ -143,7 +143,7 @@ Some of the common steps involved in requirements elicitation are
 
 * The agile way of doing things is all about breaking down the long processes, boosting communication and gaining freedom in the project
 
-## Agile requirement  prioritization
+## Agile requirement prioritization
 
 * Agile prioritization is the act of deciding in what order the agile team will work on the requirements in a project
 

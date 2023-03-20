@@ -107,9 +107,9 @@ ASD has a three-phase approach: speculate, collaborate and learn
 
 * Speculate:
 
-    1. This is where the project is initiated and planned.
-    2. The project plan uses project features as a basis for estimation and scheduling. The team sets up a vision, mission, goals and constraints for the project.
-    3. The speculation phase acknowledges that uncertainty is inevitable and plans are subject to change.
+        1. This is where the project is initiated and planned.
+        2. The project plan uses project features as a basis for estimation and scheduling. The team sets up a vision, mission, goals and constraints for the project.
+        3. The speculation phase acknowledges that uncertainty is inevitable and plans are subject to change.
 
 * Collaborate
 
@@ -189,14 +189,14 @@ ASD has a three-phase approach: speculate, collaborate and learn
 
             E. Test-driven development (TDD): This is a practice where developers write automated tests before writing code, and then write code to pass those tests. TDD ensures high code quality and prevents defects
 
-            D. Refactoring: This is a practice where developers improve the structure of existing code without changing its behavior. Refactoring eliminates duplication, reduces complexity, and enhances readability of code
+            F. Refactoring: This is a practice where developers improve the structure of existing code without changing its behavior. Refactoring eliminates duplication, reduces complexity, and enhances readability of code
 
-            E. Pair programming: This is a practice where two developers work together on one computer, one writing code while the other reviewing it. Pair programming increases productivity, quality, and knowledge sharing among developers
+            G. Pair programming: This is a practice where two developers work together on one computer, one writing code while the other reviewing it. Pair programming increases productivity, quality, and knowledge sharing among developers
 
-            F. Collective ownership: This is a practice where every developer can modify any part of the code base without asking for permission or approval. Collective ownership encourages collaboration, responsibility, and accountability among developers
+            H. Collective ownership: This is a practice where every developer can modify any part of the code base without asking for permission or approval. Collective ownership encourages collaboration, responsibility, and accountability among developers
 
-            G. Continuous integration: This is a practice where developers integrate their code changes into a shared repository several times a day, and run automated tests to ensure that the system works as expected. Continuous integration detects integration errors early, reduces rework, and speeds up delivery time
+            I. Continuous integration: This is a practice where developers integrate their code changes into a shared repository several times a day, and run automated tests to ensure that the system works as expected. Continuous integration detects integration errors early, reduces rework, and speeds up delivery time
 
-            H. Coding standards: This is a practice where developers follow consistent rules for formatting, naming, commenting, and documenting their code. Coding standards improve readability, maintainability, and communication among developers
+            J. Coding standards: This is a practice where developers follow consistent rules for formatting, naming, commenting, and documenting their code. Coding standards improve readability, maintainability, and communication among developers
 
-            I. Customer feedback: This is a practice where customers provide frequent feedback on working software delivered by the team at regular intervals. Customer feedback helps validate requirements, adjust priorities, and improve quality of software products.
+            K. Customer feedback: This is a practice where customers provide frequent feedback on working software delivered by the team at regular intervals. Customer feedback helps validate requirements, adjust priorities, and improve quality of software products.
