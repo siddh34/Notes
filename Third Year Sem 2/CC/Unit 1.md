@@ -201,20 +201,13 @@ We can **declare variables, use positional parameters, write functions & use loo
 
 1. Positional parameters
 
-        ▪ When a shell script is invoked with a set of command line parameters each
-        of these parameters are copied into special variables that can be accessed.
-        ▪ $0 This variable that contains the name of the script
-        ▪ $1, $2, ….. $n 1
-        st, 2nd 3
-        rd command line parameter
+        ▪ When a shell script is invoked with a set of command line parameters each of these parameters are copied into special variables that can be accessed.
+        ▪ $0 This variable that contains the name of the script $1, $2, ….. $n 1 st, 2nd 3 rd command line parameter
         ▪ $# Number of command line parameters
         ▪ $$ process ID of the shell
         ▪ $@ same as $* but as a list one at a time (see for loops later )
         ▪ $? Return code ‘exit code’ of the last command
-        ▪ Shift command: This shell command shifts the positional parameters by 
-        one towards the beginning and drops $1 from the list. After a shift $2 
-        becomes $1 , and so on … It is a useful command for processing the input 
-        parameters one at a time.
+        ▪ Shift command: This shell command shifts the positional parameters by  one towards the beginning and drops $1 from the list. After a shift $2 becomes $1 , and so on … It is a useful command for processing the input parameters one at a time.
 
 2. Variables
 
