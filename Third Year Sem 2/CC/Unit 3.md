@@ -141,7 +141,47 @@ Terraform is a tool that allows you to define and manage your infrastructure as 
 
 4. Terraform also provides other commands and features that help you manage your infrastructure, such as formatting, validating, importing, outputting, testing, debugging, etc
 
+### Describe how Terraform finds and fetches providers, provisioners?
+
+1. Terraform providers are plugins that allow Terraform to interact with various APIs of cloud platforms and other services
+
+2. Terraform provisioners are a legacy feature that allow Terraform to execute scripts on local or remote machines as part of resource creation or destruction
+
+3. Terraform finds and fetches providers when initializing a working directory using the terraform init command.
+
+4. It can automatically download providers from a Terraform registry, such as the public Terraform Registry or a private registry, or load them from a local mirror or cache
+
+5. Terraform does not find or fetch provisioners automatically. You must install them manually on your system and make sure they are available on your PATH
+
+6. Provisioners are not recommended for most use cases, as they introduce complexity and uncertainty into Terraform configurations. Instead, you should use other solutions such as configuration management tools, cloud-init, or custom images
+
+Note:
+
+         If you are using a persistent working directory, you must reinitialize whenever you change a configuration’s providers
+
+### When to use local-exec or remote-exec?
+
+1. When you need to run a command that is not supported by any existing provider or module.
+2. When you need to perform a one-time task that does not affect the ongoing state of the resource.
+3. When you need to interact with an external system that is not managed by Terraform.
+
+Now let's see
+
+When to not use local-exec or remote-exec?
+
+        1. You want to ensure consistency and reliability of your infrastructure using code1.
+        2. You want to avoid configuration drift and unauthorized changes to your resources1.
+        3. You want to leverage existing tools and best practices for configuration management1
+
+Note:
+
+        1. The local-exec and remote-exec provisioners are legacy features of Terraform that allow you to execute scripts on local or remote machines as part of resource creation or destruction
+
+        2. The local-exec provisioner invokes a local executable after a resource is created. This invokes a process on the machine running Terraform, not on the resource
+
 ### Basic Workflow setup & Installation
+
+We will launching an aws instance using terraform
 
 * You can download terraform from [Terraform Website](https://www.terraform.io/)
 
