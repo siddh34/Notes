@@ -385,7 +385,7 @@ RPC example is suppose there is a program run on one computer & it calls the fun
     can in C++
     • CORBA allows the separation of definition & implementation
     • CORBA uses IDL for defining interface between clients and servers.
-    • ORB vendors provide specific IDL compiles for supported languag
+    • ORB vendors provide specific IDL compiles for supported language
 
 ## SOA ( Service Oriented Architecture )
 

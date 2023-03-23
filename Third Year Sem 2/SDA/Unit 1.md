@@ -290,8 +290,7 @@ Note:
 
     • Design is a trial-and-error process
     • The process is not the same as the outcome of that process
-    • There is an interaction between requirements engineering, 
-    architecting, and design
+    • There is an interaction between requirements engineering, architecting, and design
 
 They are categorized into 4 Design methods
 
