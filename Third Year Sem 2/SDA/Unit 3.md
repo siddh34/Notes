@@ -28,7 +28,7 @@ The *Design pattern* can be **Categorised** as follows:
         a. Concerned with communication between objects
         b. Example chain of responsibilty, Command, Interpreter, Iterator, Mediator, Memento etc
 
-The **Creational Design Pattern* Type
+The **Creational Design Pattern** Type
 
 1. Prototype Design pattern
 
@@ -218,3 +218,183 @@ The *Behavioural design pattern*
         b. Originator creates and stores in memento objects and caretaker restores object state
     c. It is used in undo/redo operations
 ![Img 23](./Images/memento4.jpg)
+
+## Case Study
+
+Note: This is case study of singleton pattern using java
+
+The singleton design pattern restricts the instantiation of a class to a single instance. This is done in order to provide coordinated access to a certain resource, throughout an entire software system. Through this design pattern, the singleton class ensures that it’s only instantiated once, and can provide easy access to the single instance.
+
+In such a case, we create the instance of the class at the time of declaring the static data member, so an instance of the class is created at the time of classloading.
+
+Common use-cases for the singleton design pattern include factories, builders, and objects that hold program state.
+
+Singletons are sometimes considered to be an alternative to global variables or static classes.
+
+Compared to global variables, singletons have the following benefits:
+
+Singleton instance fields don’t take up space in the global namespace
+Singletons may be lazily initialized (to be discussed further)
+
+basic code with lazy initialization
+
+```java
+class A {
+    // It gets memory only once because of static
+    // public static A obj; // returns null
+    public static A obj = new A(); // returns obj
+    public static A getInstance() {
+        // if object is null then return new object else it will return previous instance
+        if(obj == null){
+            System.out.println("Object doesn't exist so created a new instance");
+            return new A();
+        }
+        System.out.println("Object does exist so created return the object");
+        return obj;
+    }
+}
+```
+
+Final code
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+class ListOperations{
+
+
+    private static ListOperations LO;
+    private static List<Integer> storage = new ArrayList<Integer>(); // if object is null then return new object else it will return previous instance
+   
+    // prevents the object to be initialized by other class
+    // private ListOperations(){};
+   
+    ListOperations(){
+
+
+    }
+
+
+   
+    ListOperations(String decision){
+        if(decision.equals("Y") || decision.equals("y")){
+            LO = new ListOperations(); // returns object
+        }
+        ListOperations.getInstance();
+    }
+
+
+    public static ListOperations getInstance() {
+        if(LO == null){
+            System.out.println("Object doesn't exist so created a new instance");
+            return new ListOperations();
+        }
+        System.out.println("Object does exist so return the object");        
+        return LO;
+    }
+
+
+    public static void addToList(int num){
+        storage.add(num);
+    }
+
+
+    public static void removeFromList(int num){
+        if(storage.contains(num)){
+            storage.remove(num);
+        }
+        else{
+            System.out.println("Number does not exist");
+        }
+    }
+
+
+    public static void printList(){
+        for(int i: storage){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+
+
+    public static int size(){
+        return storage.size();
+    }
+
+
+    public static boolean isEmpty(){
+        return storage.isEmpty();
+    }
+}
+
+
+public class Assignment2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        // ListOperations L = new ListOperations();
+
+
+        boolean loop = false;
+        while (loop == false) {
+            System.out.println("Do you want the instance of object?");
+            String decision = sc.next();
+            new ListOperations(decision);
+            System.out.println("Enter you choices");
+            System.out.println("What do you wanna do?");
+            System.out.println("Press 1 to add to the list");
+            System.out.println("Press 2 to remove from the list");
+            System.out.println("Press 3 to print the list");
+            System.out.println("Press 4 to get the size of list");
+            System.out.println("Press 5 to get check whether the list is empty");
+            int ch = sc.nextInt();
+            switch(ch){
+                case 1:
+                    ListOperations.addToList(sc.nextInt());
+                    break;
+                case 2:
+                    ListOperations.removeFromList(sc.nextInt());
+                    break;
+                case 3:
+                    ListOperations.printList();
+                    break;
+                case 4:
+                    System.out.println("Size of list : "+ ListOperations.size());
+                    break;
+                case 5:
+                    System.out.println("Is list empty : "+ ListOperations.isEmpty());
+                    break;
+                default:
+                    System.out.println("Wrong choice");
+            }
+
+
+            System.out.println("Do you want to continue?");
+            String choice = sc.next();
+            if(choice.toLowerCase().equals("y")){
+                loop = false;
+            }
+            else{
+                loop = true;
+            }
+
+
+        }
+
+
+        sc.close();
+    }
+}
+```
+
+Final UML class Diagram
+
+![Img](./Images/case%20study%202%20uml.png)
+
+Final Execution
+
+![Img](./Images/case%20study%202%20exc.png)

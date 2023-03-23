@@ -127,7 +127,7 @@ to another process.
 
 * An output variable is defined by using an output block with a label. The label must be unique as it can be used to reference the output’s value. Let’s define an output to show us the public IP address of the server. Add this to any of the *.tf files.
 
-  ![Img](./Images/tf%20output.png)
+  ![Img](./Images/TF%20output%202.png)
 
 ### How does terraform work?
 
