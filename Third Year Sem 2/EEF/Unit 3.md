@@ -240,7 +240,11 @@ Note : cash flow reporting can be direct or indirect
 
   ![Img](./Images/Direct%202.png)
 
-* Indirect Method
+* Indirect Method / T-account Approach
+
+        Instead of creating schedules for each section of the Statement of Cash Flows, some prefer to prepare a single large T-account to represent the changes that have taken place in Cash subdivided into the three sections of the Statement of Cash Flows
+
+  ![Img](./Images/indirect.png)
 
 ### Overall Patterns of Cash Flows
 
