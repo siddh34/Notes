@@ -2,8 +2,19 @@
 
 ## Economics
 
+Economics is a study of rationing systems
+
+It is the study of how scarce resources are allocated to fulfill the infinite wants of consumers
+
+They can be divided as into
+
     1. Micro (Small scale)
     2. Macro (Large scale)
+
+    or 
+
+    1. Planned Economies (Planned economics is a type of economic system where the distribution of goods and services or the investment, production and the allocation of capital goods takes place according to economic plans that are either economy-wide or limited to a category of goods and services)
+    2. Free Market Economies (Free market economies are economic systems based on supply and demand with little or no government control)
 
 ## Factors of productions
 
@@ -70,6 +81,38 @@ How demand is controlled?
     2. Interest rate
     3. Foreign exchange
 
+## Concept of Engineering Economics
+
+* The engineering economics is concerned the systematic evaluation of the benefits and costs of projects involving engineering design and analysis
+
+### Engineering Efficiency
+
+* Engineering efficiency is the ratio between the energy needed to power an engine or process and the energy the engine or process creates
+
+* The greater the engineering efficiency ratio, the more efficient the process
+
+* Engineering efficiency also means measuring the output of work compared to the expected outcome
+
+* Engineering efficiency is a combination of improving developer experience, maintaining org tempo, and staying aligned with business needs
+
+### Economic efficiency
+
+* Economic efficiency is when all goods and factors of production in an economy are distributed or allocated to their most valuable uses and waste is eliminated or minimized
+
+* A system is considered economically efficient if the factors of production are used at a level at or near their capacity
+
+* Economic efficiency implies an economic state in which every resource is optimally allocated to serve each individual or entity in the best way while minimizing waste and inefficiency
+
+## Scope of engineering economics
+
+* The engineering economics is concerned the systematic evaluation of the benefits and costs of projects involving engineering design and analysis
+
+* Engineering economics quantifies the benefits and costs associating with engineering projects to determine if they save enough money to warrant their capital investments
+
+* Engineering economics requires the application of engineering design and analysis principles to provide goods and services that satisfy the consumer at an affordable cost
+
+* Engineering economics is also relevant to the design engineer who considers material selection
+
 ## Cost
 
 While speaking about **Cost** can have two meanings:
@@ -111,4 +154,6 @@ Types
         b. Example depreciation cost in electronics is 33% per year
         c. It depends on the depreciation rate set by govt and the current financial year
 
-## Cost Benefit analysis
+6. Marginal Revenue and Marginal Cost
+
+    The marginal cost of production and marginal revenue are economic measures used to determine the amount of output and the price per unit of a product that will maximize profits.
