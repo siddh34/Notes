@@ -209,3 +209,39 @@ the-Years’ Digits
 * Additional info of transactions
 
 Note : cash flow reporting can be direct or indirect
+
+* A cash statement, also known as a cash flow statement, is a financial statement that summarizes the amount of cash and cash equivalents entering and leaving a company. It shows how well a company manages its cash position, meaning how well the company generates cash to pay its debt obligations and fund its operating expenses
+
+* It also complements the balance sheet and the income statement
+
+* The main components of the cash statement are
+
+        A. Cash flow from operating activities: This reflects how much cash is generated from a company’s products or services. It includes receipts from sales, interest payments, income tax payments, payments to suppliers and employees, rent payments, and any other type of operating expenses
+
+        B. Cash flow from investing activities: This shows how much cash is used for investing in assets for the future, such as property, plant, and equipment (PP&E), as well as how much cash is received from the sale of these assets. It also includes cash flows from acquisitions and disposals of subsidiaries or other businesses
+
+        C. Cash flow from financing activities: This indicates how much cash is generated or spent on raising and repaying share capital and debt together with the payments of interest and dividends. It also includes cash flows from issuing or repurchasing shares, borrowing or repaying loans, and paying dividends to shareholders
+
+        D. Disclosure of non-cash activities: This is sometimes included when prepared under generally accepted accounting principles (GAAP). It shows significant non-cash transactions that affect assets and liabilities but do not affect cash flows, such as depreciation, amortization, deferred taxes, stock-based compensation, etc
+
+* There are two methods of calculating cash flow:
+
+        A. The direct method 
+
+            i. The direct method lists all the major operating cash receipts and payments for the period by source
+
+        B. The indirect method
+
+            i.  The indirect method adjusts net income for items that affected reported net income but did not affect cash
+
+* Direct Methods
+
+  ![Img](./Images/Direct.png)
+
+  ![Img](./Images/Direct%202.png)
+
+* Indirect Method
+
+### Overall Patterns of Cash Flows
+
+![Img](./Images/performance.png)
