@@ -92,6 +92,25 @@ DevOps skills are the technical and non-technical abilities that a DevOps engine
 * Technical skills
 
     1. Technical skills are the skills that enable a DevOps engineer to design, develop, deploy, and maintain high-quality software applications. Technical skills include knowledge of cloud computing platforms and services, such as AWS, GCP, and Azure
+    2. Hard skills are YAML, Virtualization, Terraform, Containers, K8, Rancher, Helm & cloud
+
+## Tasks of Devops Engineer
+
+1. Be an excellent sysadmin
+
+2. Deploy virtualization
+
+3. Hands on experience in network & storage
+
+4. knowledge of coding
+
+5. Soft skills
+
+6. Understanding of automation skills
+
+7. Knowledge of Testing
+
+8. Security
 
 ## Devops issues
 

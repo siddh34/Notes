@@ -1,96 +1,77 @@
-# Lecture 8 & 9
+# Lecture 10
 
-## Unit 4 Devops
+* Hard skills are YAML, Virtualization, Terraform, Containers, K8, Rancher, Helm & cloud
 
-## Devops timeline
+## Tasks of Devops Engineer
 
-![Img](./Image/devops%20timeline.png)
+1. Be an excellent sysadmin
 
-## What is devops?
+2. Deploy virtualization
 
-    1. DevOps is a software development practice that promotes collaboration between development and operations, resulting in faster and more reliable software delivery
-    2. Commonly referred to as a culture, DevOps connects people, process, and technology to deliver continuous value
-    3. DevOps integrates and automates the work of software development and IT operations using various tools and stages, such as planning, coding, testing, deploying and monitoring
-    4. DevOps is an evolution of the agile model of software development and addresses the gap between developers and operations
+3. Hands on experience in network & storage
 
-## Terms in devops
+4. knowledge of coding
 
-![Img](./Image/devops.png)
+5. Soft skills
 
-### Plan
+6. Understanding of automation skills
 
-    Software such as docs, MS office, etc are used
+7. Knowledge of Testing
 
-### Code + Build
+8. Security
 
-    NPM, Github, Gitlab, NodeJS etc are used
+## Devops issues
 
-### Test
+    1. Defects can be released into production
 
-    Azure
+    2. Issues related to environment can be there
 
-### Release
+## Devops Delivery Pipelines
 
-    Jetkins
+* When preparing to implement the DevOps methodology, you should assess the tools you have on hand to determine which ones, if any, can support the application delivery process and what additional tools you might need.
 
-### Deploy
+* Some of benefits are
 
-    Puppet, chef etc
+    1. Faster delivery of features and bug fixes
 
-### Operate
+    2. Higher quality and reliability of software
 
-    Slack, splunk etc
+    3. Improved collaboration and communication among teams
 
-### Monitor
+    4. Reduced costs and risks of software development
 
-    Grafana, graylogs etc
+Some of the tools that can help you create a DevOps delivery pipeline are
 
-## Devops Roadmap
+* Azure Pipelines: A cloud-based service that provides continuous integration and continuous delivery for any platform and cloud
 
-1. Version Control System
+* Jenkins: An open source automation server that can run various tasks such as building, testing and deploying software
 
-    1. A version control system is a software tool that helps track and manage changes to software code over time
-    2. Version control systems also facilitate collaboration among developers, as they can work on different parts of the code without conflicting or overwriting each other’s work
+* Docker: A platform that enables you to create, run and share applications using containers
 
-2. Continuous Integration & deployment
+* Ansible: A tool that automates configuration management, application deployment and orchestration
 
-    1. Continuous integration (CI) and continuous deployment (CD) are two related practices that aim to improve the software development and delivery process
-    2. CI is the practice of integrating code changes from multiple developers into a main repository frequently and automatically, and running automated tests to ensure quality and compatibility
+* Prometheus: A tool that monitors and alerts on the performance and availability of your systems and application
 
-3. Infrastructure as Code (IaC)
+## Devops lifecycle
 
-    1. Infrastructure as Code (IaC) is a method of defining and provisioning IT infrastructure using code files that describe the desired state and configuration of the resources
-    2. IaC enables developers and IT teams to automate and scale the creation and management of infrastructure, such as servers, networks, storage, and databases
+![Img](./Image/devops%20lifecycle.png)
 
-4. Configuration management
+1. Green is Dev & Yellow is Ops
 
-    1. Configuration management (CM) is a process for establishing and maintaining consistency of a product’s performance, functional, and physical attributes with its requirements, design, and operational information throughout its life
-    2. In software development, configuration management is a practice that tracks and controls changes to the software code and its dependencies, such as libraries, frameworks, and configuration files
+2. Integration is a development practice that integrates not only the code but all other stages and components of the DevOps ecosystem and reports frequently By integrating regularly, we can detect the errors quickly, and locate them more easily
 
-5. Containerization
+3. A DevOps ecosystem consists of various tools and services that support different aspects of the DevOps lifecycle, such as planning, development, testing, delivery and operations
 
-    1. Containerization has two distinct meanings. In computing, containerization is a method of packaging software code with only the operating system libraries and dependencies required to run it, creating a single lightweight executable unit called a container
-    2. Containers can run on any infrastructure, regardless of the operating system or platform, and are more portable and resource-efficient than virtual machines
+4. Some of the categories of tools in a DevOps ecosystem are
 
-6. Observability/ Monitoring
+    1. Source control: Tools that manage and track changes to code, such as Git, Azure Repos, GitHub, etc
 
-    1. Observability and monitoring are related but distinct concepts that help IT teams to understand and manage the performance and health of their systems. Monitoring is the act of collecting and analyzing predefined data from individual systems, such as metrics, logs, and traces, and translating them into actionable insights
-    2. Monitoring tools use dashboards, alerts, and reports to show system performance and usage, and help IT teams to identify or troubleshoot issues
+    2. Build automation: Tools that compile, test and package code into executable artifacts, such as Jenkins, Azure Pipelines, Maven, Gradle, etc
 
-Note: Linux should be perfect
+    3. Containerization: Tools that create and run applications using isolated environments, such as Docker, Kubernetes, Azure Container Registry, etc
 
-## Devops Skills
+    4. Configuration management: Tools that automate the provisioning and configuration of infrastructure and applications, such as Ansible, Chef, Puppet, Terraform, etc
 
-DevOps skills are the technical and non-technical abilities that a DevOps engineer needs to perform their role effectively.
+    5. Monitoring: Tools that collect and analyze metrics and logs from systems and applications, such as Prometheus, Grafana, Azure Monitor, Splunk, etc
 
-* Automation skills
-
-    1. Automation skills are the skills that enable a DevOps engineer to automate various aspects of the software development and delivery process, such as testing, integration, deployment, and monitoring. Automation skills include knowledge of tools and frameworks that support automation, such as Jenkins, GitLab, Azure DevOps, and Travis CI
-
-* Functional Skills
-
-    1. Functional skills are the skills that enable a DevOps engineer to understand the business requirements and goals of the software project, and to communicate and collaborate effectively with other stakeholders. Functional skills include knowledge of agile methodologies, such as Scrum and Kanban, that support DevOps principles
-
-* Technical skills
-
-    1. Technical skills are the skills that enable a DevOps engineer to design, develop, deploy, and maintain high-quality software applications. Technical skills include knowledge of cloud computing platforms and services, such as AWS, GCP, and Azure
+Note: CI (continous integration is till build) & CD (continuous deployment is after that)
