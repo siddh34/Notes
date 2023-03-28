@@ -1,6 +1,4 @@
-# Lecture 11
-
-## Unit 4 Introduction to FinTech
+# Unit 4 Introduction to FinTech
 
 * FinTech = Finance + Technology
 
