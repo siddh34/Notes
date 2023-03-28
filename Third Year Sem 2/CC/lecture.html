@@ -365,31 +365,99 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-6">Lecture 6</h1>
-<h2 id="unit-2-aws">Unit 2 <strong>AWS</strong></h2>
-<h2 id="s3">S3</h2>
-<pre><code>    1. Storage
-    2. It uses cloudfront (Edge location) &amp; cloudformation (But we will be using Teraform)
-</code></pre>
-<h2 id="important-cloud-service">Important cloud service</h2>
-<ul>
-<li>
-<p>Compute (EC2 and lambda)</p>
-</li>
-<li>
-<p>Storage (EFS, EBS, S3)</p>
-</li>
-<li>
-<p>N/W (VPC, SH)</p>
-</li>
-<li>
-<p>Database</p>
-</li>
-</ul>
-<h2 id="lambda-service">Lambda service</h2>
-<pre><code>    a. It is serverless service
-    b. Server's cost is saved 
-</code></pre>
+<h1 id="lecture-7">Lecture 7</h1>
+<h2 id="unit-4-ansible">Unit 4 Ansible</h2>
+<h2 id="yaml">YAML</h2>
+<h3 id="simple-example">Simple Example</h3>
+<pre class="hljs"><code><div>    <span class="hljs-attr">name:</span> <span class="hljs-string">Siddharth</span>
+    <span class="hljs-attr">rollNo:</span> <span class="hljs-number">323054</span>
+    <span class="hljs-attr">college:</span> <span class="hljs-string">viit</span>
+</div></code></pre>
+<h3 id="comments">Comments</h3>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># This is YAML SCRIPT</span>
+</div></code></pre>
+<h3 id="objects">Objects</h3>
+<pre class="hljs"><code><div>    <span class="hljs-attr">STUDENT1:</span>
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Siddharth</span>
+        <span class="hljs-attr">rollNo:</span> <span class="hljs-number">323054</span>
+        <span class="hljs-attr">college:</span> <span class="hljs-string">viit</span>
+
+    <span class="hljs-attr">STUDENT2:</span>
+        <span class="hljs-string">_______</span>
+        <span class="hljs-string">_______</span>
+</div></code></pre>
+<h3 id="list">LIST</h3>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># WAY 1 to write list</span>
+
+    <span class="hljs-attr">STUDENT1:</span>
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Siddharth</span>
+        <span class="hljs-attr">rollNo:</span> <span class="hljs-number">323054</span>
+        <span class="hljs-attr">college:</span> <span class="hljs-string">viit</span>
+        <span class="hljs-attr">Subjects:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">AMD</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">CC</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">DAA</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">SDA</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">EEF</span>
+        
+    <span class="hljs-comment"># WAY 2 to write list</span>
+    
+    <span class="hljs-attr">STUDENT2:</span>
+        <span class="hljs-attr">name:</span> <span class="hljs-string">Siddharth</span>
+        <span class="hljs-attr">rollNo:</span> <span class="hljs-number">323054</span>
+        <span class="hljs-attr">college:</span> <span class="hljs-string">viit</span>
+        <span class="hljs-attr">Subjects:</span> <span class="hljs-string">[</span> <span class="hljs-string">AMD,</span> <span class="hljs-string">CC,</span> <span class="hljs-string">DAA,</span> <span class="hljs-string">SDA,</span> <span class="hljs-string">EEF</span> <span class="hljs-string">]</span>
+</div></code></pre>
+<h3 id="variables-in-yaml">variables in yaml</h3>
+<h4 id="strings">Strings</h4>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># 1</span>
+    <span class="hljs-attr">name:</span> <span class="hljs-string">"Siddharth"</span>
+    <span class="hljs-comment"># 2</span>
+    <span class="hljs-attr">name2:</span> <span class="hljs-string">'Sidd'</span>
+    <span class="hljs-comment"># 3</span>
+    <span class="hljs-attr">name3:</span> <span class="hljs-string">Siddharth</span>
+    <span class="hljs-comment"># String pipe</span>
+    <span class="hljs-attr">name4:</span> <span class="hljs-string">|
+        This is first line
+        This is second line
+        This is third linec
+</span>    <span class="hljs-comment"># Multiple lines are written but considered as single line</span>
+    <span class="hljs-attr">name5:</span> <span class="hljs-string">&gt;
+        This is first line
+        This is second line
+        This is third line
+</span></div></code></pre>
+<h4 id="numbers">Numbers</h4>
+<pre class="hljs"><code><div>    <span class="hljs-attr">num1:</span> <span class="hljs-number">23</span>
+    <span class="hljs-attr">num2:</span> <span class="hljs-number">123.1</span>
+    <span class="hljs-attr">num3:</span> <span class="hljs-number">0.1</span>
+</div></code></pre>
+<h4 id="boolean">Boolean</h4>
+<pre class="hljs"><code><div>    <span class="hljs-attr">isTrue:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-attr">isFalse:</span> <span class="hljs-literal">No</span>
+    <span class="hljs-attr">isFalse:</span> <span class="hljs-string">off</span>
+</div></code></pre>
+<h4 id="start--end">Start &amp; end</h4>
+<pre class="hljs"><code><div>    <span class="hljs-comment"># Start</span>
+    <span class="hljs-string">_</span> <span class="hljs-string">_</span> <span class="hljs-string">_</span>
+    
+    <span class="hljs-string">.</span> <span class="hljs-string">.</span> <span class="hljs-string">.</span>
+    <span class="hljs-comment"># End</span>
+</div></code></pre>
+<p>Sample Script</p>
+<pre class="hljs"><code><div>    <span class="hljs-bullet">-</span> <span class="hljs-attr">STUDENT1:</span>
+        <span class="hljs-attr">rollno:</span> <span class="hljs-number">23</span>
+        <span class="hljs-attr">name:</span> <span class="hljs-string">"Sidd"</span>
+        <span class="hljs-attr">address:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">Street:</span> <span class="hljs-string">laxminagar</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">Area:</span> <span class="hljs-string">Kondhwa</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">Pin:</span> <span class="hljs-number">411048</span>
+        <span class="hljs-attr">Phone:</span> <span class="hljs-string">[1234,5678]</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">STUDENT2:</span>
+        <span class="hljs-string">____</span>
+        <span class="hljs-string">____</span>
+        <span class="hljs-string">____</span>
+</div></code></pre>
 
 </body>
 </html>

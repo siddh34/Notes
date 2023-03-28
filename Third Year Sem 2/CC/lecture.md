@@ -1,23 +1,123 @@
-# Lecture 6
+# Lecture 7
 
-## Unit 2 **AWS**
+## Unit 4 Ansible
 
-## S3
+## YAML
 
-        1. Storage
-        2. It uses cloudfront (Edge location) & cloudformation (But we will be using Teraform)
+### Simple Example
 
-## Important cloud service
+```YAML
+    name: Siddharth
+    rollNo: 323054
+    college: viit
+```
 
-* Compute (EC2 and lambda)
+### Comments
 
-* Storage (EFS, EBS, S3)
+```YAML
+    # This is YAML SCRIPT
+```
 
-* N/W (VPC, SH)
+### Objects
 
-* Database
+```YAML
+    STUDENT1:
+        name: Siddharth
+        rollNo: 323054
+        college: viit
 
-## Lambda service
+    STUDENT2:
+        _______
+        _______
+```
 
-        a. It is serverless service
-        b. Server's cost is saved 
+### LIST
+
+```YAML
+    # WAY 1 to write list
+
+    STUDENT1:
+        name: Siddharth
+        rollNo: 323054
+        college: viit
+        Subjects:
+            - AMD
+            - CC
+            - DAA
+            - SDA
+            - EEF
+        
+    # WAY 2 to write list
+    
+    STUDENT2:
+        name: Siddharth
+        rollNo: 323054
+        college: viit
+        Subjects: [ AMD, CC, DAA, SDA, EEF ]
+```
+
+### variables in yaml
+
+#### Strings
+
+```YAML
+    # 1
+    name: "Siddharth"
+    # 2
+    name2: 'Sidd'
+    # 3
+    name3: Siddharth
+    # String pipe
+    name4: |
+        This is first line
+        This is second line
+        This is third linec
+    # Multiple lines are written but considered as single line
+    name5: >
+        This is first line
+        This is second line
+        This is third line
+```
+
+#### Numbers
+
+```YAML
+    num1: 23
+    num2: 123.1
+    num3: 0.1
+```
+
+#### Boolean
+
+```YAML
+    isTrue: true
+    isFalse: No
+    isFalse: off
+```
+
+#### Start & end
+
+```YAML
+    # Start
+    _ _ _
+    
+    . . .
+    # End
+```
+
+Sample Script
+
+```YAML
+    - STUDENT1:
+        rollno: 23
+        name: "Sidd"
+        address:
+            - Street: laxminagar
+            - Area: Kondhwa
+            - Pin: 411048
+        Phone: [1234,5678]
+    - STUDENT2:
+        ____
+        ____
+        ____
+```
