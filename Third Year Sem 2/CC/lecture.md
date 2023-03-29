@@ -1,123 +1,52 @@
-# Lecture 7
+# Lecture 8
 
-## Unit 4 Ansible
+## Ansible
 
-## YAML
+* Configuration Management Tool
 
-### Simple Example
+* It has two things Ansible tower & Ansible Galaxy
 
-```YAML
-    name: Siddharth
-    rollNo: 323054
-    college: viit
-```
+### Ansible workflow
 
-### Comments
+![IMG](./Images/ansi.png)
 
-```YAML
-    # This is YAML SCRIPT
-```
+* It is a agentless tool
 
-### Objects
+* Host & master can be same
 
-```YAML
-    STUDENT1:
-        name: Siddharth
-        rollNo: 323054
-        college: viit
+### Terminologies
 
-    STUDENT2:
-        _______
-        _______
-```
+1. Ad-boc command
 
-### LIST
+        Single commands
 
-```YAML
-    # WAY 1 to write list
+2. Playbook
 
-    STUDENT1:
-        name: Siddharth
-        rollNo: 323054
-        college: viit
-        Subjects:
-            - AMD
-            - CC
-            - DAA
-            - SDA
-            - EEF
-        
-    # WAY 2 to write list
-    
-    STUDENT2:
-        name: Siddharth
-        rollNo: 323054
-        college: viit
-        Subjects: [ AMD, CC, DAA, SDA, EEF ]
-```
+        1. Collection of multiple commands
+        2. One playbook cantains of many plays
 
-### variables in yaml
+    ![IMG](./Images/playbook.png)
 
-#### Strings
+3. Modules
 
-```YAML
-    # 1
-    name: "Siddharth"
-    # 2
-    name2: 'Sidd'
-    # 3
-    name3: Siddharth
-    # String pipe
-    name4: |
-        This is first line
-        This is second line
-        This is third linec
-    # Multiple lines are written but considered as single line
-    name5: >
-        This is first line
-        This is second line
-        This is third line
-```
+        1. Certains commands but not the collection
 
-#### Numbers
+4. Roles
 
-```YAML
-    num1: 23
-    num2: 123.1
-    num3: 0.1
-```
+        1. Well Organized structure of files
 
-#### Boolean
+### Ansible workflow example
 
-```YAML
-    isTrue: true
-    isFalse: No
-    isFalse: off
-```
+Note: before starting you need to have another machine whether aws instance or another user on ubuntu
 
-#### Start & end
+1. Make a folder
 
-```YAML
-    # Start
-    _ _ _
-    
-    . . .
-    # End
-```
+2. Take sudo access
 
-Sample Script
+3. Make SSH keys & copy them from master to target
 
-```YAML
-    - STUDENT1:
-        rollno: 23
-        name: "Sidd"
-        address:
-            - Street: laxminagar
-            - Area: Kondhwa
-            - Pin: 411048
-        Phone: [1234,5678]
-    - STUDENT2:
-        ____
-        ____
-        ____
-```
+4. Paste the keys in system files of target
+
+5. Write ansible playbook for the task
+
+6. Run the playbook

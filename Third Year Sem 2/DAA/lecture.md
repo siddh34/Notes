@@ -1,191 +1,219 @@
-# DAA Lecture Notes
+# DAA Lecture 13, 14 & 15
 
-## Lecture 12
+## Unit 4 Intractable Problems and NP-Completeness
 
-M = {
+Algorithm can be divided into two parts
 
-    [INF,20,30,10,11],
-    [15,INF,16,4,2],
-    [3,5,INF,2,4],
-    [19, 6, 18, INF, 3],
-    [18,4,7,16,INF]
+1. Ploynomial time
 
-}
+        1) Linear Search
+        2) Binary Search
+        3) Insertion Sort
+        4) Merge Sort
 
-MIN ROW values = [10,2,2,3,4]
+2. Exponential time / Non ploynomial time
 
-reducing the matrix
+        1) TSP
+        2) GRAPH COLORING
+        3) Sudoku
+        4) Scheduling
 
-M = {
+## P Class Problem
 
-    [INF,10,20,0,1],
-    [13,INF,14,2,0],
-    [1,3,INF,0,2],
-    [16, 3, 15, INF, 0],
-    [13,0,3,12,INF]
+A problem which can be solved in ploynomial time is called the P class problem
 
-}
+## NP Class Problem
 
-MIN Colum values = [1,0,3,0,0]
+* A problem which cannot be solved in ploynomial time but it is verified in ploynomial time is called the NP class problem
 
-M = {
+* Example SUDOKU
 
-    [INF,10 ,17 ,0  ,  1],
-    [12 ,INF,11 ,2  ,  0],
-    [0  , 3 ,INF,0  ,  2],
-    [15 , 3 ,12 ,INF,  0],
-    [11 , 0 , 0 ,12 ,INF]
+        +-------+-------+-------+
+        | 6 3 . | . 7 . | . . . |
+        | . 9 . | . . 6 | 3 7 . |
+        | 8 . . | 9 . . | . 6 2 |
+        +-------+-------+-------+
+        | . 6 . | 2 8 9 | 1 . . |
+        | 3 . 9 | . 6 . | 7 . 8 |
+        | . . 1 | 7 3 4 | . 9 . |
+        +-------+-------+-------+
+        | 7 4 . | . . 8 | . . 6 |
+        | . 2 6 | 6 . . | . 8 . |
+        | . . . | . 9 . | . 4 7 |
+        +-------+-------+-------+
 
-}
+## Deterministic algorithm
 
-consider path 1-2 make 1st row & 2nd column INF
+    Problems where we know its every steps
 
-    that is m[2][1] = INF
+## Non Deterministic algorithm
 
-M = {
+    1. Problems where we don't know its every steps
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,11 ,2  ,  0],
-    [0  ,INF,INF,0  ,  2],
-    [15 ,INF,12 ,INF,  0],
-    [11 ,INF, 0 ,12 ,INF]
+    2. Example
 
-}
+```Python
+        TYC_SEARCH(A,N,KEY):
+            i = choice()
 
-val = 25 + 0 + 10 = 35
+            if(i == key)
+                print(i)
+            
+            print(0)
+```
 
-consider path 1-3 make 1st row & 2nd column INF
+## P & NP CLASS + NP HARD & NP Complete
 
-    that is m[3][1] = INF
+    +---------------------+
+    |                     |
+    |                     |    +-----------------+
+    |                     |    |                 |
+    |                     |    |                 |
+    |          NP         |    |                 |
+    |                     |    |                 |
+    |                     |    |                 |
+    |                     |    |                 |
+    +---------------------+    |                 |
+    |          P          |    |                 |
+    +---------------------+    |                 |
+                               |                 |
+                               |   NPcomplete    |
+                               |                 |  
+                               |                 |
+                               +-----------------+ 
+                               |   NP-hard       |
+                               +-----------------+
 
-M = {
+Exact Diagram
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,INF,2  ,  0],
-    [INF, 3 ,INF,0  ,  2],
-    [15 , 3 ,INF,INF,  0],
-    [11 , 0 ,INF,12 ,INF]
+![Img](./Images/np.png)
 
-}
+1. Inside P tractable problems are there
 
-val = 25 + 11 + 17 = 53
+2. Inside NP non tractable problems are there
 
-consider path 1-4 make 1st row & 2nd column INF
+3. P is the class of problems that can be solved by a deterministic machine in polynomial time
 
-    that is m[4][1] = INF
+4. NP is the class of problems that can be solved by a non-deterministic machine in polynomial time, or equivalently, verified by a deterministic machine in polynomial time given a certificate or a hint.
 
-M = {
+5. **NP-complete is the class of problems that are both in NP and as hard as any problem in NP**, meaning that **any problem in NP can be reduced to them in polynomial time**. Example eulers graph
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,INF,  0],
-    [0  , 3 ,INF,INF,  2],
-    [INF, 3 ,12 ,INF,  0],
-    [11 , 0 , 0 ,INF,INF]
+6. **NP-hard is the class of problems that are at least as hard as any problem in NP**, meaning that **any problem in NP can be reduced to them in polynomial time, but they may or may not be in NP themselves.** Example optimization problem
 
-}
+The diagram also shows two possible scenarios for the relationship between P and NP
 
-val = 25
+    1. The left side assumes that P ≠ NP, meaning that there are some problems in NP that cannot be solved by a deterministic machine in polynomial time. This is the most widely believed conjecture, but it has not been proven or disproven yet.
+    2. The right side assumes that P = NP, meaning that there are no problems in NP that cannot be solved by a deterministic machine in polynomial time. This would imply that all problems in NP are also in P, and that all problems in NP-complete are also in P. This would have profound implications for cryptography, optimization, and artificial intelligence, but it is considered very unlikely by most experts.
 
-consider path 1-5 make 1st row & 2nd column INF
+## More on NP HARD & NP Complete
 
-    that is m[5][1] = INF
+    + - +         + - +
+    + A + - - - > + B -
+    + - + - - - - + - +
 
-M = {
+1. A & B are two problem A reduces to problem B
+2. There is a way to solve A by deterministic algo that solve B in ploynomial time
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,2  ,INF],
-    [0  , 3 ,INF,0  ,INF],
-    [15 , 3 ,12 ,INF,INF],
-    [INF, 0 , 0 ,12 ,INF]
+## Approximation Algorithm
 
-}
+* An approximation algorithm is a way of dealing with NP-completeness for an optimization problem.
 
-val = 25 + 2 + 3 + 1 = 31
+* This technique does not guarantee the best solution
 
-consider path 1-4-2 as infinity
+* The goal of the approximation algorithm is to come as close as possible to the optimal solution in polynomial time. Such algorithms are called approximation algorithms or heuristic algorithms
 
-M = {
+* An approximation algorithm has a performance ratio that measures how close the solution is to the optimal one
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,11 ,INF,  0],
-    [0  ,INF,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [11 ,INF, 0 ,INF,INF]
+* Depending on the problem, we may define an optimal solution as one with maximum possible cost or one with minimum possible cost,i.e, the problem can either be a maximization or minimization problem
 
-}
+* Examples
 
-val = 25 + 0 + 3 = 28
+    1. The Vertex Cover Problem – In the vertex cover problem, the optimization problem is to find the vertex cover with the fewest vertices, and the approximation problem is to find the vertex cover with few vertices
 
-consider path 1-4-3 as infinity
+    2. Travelling Salesman Problem – In the traveling salesperson problem, the optimization problem is to find the shortest cycle, and the approximation problem is to find a short cycle
 
-M = {
+    3. The Set Covering Problem – This is an optimization problem that models many problems that require resources to be allocated. Here, a logarithmic approximation ratio is used
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,INF,INF,  0],
-    [INF,3  ,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [11 ,0  ,INF,INF,INF]
+    4. The Subset Sum Problem – In the Subset sum problem, the optimization problem is to find a subset of {x1,×2,×3…xn} whose sum is as large as possible but not larger than the target value t
 
-}
+* Let's go deep into **vertex cover** problem
 
-val = 25 + 13 + 12 = 50
+    1. Vertex Cover Problem is a known NP Complete problem, i.e., there is no polynomial-time solution for this unless P = NP
 
-consider path 1-4-5 as infinity
+    2. Consider all the subset of vertices one by one and find out whether it covers all edges of the graph. For eg. in a graph consisting only 3 vertices the set consisting of the combination of vertices are:{0,1,2,{0,1},{0,2},{1,2},{0,1,2}}
 
-M = {
+    3. Approximate Algorithm for Vertex Cover
 
-    [INF,INF,INF,INF,INF],
-    [12 ,INF,11 ,INF,INF],
-    [0  , 3 ,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF, 0 , 0 ,INF,INF]
+        1) Initialize the result as {}
+        2) Consider a set of all edges in given graph.  Let the set be E.
+        3) Do following while E is not empty
 
-}
+                a) Pick an arbitrary edge (u, v) from set E and add 'u' and 'v' to result
+                b) Remove all edges from E which are either incident on u or v.
+        4) Return result
 
-val = 25 + 11 + 0 = 36
+    ![IMG](./Images/vertex%20cover.png)
 
-consider path 1-4-2-3
+* Terms of approximation algo
 
-M = {
+    1. C --> Cost of Solution
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,  2],
-    [INF,INF,INF,INF,INF],
-    [ 11,INF,INF,INF,INF]
+    2. C* --> Cost of optimal solution
 
-}
+    3. P(n) --> approximation ratio
 
-val = 28 + 13 + 11 = 52
+    4. n --> i/p size
 
-consider path 1-4-2-5
+* Problem
 
-M = {
+    ![IMG](./Images/vertex%20prb.png)
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [  0,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,  0,INF,INF]
+        E = { (c,d), (b,c), (a,b) }
 
-}
+        C = fi
 
-val = 28 + 0 + 0 = 28
+        C = fi U {b,c}
 
-consider path 1-4-2-5-3
+        furthur
 
-M = {
+        (b,c) U (e,f)
 
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF],
-    [INF,INF,INF,INF,INF]
+        {b,c,e,f} U {d, g }
 
-}
+        {b,c,e,f,d,g}
 
-val = 28 + 0 + 0 = 28
+## Hamilton Cycle
 
-Final **Tree**
+Example 1
 
-![Img 1](./Images/TREECOR.png)
+  ![IMG](./Images/Hamilton%20Cycle.png)
+
+    Hamilton Cycle --> 1 2 3 4 5 6 1
+    Hamilton Cycle --> 1 2 6 5 4 3 1
+
+Example 2
+
+  ![IMG](./Images/H%20cycle%202.png)
+
+    It is not a hamilton cycle
+
+Example 3
+
+![IMG](./Images/H%20cycle%203.png)
+
+    Consider the above graph
+
+    it will have a matrix
+
+      1 2 3 4 5
+    1 0 1 1 0 1
+    2 1 0 1 1 1
+    3 1 1 0 1 0
+    4 0 1 1 0 1
+    5 1 1 0 1 0
+
+![IMG](./Images/H%20cycle%204.png)
+
+    1. The above is general solution which is obtained by exapanding the node
+    2. This is not an optimized solution
+    3. To find optimized solution we need to use approximate algorithm
