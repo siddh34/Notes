@@ -365,45 +365,41 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-16">Lecture 16</h1>
-<h2 id="rpc--remote-procedure-call">RPC ( Remote Procedure Call )</h2>
-<p>RPC example is suppose there is a program run on one computer &amp; it calls the function which is on another computer</p>
-<h2 id="corba">CORBA</h2>
-<ul>
+<h1 id="lecture-17">Lecture 17</h1>
+<h2 id="mda">MDA</h2>
+<p><img src="./Images/MDA.png" alt="IMG"></p>
+<p><img src="./Images/mda diagram.png" alt="IMG"></p>
+<h3 id="types-of-viewpoints-mda">Types of viewpoints MDA</h3>
+<ol>
 <li>
-<p>Distributed object based system</p>
+<p>Computational Independant Viewpoint</p>
 </li>
 <li>
-<p>Provides inter-operability</p>
+<p>Platform Independent Viewpoint</p>
 </li>
 <li>
-<p>CORBA Architecture</p>
-<p><img src="./Images/CORBA.png" alt="Img"></p>
+<p>Platform Specific Viewpoint</p>
+</li>
+</ol>
+<h3 id="types-of-mda">Types of MDA</h3>
+<ol>
+<li>
+<p>Computational Independant Model (CIM)</p>
 </li>
 <li>
-<p>Communication takes place in IDL langauge here</p>
+<p>Platform Independent Model (PIM)</p>
 </li>
 <li>
-<p>Communication is between client &amp; server!</p>
+<p>Platform Specific Model (PSM)</p>
 </li>
-</ul>
-<h2 id="broker">Broker</h2>
-<ul>
-<li>It is responsible for co-ordinating request</li>
-</ul>
-<h2 id="soa--service-oriented-architecture">SOA ( Service Oriented Architecture )</h2>
-<ul>
-<li>
-<p>SOA combines large number of facilities from existing services to form application</p>
-</li>
-<li>
-<p>It is like a service mergering platform</p>
-</li>
-<li>
-<p>It is a blackbox for its consumers, meaning the consumer does not have to be aware of service's inner working</p>
-<p><img src="./Images/SOA.png" alt="Img"></p>
-</li>
-</ul>
+</ol>
+<p>Note: They get converted to other MDAs with the help of automation</p>
+<p><img src="./Images/conversion mda.png" alt="IMG"></p>
+<p>CORBA converts to c++</p>
+<p>EJB converts to java</p>
+<p><img src="./Images/con mda.png" alt="IMG"></p>
+<h3 id="conversion">Conversion</h3>
+<p><img src="./Images/pim to psm.png" alt="IMG"></p>
 
 </body>
 </html>

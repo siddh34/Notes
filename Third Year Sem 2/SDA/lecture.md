@@ -1,33 +1,37 @@
-# Lecture 16
+# Lecture 17
 
-## RPC ( Remote Procedure Call )
+## MDA
 
-RPC example is suppose there is a program run on one computer & it calls the function which is on another computer
+  ![IMG](./Images/MDA.png)
 
-## CORBA
+  ![IMG](./Images/mda%20diagram.png)
 
-* Distributed object based system
+### Types of viewpoints MDA
 
-* Provides inter-operability
+1. Computational Independant Viewpoint
 
-* CORBA Architecture
+2. Platform Independent Viewpoint
 
-  ![Img](./Images/CORBA.png)
+3. Platform Specific Viewpoint
 
-* Communication takes place in IDL langauge here
+### Types of MDA
 
-* Communication is between client & server!
+1. Computational Independant Model (CIM)
 
-## Broker
+2. Platform Independent Model (PIM)
 
-* It is responsible for co-ordinating request
+3. Platform Specific Model (PSM)
 
-## SOA ( Service Oriented Architecture )
+Note: They get converted to other MDAs with the help of automation
 
-* SOA combines large number of facilities from existing services to form application
+![IMG](./Images/conversion%20mda.png)
 
-* It is like a service mergering platform
+CORBA converts to c++
 
-* It is a blackbox for its consumers, meaning the consumer does not have to be aware of service's inner working
+EJB converts to java
 
-  ![Img](./Images/SOA.png)
+![IMG](./Images/con%20mda.png)
+
+### Conversion
+
+![IMG](./Images/pim%20to%20psm.png)
