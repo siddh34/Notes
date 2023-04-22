@@ -1,3 +1,5 @@
+// This is assignment 1
+
 class A {
     // It gets memory only once because of static
     // public static A obj; // returns null

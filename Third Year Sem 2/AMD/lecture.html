@@ -365,49 +365,39 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-10">Lecture 10</h1>
+<h1 id="lecture-12">Lecture 12</h1>
+<h2 id="continuous-things">Continuous Things</h2>
+<p>Devops <strong>lifecycle divides the SDLC lifecycle</strong> into <strong>Continous Development, Continuous Testing, Continuous Deployment, Continuous Integration</strong></p>
+<p><img src="./Image/CI CD.png" alt="IMG"></p>
+<p><img src="./Image/Pipline 2.png" alt="IMG"></p>
 <ul>
-<li>Hard skills are YAML, Virtualization, Terraform, Containers, K8, Rancher, Helm &amp; cloud</li>
-</ul>
-<h2 id="tasks-of-devops-engineer">Tasks of Devops Engineer</h2>
-<ol>
 <li>
-<p>Be an excellent sysadmin</p>
-</li>
-<li>
-<p>Deploy virtualization</p>
-</li>
-<li>
-<p>Hands on experience in network &amp; storage</p>
-</li>
-<li>
-<p>knowledge of coding</p>
-</li>
-<li>
-<p>Soft skills</p>
-</li>
-<li>
-<p>Understanding of automation skills</p>
-</li>
-<li>
-<p>Knowledge of Testing</p>
-</li>
-<li>
-<p>Security</p>
-</li>
-</ol>
-<h2 id="devops-issues">Devops issues</h2>
-<pre><code>1. Defects can be released into production
-
-2. Issues related to environment can be there
+<p>Continuous Development</p>
+<pre><code>  Executable file is created after CD
 </code></pre>
-<h2 id="devops-delivery-pipelines">Devops Delivery Pipelines</h2>
-<ul>
-<li>
-<p>When preparing to implement the DevOps methodology, you should assess the tools you have on hand to determine which ones, if any, can support the application delivery process and what additional tools you might need.</p>
 </li>
 <li>
-<p>Some of benefits are</p>
+<p>Continuous Integration</p>
+<pre><code>  Using Jetkins CI can be done
+</code></pre>
+</li>
+<li>
+<p>Continuous Deployment</p>
+<pre><code>  Code is built, the environment or the application is containerized &amp; is pushed on to the desired server
+</code></pre>
+</li>
+<li>
+<p>Continuous Testing</p>
+<pre><code>  Integration tools send the failure message to developer or pushes the code to production
+</code></pre>
+</li>
+<li>
+<p>Continuous Monitoring</p>
+<pre><code>  This stage monitors the deployed application for bugs or crashes. It also collects user feedback
+</code></pre>
+</li>
+<li>
+<p>Some of benefits of devops are</p>
 <ol>
 <li>
 <p>Faster delivery of features and bug fixes</p>
@@ -424,58 +414,6 @@ code {
 </ol>
 </li>
 </ul>
-<p>Some of the tools that can help you create a DevOps delivery pipeline are</p>
-<ul>
-<li>
-<p>Azure Pipelines: A cloud-based service that provides continuous integration and continuous delivery for any platform and cloud</p>
-</li>
-<li>
-<p>Jenkins: An open source automation server that can run various tasks such as building, testing and deploying software</p>
-</li>
-<li>
-<p>Docker: A platform that enables you to create, run and share applications using containers</p>
-</li>
-<li>
-<p>Ansible: A tool that automates configuration management, application deployment and orchestration</p>
-</li>
-<li>
-<p>Prometheus: A tool that monitors and alerts on the performance and availability of your systems and application</p>
-</li>
-</ul>
-<h2 id="devops-lifecycle">Devops lifecycle</h2>
-<p><img src="./Image/devops lifecycle.png" alt="Img"></p>
-<ol>
-<li>
-<p>Green is Dev &amp; Yellow is Ops</p>
-</li>
-<li>
-<p>Integration is a development practice that integrates not only the code but all other stages and components of the DevOps ecosystem and reports frequently By integrating regularly, we can detect the errors quickly, and locate them more easily</p>
-</li>
-<li>
-<p>A DevOps ecosystem consists of various tools and services that support different aspects of the DevOps lifecycle, such as planning, development, testing, delivery and operations</p>
-</li>
-<li>
-<p>Some of the categories of tools in a DevOps ecosystem are</p>
-<ol>
-<li>
-<p>Source control: Tools that manage and track changes to code, such as Git, Azure Repos, GitHub, etc</p>
-</li>
-<li>
-<p>Build automation: Tools that compile, test and package code into executable artifacts, such as Jenkins, Azure Pipelines, Maven, Gradle, etc</p>
-</li>
-<li>
-<p>Containerization: Tools that create and run applications using isolated environments, such as Docker, Kubernetes, Azure Container Registry, etc</p>
-</li>
-<li>
-<p>Configuration management: Tools that automate the provisioning and configuration of infrastructure and applications, such as Ansible, Chef, Puppet, Terraform, etc</p>
-</li>
-<li>
-<p>Monitoring: Tools that collect and analyze metrics and logs from systems and applications, such as Prometheus, Grafana, Azure Monitor, Splunk, etc</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>Note: CI (continous integration is till build) &amp; CD (continuous deployment is after that)</p>
 
 </body>
 </html>

@@ -170,3 +170,9 @@ Note: before starting you need to have another machine whether aws instance or a
 5. Write ansible playbook for the task
 
 6. Run the playbook
+
+## Roles
+
+* Roles is a Directory Structure
+
+* It is used when project becomes too big

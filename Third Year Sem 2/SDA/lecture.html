@@ -365,41 +365,64 @@ code {
           : 'default'
     });
   </script>
-<h1 id="lecture-17">Lecture 17</h1>
+<h1 id="lecture-18">Lecture 18</h1>
 <h2 id="mda">MDA</h2>
-<p><img src="./Images/MDA.png" alt="IMG"></p>
-<p><img src="./Images/mda diagram.png" alt="IMG"></p>
+<h3 id="basic-concepts-of-mda">Basic concepts of MDA</h3>
+<ol>
+<li>
+<p>Model: Combination of drawing &amp; text</p>
+</li>
+<li>
+<p>Viewpoint: here 'abstraction' is used to mean the process of suppressing selected detail</p>
+</li>
+<li>
+<p>Platform: Set of subsystems</p>
+</li>
+<li>
+<p>Prevasive services: services available in a wide range of platforms</p>
+</li>
+</ol>
+<p>Consider the diagram</p>
+<p><img src="./Images/problem solving.jpg" alt="IMG"></p>
 <h3 id="types-of-viewpoints-mda">Types of viewpoints MDA</h3>
 <ol>
 <li>
 <p>Computational Independant Viewpoint</p>
+<pre><code> It focuses on environment of system
+</code></pre>
 </li>
 <li>
 <p>Platform Independent Viewpoint</p>
+<pre><code> It focuses on Operations of system
+</code></pre>
 </li>
 <li>
 <p>Platform Specific Viewpoint</p>
+<pre><code> It is linked to specific technology of platform
+</code></pre>
 </li>
 </ol>
 <h3 id="types-of-mda">Types of MDA</h3>
 <ol>
 <li>
 <p>Computational Independant Model (CIM)</p>
+<pre><code> 1. A Computational Independent Model (CIM) is a model of a software or business system that defines its functionality and requirements from a business perspective, without considering any specific implementation details or technologies
+ 2. A CIM may contain information about the system’s organization, roles, functions, processes, activities, documentation, constraints, etc
+ 3. A CIM is one of the primary models defined within the Model-Driven Architecture (MDA) approach proposed by the Object Management Group (OMG)
+</code></pre>
 </li>
 <li>
 <p>Platform Independent Model (PIM)</p>
+<pre><code> 1. A PIM is a model that describes the system’s functionality and behavior in a platform-independent way, using concepts that are independent of any specific technology or implementation
+</code></pre>
 </li>
 <li>
 <p>Platform Specific Model (PSM)</p>
+<pre><code> 1.  A PSM is a model that describes the system’s functionality and behavior in a platform-specific way, using concepts that are linked to a specific technology or implementation
+ 2.  This way, the system can be developed in a more abstract and platform-independent way, and then refined and implemented for different platforms in a more automated and consistent way
+</code></pre>
 </li>
 </ol>
-<p>Note: They get converted to other MDAs with the help of automation</p>
-<p><img src="./Images/conversion mda.png" alt="IMG"></p>
-<p>CORBA converts to c++</p>
-<p>EJB converts to java</p>
-<p><img src="./Images/con mda.png" alt="IMG"></p>
-<h3 id="conversion">Conversion</h3>
-<p><img src="./Images/pim to psm.png" alt="IMG"></p>
 
 </body>
 </html>

@@ -1,36 +1,34 @@
-# Lecture 10
+# Lecture 12
 
-* Hard skills are YAML, Virtualization, Terraform, Containers, K8, Rancher, Helm & cloud
+## Continuous Things
 
-## Tasks of Devops Engineer
+Devops **lifecycle divides the SDLC lifecycle** into **Continous Development, Continuous Testing, Continuous Deployment, Continuous Integration**
 
-1. Be an excellent sysadmin
+![IMG](./Image/CI%20CD.png)
 
-2. Deploy virtualization
+![IMG](./Image/Pipline%202.png)
 
-3. Hands on experience in network & storage
+* Continuous Development
 
-4. knowledge of coding
+        Executable file is created after CD
 
-5. Soft skills
+* Continuous Integration
 
-6. Understanding of automation skills
+        Using Jetkins CI can be done
 
-7. Knowledge of Testing
+* Continuous Deployment
 
-8. Security
+        Code is built, the environment or the application is containerized & is pushed on to the desired server
 
-## Devops issues
+* Continuous Testing
 
-    1. Defects can be released into production
+        Integration tools send the failure message to developer or pushes the code to production
 
-    2. Issues related to environment can be there
+* Continuous Monitoring
 
-## Devops Delivery Pipelines
+        This stage monitors the deployed application for bugs or crashes. It also collects user feedback
 
-* When preparing to implement the DevOps methodology, you should assess the tools you have on hand to determine which ones, if any, can support the application delivery process and what additional tools you might need.
-
-* Some of benefits are
+* Some of benefits of devops are
 
     1. Faster delivery of features and bug fixes
 
@@ -39,39 +37,3 @@
     3. Improved collaboration and communication among teams
 
     4. Reduced costs and risks of software development
-
-Some of the tools that can help you create a DevOps delivery pipeline are
-
-* Azure Pipelines: A cloud-based service that provides continuous integration and continuous delivery for any platform and cloud
-
-* Jenkins: An open source automation server that can run various tasks such as building, testing and deploying software
-
-* Docker: A platform that enables you to create, run and share applications using containers
-
-* Ansible: A tool that automates configuration management, application deployment and orchestration
-
-* Prometheus: A tool that monitors and alerts on the performance and availability of your systems and application
-
-## Devops lifecycle
-
-![Img](./Image/devops%20lifecycle.png)
-
-1. Green is Dev & Yellow is Ops
-
-2. Integration is a development practice that integrates not only the code but all other stages and components of the DevOps ecosystem and reports frequently By integrating regularly, we can detect the errors quickly, and locate them more easily
-
-3. A DevOps ecosystem consists of various tools and services that support different aspects of the DevOps lifecycle, such as planning, development, testing, delivery and operations
-
-4. Some of the categories of tools in a DevOps ecosystem are
-
-    1. Source control: Tools that manage and track changes to code, such as Git, Azure Repos, GitHub, etc
-
-    2. Build automation: Tools that compile, test and package code into executable artifacts, such as Jenkins, Azure Pipelines, Maven, Gradle, etc
-
-    3. Containerization: Tools that create and run applications using isolated environments, such as Docker, Kubernetes, Azure Container Registry, etc
-
-    4. Configuration management: Tools that automate the provisioning and configuration of infrastructure and applications, such as Ansible, Chef, Puppet, Terraform, etc
-
-    5. Monitoring: Tools that collect and analyze metrics and logs from systems and applications, such as Prometheus, Grafana, Azure Monitor, Splunk, etc
-
-Note: CI (continous integration is till build) & CD (continuous deployment is after that)

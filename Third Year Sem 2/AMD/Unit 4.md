@@ -167,3 +167,37 @@ Some of the tools that can help you create a DevOps delivery pipeline are
     5. Monitoring: Tools that collect and analyze metrics and logs from systems and applications, such as Prometheus, Grafana, Azure Monitor, Splunk, etc
 
 Note: CI (continous integration is till build) & CD (continuous deployment is after that)
+
+## Continuous Things
+
+Devops **lifecycle divides the SDLC lifecycle** into **Continous Development, Continuous Testing, Continuous Deployment, Continuous Integration**
+
+![IMG](./Image/CI%20CD.png)
+
+![IMG](./Image/Pipline%202.png)
+
+* Continuous Development
+
+        Executable file is created after CD
+
+* Continuous Integration
+
+        Using Jetkins CI can be done
+
+* Continuous Deployment
+
+        Code is built, the environment or the application is containerized & is pushed on to the desired server
+
+* Continuous Testing
+
+        Integration tools send the failure message to developer or pushes the code to production
+
+* Continuous Monitoring
+
+        This stage monitors the deployed application for bugs or crashes. It also collects user feedback
+
+Questions
+
+1. Explain devops
+
+2. Devops benefits

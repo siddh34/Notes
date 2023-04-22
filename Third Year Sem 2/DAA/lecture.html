@@ -365,254 +365,51 @@ code {
           : 'default'
     });
   </script>
-<h1 id="daa-lecture-13-14--15">DAA Lecture 13, 14 &amp; 15</h1>
-<h2 id="unit-4-intractable-problems-and-np-completeness">Unit 4 Intractable Problems and NP-Completeness</h2>
-<p>Algorithm can be divided into two parts</p>
-<ol>
-<li>
-<p>Ploynomial time</p>
-<pre><code> 1) Linear Search
- 2) Binary Search
- 3) Insertion Sort
- 4) Merge Sort
-</code></pre>
-</li>
-<li>
-<p>Exponential time / Non ploynomial time</p>
-<pre><code> 1) TSP
- 2) GRAPH COLORING
- 3) Sudoku
- 4) Scheduling
-</code></pre>
-</li>
-</ol>
-<h2 id="p-class-problem">P Class Problem</h2>
-<p>A problem which can be solved in ploynomial time is called the P class problem</p>
-<h2 id="np-class-problem">NP Class Problem</h2>
-<ul>
-<li>
-<p>A problem which cannot be solved in ploynomial time but it is verified in ploynomial time is called the NP class problem</p>
-</li>
-<li>
-<p>Example SUDOKU</p>
-<pre><code>  +-------+-------+-------+
-  | 6 3 . | . 7 . | . . . |
-  | . 9 . | . . 6 | 3 7 . |
-  | 8 . . | 9 . . | . 6 2 |
-  +-------+-------+-------+
-  | . 6 . | 2 8 9 | 1 . . |
-  | 3 . 9 | . 6 . | 7 . 8 |
-  | . . 1 | 7 3 4 | . 9 . |
-  +-------+-------+-------+
-  | 7 4 . | . . 8 | . . 6 |
-  | . 2 6 | 6 . . | . 8 . |
-  | . . . | . 9 . | . 4 7 |
-  +-------+-------+-------+
-</code></pre>
-</li>
-</ul>
-<h2 id="deterministic-algorithm">Deterministic algorithm</h2>
-<pre><code>Problems where we know its every steps
-</code></pre>
-<h2 id="non-deterministic-algorithm">Non Deterministic algorithm</h2>
-<pre><code>1. Problems where we don't know its every steps
+<h1 id="daa-lecture-19">DAA Lecture 19</h1>
+<h2 id="dinning-philosopher">Dinning Philosopher</h2>
+<pre class="hljs"><code><div>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> N5</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> Thinking 0</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> Hungry 1</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> eating 2</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> Left (i+N-1)%N</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> Right (i+1)%N</span>
 
-2. Example
-</code></pre>
-<pre class="hljs"><code><div>        TYC_SEARCH(A,N,KEY):
-            i = choice()
+B Semaphore mutex=<span class="hljs-number">1</span>;
+B Semaphore S[N]={<span class="hljs-number">0</span>};
 
-            <span class="hljs-keyword">if</span>(i == key)
-                print(i)
-            
-            print(<span class="hljs-number">0</span>)
+<span class="hljs-keyword">int</span> state[N]=<span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Philosopher</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span>
+</span>{
+    <span class="hljs-keyword">while</span>(True){
+        Thinking();
+        <span class="hljs-function">Take <span class="hljs-title">Forks</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span>;
+        Eat();
+    }
+    PutForks(<span class="hljs-number">1</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">TakeForks</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span></span>{
+    down mutex;
+    state[i]=Hungry;
+    Test(i);
+    up mutex;
+}down(S[i]);
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Test</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span></span>{
+    <span class="hljs-keyword">if</span>(state(i)==Hungry &amp;&amp; state[Left!=Eating] &amp;&amp; state[Right!=Eating]){
+        state[i]=Eating;
+    }up(S[i]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PutForks</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span></span>{
+    down mutex;
+    state[i]=Thinking;
+    Test[Left];
+    Test[Right];
+    up mutex;
+}
+
 </div></code></pre>
-<h2 id="p--np-class--np-hard--np-complete">P &amp; NP CLASS + NP HARD &amp; NP Complete</h2>
-<pre><code>+---------------------+
-|                     |
-|                     |    +-----------------+
-|                     |    |                 |
-|                     |    |                 |
-|          NP         |    |                 |
-|                     |    |                 |
-|                     |    |                 |
-|                     |    |                 |
-+---------------------+    |                 |
-|          P          |    |                 |
-+---------------------+    |                 |
-                           |                 |
-                           |   NPcomplete    |
-                           |                 |  
-                           |                 |
-                           +-----------------+ 
-                           |   NP-hard       |
-                           +-----------------+
-</code></pre>
-<p>Exact Diagram</p>
-<p><img src="./Images/np.png" alt="Img"></p>
-<ol>
-<li>
-<p>Inside P tractable problems are there</p>
-</li>
-<li>
-<p>Inside NP non tractable problems are there</p>
-</li>
-<li>
-<p>P is the class of problems that can be solved by a deterministic machine in polynomial time</p>
-</li>
-<li>
-<p>NP is the class of problems that can be solved by a non-deterministic machine in polynomial time, or equivalently, verified by a deterministic machine in polynomial time given a certificate or a hint.</p>
-</li>
-<li>
-<p><strong>NP-complete is the class of problems that are both in NP and as hard as any problem in NP</strong>, meaning that <strong>any problem in NP can be reduced to them in polynomial time</strong>. Example eulers graph</p>
-</li>
-<li>
-<p><strong>NP-hard is the class of problems that are at least as hard as any problem in NP</strong>, meaning that <strong>any problem in NP can be reduced to them in polynomial time, but they may or may not be in NP themselves.</strong> Example optimization problem</p>
-</li>
-</ol>
-<p>The diagram also shows two possible scenarios for the relationship between P and NP</p>
-<pre><code>1. The left side assumes that P ≠ NP, meaning that there are some problems in NP that cannot be solved by a deterministic machine in polynomial time. This is the most widely believed conjecture, but it has not been proven or disproven yet.
-2. The right side assumes that P = NP, meaning that there are no problems in NP that cannot be solved by a deterministic machine in polynomial time. This would imply that all problems in NP are also in P, and that all problems in NP-complete are also in P. This would have profound implications for cryptography, optimization, and artificial intelligence, but it is considered very unlikely by most experts.
-</code></pre>
-<h2 id="more-on-np-hard--np-complete">More on NP HARD &amp; NP Complete</h2>
-<pre><code>+ - +         + - +
-+ A + - - - &gt; + B -
-+ - + - - - - + - +
-</code></pre>
-<ol>
-<li>A &amp; B are two problem A reduces to problem B</li>
-<li>There is a way to solve A by deterministic algo that solve B in ploynomial time</li>
-</ol>
-<h2 id="approximation-algorithm">Approximation Algorithm</h2>
-<ul>
-<li>
-<p>An approximation algorithm is a way of dealing with NP-completeness for an optimization problem.</p>
-</li>
-<li>
-<p>This technique does not guarantee the best solution</p>
-</li>
-<li>
-<p>The goal of the approximation algorithm is to come as close as possible to the optimal solution in polynomial time. Such algorithms are called approximation algorithms or heuristic algorithms</p>
-</li>
-<li>
-<p>An approximation algorithm has a performance ratio that measures how close the solution is to the optimal one</p>
-</li>
-<li>
-<p>Depending on the problem, we may define an optimal solution as one with maximum possible cost or one with minimum possible cost,i.e, the problem can either be a maximization or minimization problem</p>
-</li>
-<li>
-<p>Examples</p>
-<ol>
-<li>
-<p>The Vertex Cover Problem – In the vertex cover problem, the optimization problem is to find the vertex cover with the fewest vertices, and the approximation problem is to find the vertex cover with few vertices</p>
-</li>
-<li>
-<p>Travelling Salesman Problem – In the traveling salesperson problem, the optimization problem is to find the shortest cycle, and the approximation problem is to find a short cycle</p>
-</li>
-<li>
-<p>The Set Covering Problem – This is an optimization problem that models many problems that require resources to be allocated. Here, a logarithmic approximation ratio is used</p>
-</li>
-<li>
-<p>The Subset Sum Problem – In the Subset sum problem, the optimization problem is to find a subset of {x1,×2,×3…xn} whose sum is as large as possible but not larger than the target value t</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Let's go deep into <strong>vertex cover</strong> problem</p>
-<ol>
-<li>
-<p>Vertex Cover Problem is a known NP Complete problem, i.e., there is no polynomial-time solution for this unless P = NP</p>
-</li>
-<li>
-<p>Consider all the subset of vertices one by one and find out whether it covers all edges of the graph. For eg. in a graph consisting only 3 vertices the set consisting of the combination of vertices are:{0,1,2,{0,1},{0,2},{1,2},{0,1,2}}</p>
-</li>
-<li>
-<p>Approximate Algorithm for Vertex Cover</p>
-<ol>
-<li>
-<p>Initialize the result as {}</p>
-</li>
-<li>
-<p>Consider a set of all edges in given graph.  Let the set be E.</p>
-</li>
-<li>
-<p>Do following while E is not empty</p>
-<pre><code> a) Pick an arbitrary edge (u, v) from set E and add 'u' and 'v' to result
- b) Remove all edges from E which are either incident on u or v.
-</code></pre>
-</li>
-<li>
-<p>Return result</p>
-</li>
-</ol>
-</li>
-</ol>
-<p><img src="./Images/vertex cover.png" alt="IMG"></p>
-</li>
-<li>
-<p>Terms of approximation algo</p>
-<ol>
-<li>
-<p>C --&gt; Cost of Solution</p>
-</li>
-<li>
-<p>C* --&gt; Cost of optimal solution</p>
-</li>
-<li>
-<p>P(n) --&gt; approximation ratio</p>
-</li>
-<li>
-<p>n --&gt; i/p size</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Problem</p>
-<p><img src="./Images/vertex prb.png" alt="IMG"></p>
-<pre><code>  E = { (c,d), (b,c), (a,b) }
-
-  C = fi
-
-  C = fi U {b,c}
-
-  furthur
-
-  (b,c) U (e,f)
-
-  {b,c,e,f} U {d, g }
-
-  {b,c,e,f,d,g}
-</code></pre>
-</li>
-</ul>
-<h2 id="hamilton-cycle">Hamilton Cycle</h2>
-<p>Example 1</p>
-<p><img src="./Images/Hamilton Cycle.png" alt="IMG"></p>
-<pre><code>Hamilton Cycle --&gt; 1 2 3 4 5 6 1
-Hamilton Cycle --&gt; 1 2 6 5 4 3 1
-</code></pre>
-<p>Example 2</p>
-<p><img src="./Images/H cycle 2.png" alt="IMG"></p>
-<pre><code>It is not a hamilton cycle
-</code></pre>
-<p>Example 3</p>
-<p><img src="./Images/H cycle 3.png" alt="IMG"></p>
-<pre><code>Consider the above graph
-
-it will have a matrix
-
-  1 2 3 4 5
-1 0 1 1 0 1
-2 1 0 1 1 1
-3 1 1 0 1 0
-4 0 1 1 0 1
-5 1 1 0 1 0
-</code></pre>
-<p><img src="./Images/H cycle 4.png" alt="IMG"></p>
-<pre><code>1. The above is general solution which is obtained by exapanding the node
-2. This is not an optimized solution
-3. To find optimized solution we need to use approximate algorithm
-</code></pre>
 
 </body>
 </html>
