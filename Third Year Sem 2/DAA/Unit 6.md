@@ -71,8 +71,8 @@ Example
 #define Left (i+N-1)%N
 #define Right (i+1)%N
 
-B Semaphore mutex=1;
-B Semaphore S[N]={0};
+Semaphore mutex=1;
+Semaphore S[N]={0};
 
 int state[N]=0;
 void Philosopher(int i)

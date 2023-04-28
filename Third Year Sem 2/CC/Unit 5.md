@@ -19,7 +19,7 @@ Note:
 | Heavy Architecture | light architecture |
 | Guest OS concept | No Guest OS concept |
 
-## REGISTRY &  Dockerhut
+## Registry &  Dockerhut
 
 * Registry is private
 
