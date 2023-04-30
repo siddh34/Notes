@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questions.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="daa-sce">DAA SCE</h1>
+<h2 id="q1-given-an-array-of-integers-and-a-target-sum-determine-the-sum-nearest-to-but-not-exceeding-the-target-that-can-be-created-to-create-the-sum-use-any-element-of-your-array-zero-or-more-times-for-example-array-234-if-and-your-target-sum-is-10--you-might-select-22222-2233-or-3331--in-this-case-you-can-arrive-at-exactly-the-target-it-must-return-an-integer-that-represents-the-sum-nearest-to-without-exceeding-the-target-value">Q1. Given an array of integers and a target sum, determine the sum nearest to but not exceeding the target that can be created. To create the sum, use any element of your array zero or more times. For example, array =[2,3,4 ]if  and your target sum is 10 , you might select [2,2,2,2,2]  [2,2,3,3] or [3,3,3,1] . In this case, you can arrive at exactly the target. It must return an integer that represents the sum nearest to without exceeding the target value</h2>
+<h3 id="aim">Aim</h3>
+<p>To return an integer that represents the sum nearest to without exceeding the target value</p>
+<h3 id="approach">Approach</h3>
+<ol>
+<li>
+<p>We will have a hashset where we will recording all the values given to us without repeatation.</p>
+</li>
+<li>
+<p>After storing it to a hashset we will pass the hashset to getTarget function</p>
+</li>
+<li>
+<p>In getTarget function we will be creating a boolean array of length equals to targetValue. All the values in array are filled with false</p>
+</li>
+<li>
+<p>We need to make the first value true &amp; then we will be iterating through a loop till i &lt;= target. For each value of i we will check whether it's addition with the hashset value is less than or equal to target if so the we will be marking that boolean indez as true</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= target; i++) {
+   it = map.iterator();
+   <span class="hljs-keyword">while</span>(it.hasNext()){
+         a = it.next();
+         <span class="hljs-keyword">if</span>((i + a) &lt;= target){
+            sum[i + a] = <span class="hljs-keyword">true</span>;
+         }
+   }
+}
+</div></code></pre>
+</li>
+<li>
+<p>Then we will iterate over the boolean array in a reverse fashion &amp;  get the top index which is close to target</p>
+</li>
+<li>
+<p>We have also recorded how our sum variable reaches to the target value in chosen array</p>
+</li>
+</ol>
+<h3 id="code">CODE</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.HashSet;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+<span class="hljs-keyword">import</span> java.util.Iterator;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TargetSum</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getTarget</span><span class="hljs-params">(HashSet&lt;Integer&gt; map,<span class="hljs-keyword">int</span> target)</span> </span>{
+        Iterator&lt;Integer&gt; it = map.iterator();
+        <span class="hljs-keyword">boolean</span>[] sum = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[target + <span class="hljs-number">1</span>];
+        Arrays.fill(sum,<span class="hljs-keyword">false</span>);
+        sum[<span class="hljs-number">0</span>] = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;
+        List&lt;Integer&gt; chosen = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= target; i++) {
+            it = map.iterator();
+            <span class="hljs-keyword">while</span>(it.hasNext()){
+                a = it.next();
+                <span class="hljs-keyword">if</span>((i + a) &lt;= target){
+                    sum[i + a] = <span class="hljs-keyword">true</span>;
+                }
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= target; i++) {
+            <span class="hljs-keyword">if</span>(sum[i] == <span class="hljs-keyword">true</span>){
+                chosen.add(i);
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; chosen.size(); i++) {
+            System.out.print(chosen.get(i) + <span class="hljs-string">" "</span>);
+        }
+        System.out.println();
+
+        chosen.clear();
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = target; i &gt;= <span class="hljs-number">0</span>; i--){
+            <span class="hljs-keyword">if</span>(sum[i] == <span class="hljs-keyword">true</span>){
+                <span class="hljs-keyword">return</span> i;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> target;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+        
+        <span class="hljs-keyword">int</span> T = sc.nextInt();
+        HashSet&lt;Integer&gt; map = <span class="hljs-keyword">new</span> HashSet&lt;Integer&gt;();
+
+        <span class="hljs-keyword">while</span>((--T) &gt;= <span class="hljs-number">0</span>){
+            <span class="hljs-keyword">int</span> N = sc.nextInt();
+            <span class="hljs-keyword">int</span> target = sc.nextInt();
+            
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i++){
+                map.add(sc.nextInt());
+            }
+
+            System.out.println(getTarget(map, target));
+
+            map.clear();
+        }
+        
+        sc.close();
+    }
+}
+</div></code></pre>
+<h3 id="output">OUTPUT</h3>
+<p><img src="./imgs/target.png" alt="IMG"></p>
+<h3 id="conclusion-1">CONCLUSION 1</h3>
+<p>We found the target via using the elements from array multiple time or only the elements of array</p>
+<h2 id="q2-amortized-analysis">Q2. Amortized Analysis</h2>
+<h3 id="meaning">Meaning</h3>
+<p><img src="./imgs/amortized.png" alt="IMG"></p>
+<h3 id="what-is-amortized-analysis">What is Amortized Analysis?</h3>
+<ul>
+<li>
+<p>Amortized analysis is a method used to analyze the performance of algorithms that perform a sequence of operations, where each individual operation may be fast, but the sequence of operations may be slow as a whole</p>
+</li>
+<li>
+<p>The motivation for amortized analysis is that looking at the worst-case run time can be too pessimistic</p>
+</li>
+<li>
+<p>Amortized analysis requires knowledge of which series of operations are possible</p>
+</li>
+<li>
+<p>This is most commonly the case with data structures, which have state that persists between operations</p>
+</li>
+</ul>
+<h3 id="basic-idea">Basic Idea</h3>
+<p>The <em>basic idea is that a worst-case operation can alter the state in such a way that the worst case cannot occur again for a long time, thus “amortizing” its cost</em></p>
+<h3 id="when-to-use-amortized-analysis">When to use Amortized Analysis?</h3>
+<ul>
+<li>This analysis is used when the occasional operation is very slow, but most of the operations which are executing very frequently are faster</li>
+</ul>
+<h3 id="data-structures-needed">Data structures needed</h3>
+<ul>
+<li>
+<p>Hash Tables</p>
+</li>
+<li>
+<p>Disjoint Sets</p>
+</li>
+<li>
+<p>Dynamic arrays</p>
+</li>
+</ul>
+<h3 id="two-approaches">Two Approaches</h3>
+<ol>
+<li>
+<p>The Aggregate Method</p>
+<ol>
+<li>Determine the worst-case cost of our entire sequence of operations, T(n)</li>
+<li>Divide this cost by the number of operations in the sequence, n</li>
+<li>AOC (Amortized Operation Cost) = T(n)/n</li>
+<li>Example</li>
+</ol>
+<p><img src="./imgs/Aggregation.png" alt="IMG"></p>
+<pre><code> 1. Here we can see Ci is the cost of operation.
+ 2. We can define this as Ci = i + 1 when i is power of 2 else it is 1
+ 3. To find AOC we need to find T(n)
+ 4. T(n) = SUM(Ci)
+    T(n) = SUM(i + 1) + SUM(1)
+    T(n) = SUM(i) + SUM(1) + SUM(1)
+    T(n) = SUM(i + n)
+ 5. we can solve our first summation by recognizing that i can be a power of 2 at most log2n times in the sequence. So, we can transform this sum to have a new index j, which iterates over a range from 0 to log2n, and adds the value of 2j. If this step is a bit confusing, check out this page for a more detailed step through
+ 6. T(n) = SUM(FROM 0 to log(n) to the base 2)(2^j) + n
+    T(n) &lt;= 2n + n
+    T(n) &lt;= 3n
+ 7. Limitation: As we can see, this method is very straight forward. However, it only works when we have a concrete definition of how much our sequence will cost. This is not ideal
+</code></pre>
+</li>
+<li>
+<p>The Accounting Method</p>
+<ol>
+<li>
+<p>For this method, we think about amortized cost as being a “charge” that we assign to each operation.</p>
+</li>
+<li>
+<p>Each time we encounter an operation, we try to pay for it using this “charge”.</p>
+</li>
+<li>
+<p>If the operation actually costs less than our “charge”, we stash the change in a bank account. If the operation actually costs more than our “charge”, we can dip into our bank account to cover the cost.</p>
+</li>
+<li>
+<p>The idea is that we want to save enough money during our “cheaper” operations to pay for any “expensive” operations we might encounter later on.</p>
+</li>
+<li>
+<p>This means that our amortized operation cost has an upper bound of 3.  Refer image 2</p>
+</li>
+</ol>
+<p><img src="./imgs/accounting 2.png" alt="IMG"></p>
+<p><img src="./imgs/accounting.png" alt="IMG"></p>
+</li>
+</ol>
+<h3 id="advantages-of-amortized-analysis">Advantages of amortized analysis</h3>
+<ol>
+<li>More accurate predictions: Amortized analysis provides a more accurate prediction of the average-case complexity of an algorithm over a sequence of operations, rather than just the worst-case complexity of individual operations.</li>
+<li>Provides insight into algorithm behavior: By analyzing the amortized cost of an algorithm, we can gain insight into how it behaves over a longer period of time and how it handles different types of inputs.</li>
+<li>Helps in algorithm design: Amortized analysis can be used as a tool for designing algorithms that are efficient over a sequence of operations.</li>
+<li>Useful in dynamic data structures: Amortized analysis is particularly useful in dynamic data structures like heaps, stacks, and queues, where the cost of an operation may depend on the current state of the data structure.</li>
+</ol>
+<h3 id="disadvantages-of-amortized-analysis">Disadvantages of amortized analysis</h3>
+<ol>
+<li>Complexity: Amortized analysis can be complex, especially when multiple operations are involved, making it difficult to implement and understand.
+Limited applicability: Amortized analysis may not be suitable for all types of algorithms, especially those with highly unpredictable behavior or those that depend on external factors like network latency or I/O operations.</li>
+<li>Lack of precision: Although amortized analysis provides a more accurate prediction of average-case complexity than worst-case analysis, it may not always provide a precise estimate of the actual performance of an algorithm, especially in cases where there is high variance in the cost of operations.</li>
+</ol>
+<h3 id="conclusion-2">CONCLUSION 2</h3>
+<p>We explored how amortized analysis can help us prove that a sequence of operations is actually quite efficient, even though its individual operations suffer an expensive worst-case cost.</p>
+<h2 id="q3-concurrent-algorithm-for-finding-squares--vedic-mathematics">Q3. Concurrent algorithm for finding squares ( Vedic Mathematics )</h2>
+<h3 id="aim">AIM</h3>
+<p>To write a Concurrent algorithm for finding squares using vedic maths</p>
+<h3 id="solved-example">Solved Example</h3>
+<h3 id="approach">APPROACH</h3>
+<ol>
+<li>The approach is to use string and character &amp; typecast them whenever needed.</li>
+<li>We will be using the duplex method in vedic maths to find out the square</li>
+<li>Firstly break the numbers into characters but it would be done incrementally like first one character we will pass to duplex function then we will pass two characters to duplex function</li>
+<li>After that we will pass the characters decreamentally to the duplex function</li>
+<li>We get an array of Integers in a certain order</li>
+<li>In order to get square we will be tranversing the arraylist in reverse order we need to see that only single elements remain in each slot except the first we can add remaining elements next slot</li>
+<li>By join this array into a string we get the square</li>
+<li>Further for concurrency we have used multithreading to do this work</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> java.time.Duration;
+<span class="hljs-keyword">import</span> java.time.Instant;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculate</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+    <span class="hljs-keyword">public</span> String num;
+
+    Calculate(String number) {
+        <span class="hljs-keyword">this</span>.num = number;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">duplex</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] arr)</span> </span>{
+        <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">3</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) + (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">4</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">5</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">6</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">5</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">4</span>] - <span class="hljs-string">'0'</span>)
+                    + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">7</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">6</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">5</span>] - <span class="hljs-string">'0'</span>)
+                    + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">4</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>);
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        List&lt;Integer&gt; record = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-keyword">this</span>.num.length(); i++) {
+            String nstr = <span class="hljs-keyword">this</span>.num.substring(<span class="hljs-number">0</span>, i);
+            record.add(duplex(nstr.toCharArray()));
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">this</span>.num.length() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+            sb.append(<span class="hljs-keyword">this</span>.num.charAt(i));
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">this</span>.num.length() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+            String nstr = sb.substring(<span class="hljs-number">0</span>, i);
+            record.add(duplex(nstr.toCharArray()));
+        }
+
+        <span class="hljs-comment">// getting squares</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = record.size() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+            String s1 = record.get(i).toString();
+            String s2 = record.get(i - <span class="hljs-number">1</span>).toString();
+            String s11;
+            String s12;
+
+            <span class="hljs-keyword">if</span> (s1.length() &gt; <span class="hljs-number">1</span>) {
+                s11 = s1.substring(s1.length() - <span class="hljs-number">1</span>, s1.length());
+                s12 = s1.substring(<span class="hljs-number">0</span>, s1.length() - <span class="hljs-number">1</span>);
+
+                record.set(i - <span class="hljs-number">1</span>, Integer.parseInt(s2) + Integer.parseInt(s12));
+                record.set(i, Integer.parseInt(s11));
+            }
+        }
+
+        sb = <span class="hljs-keyword">new</span> StringBuilder();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; record.size(); i++) {
+            sb.append(record.get(i).toString());
+        }
+
+        System.out.println(sb);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span> numberofthread = <span class="hljs-number">4</span>;
+        List&lt;Thread&gt; threads = <span class="hljs-keyword">new</span> ArrayList&lt;Thread&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numberofthread; i++) {
+            Thread t1 = <span class="hljs-keyword">new</span> Thread();
+            t1.start();
+            threads.add(t1);
+            <span class="hljs-keyword">if</span>(threads.size() % <span class="hljs-number">4</span> == <span class="hljs-number">0</span>){
+                waitForThreads(threads);
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">waitForThreads</span><span class="hljs-params">(List&lt;Thread&gt; threads)</span> </span>{
+        <span class="hljs-keyword">for</span> (Thread thread : threads) {
+            <span class="hljs-keyword">try</span> {
+                thread.join();
+            } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        threads.clear();
+    }
+
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VedicSquares</span> </span>{
+    <span class="hljs-keyword">public</span> List&lt;Integer&gt; Xrecord = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">duplex</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] arr)</span> </span>{
+        <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">3</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) + (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">4</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">5</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">6</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">5</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">4</span>] - <span class="hljs-string">'0'</span>)
+                    + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr.length == <span class="hljs-number">7</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * (arr[<span class="hljs-number">0</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">6</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">1</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">5</span>] - <span class="hljs-string">'0'</span>)
+                    + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">2</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">4</span>] - <span class="hljs-string">'0'</span>) + <span class="hljs-number">2</span> * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>) * (arr[<span class="hljs-number">3</span>] - <span class="hljs-string">'0'</span>);
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(String str)</span> </span>{
+        List&lt;Integer&gt; record = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= str.length(); i++) {
+            String nstr = str.substring(<span class="hljs-number">0</span>, i);
+            record.add(duplex(nstr.toCharArray()));
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = str.length() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+            sb.append(str.charAt(i));
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = str.length() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+            String nstr = sb.substring(<span class="hljs-number">0</span>, i);
+            record.add(duplex(nstr.toCharArray()));
+        }
+
+        <span class="hljs-comment">// getting squares</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = record.size() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) {
+            String s1 = record.get(i).toString();
+            String s2 = record.get(i - <span class="hljs-number">1</span>).toString();
+            String s11;
+            String s12;
+
+            <span class="hljs-keyword">if</span> (s1.length() &gt; <span class="hljs-number">1</span>) {
+                s11 = s1.substring(s1.length() - <span class="hljs-number">1</span>, s1.length());
+                s12 = s1.substring(<span class="hljs-number">0</span>, s1.length() - <span class="hljs-number">1</span>);
+
+                record.set(i - <span class="hljs-number">1</span>, Integer.parseInt(s2) + Integer.parseInt(s12));
+                record.set(i, Integer.parseInt(s11));
+            }
+        }
+
+        sb = <span class="hljs-keyword">new</span> StringBuilder();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; record.size(); i++) {
+            sb.append(record.get(i).toString());
+        }
+
+        System.out.println(sb);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+        <span class="hljs-keyword">int</span> T = sc.nextInt();
+
+
+        <span class="hljs-keyword">while</span> ((--T) &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-comment">// Your code below</span>
+            String number = sc.next();
+            
+            System.out.println(<span class="hljs-string">"Enter 1 for non concurrent algorithm"</span>);
+            System.out.println(<span class="hljs-string">"Enter 2 for concurrent algorithm"</span>);
+            
+            <span class="hljs-keyword">int</span> choice = sc.nextInt();
+            
+            Instant start = Instant.now();
+
+            <span class="hljs-keyword">if</span> (choice == <span class="hljs-number">1</span>) {
+                VedicSquares vs = <span class="hljs-keyword">new</span> VedicSquares();
+                vs.process(number);
+            } <span class="hljs-keyword">else</span> {
+                Calculate c1 = <span class="hljs-keyword">new</span> Calculate(number);
+                c1.run();
+            }
+
+            Instant end = Instant.now();
+            Duration timeElapsed = Duration.between(start, end);
+            System.out.println(<span class="hljs-string">"Time taken: "</span>+ timeElapsed.toNanosPart() +<span class="hljs-string">" nano seconds"</span>);
+        }
+
+        sc.close();
+    }
+}
+</div></code></pre>
+<h3 id="output">Output</h3>
+<p><img src="./imgs/vedic maths.png" alt="IMG"></p>
+<h3 id="conclusion-3">CONCLUSION 3</h3>
+<p>Parallelism is understood via concurrent algorithm</p>
+
+</body>
+</html>
