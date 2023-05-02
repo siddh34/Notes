@@ -21,13 +21,13 @@ class Calculate implements Runnable {
         } else if (arr.length == 4) {
             return 2 * (arr[0] - '0') * (arr[3] - '0') + 2 * (arr[1] - '0') * (arr[2] - '0');
         } else if (arr.length == 5) {
-            return 2 * (arr[0] - '0') * (arr[3] - '0') + 2 * (arr[1] - '0') * (arr[2] - '0');
+            return 2 * (arr[0] - '0') * (arr[4] - '0') + 2 * (arr[1] - '0') * (arr[3] - '0') + (arr[2] - '0') * (arr[2] - '0');
         } else if (arr.length == 6) {
             return 2 * (arr[0] - '0') * (arr[5] - '0') + 2 * (arr[1] - '0') * (arr[4] - '0')
                     + 2 * (arr[2] - '0') * (arr[3] - '0');
         } else if (arr.length == 7) {
             return 2 * (arr[0] - '0') * (arr[6] - '0') + 2 * (arr[1] - '0') * (arr[5] - '0')
-                    + 2 * (arr[2] - '0') * (arr[4] - '0') + 2 * (arr[3] - '0') * (arr[3] - '0');
+                    + 2 * (arr[2] - '0') * (arr[4] - '0') + (arr[3] - '0') * (arr[3] - '0');
         }
         return -1;
     }
@@ -115,13 +115,13 @@ public class VedicSquares {
         } else if (arr.length == 4) {
             return 2 * (arr[0] - '0') * (arr[3] - '0') + 2 * (arr[1] - '0') * (arr[2] - '0');
         } else if (arr.length == 5) {
-            return 2 * (arr[0] - '0') * (arr[3] - '0') + 2 * (arr[1] - '0') * (arr[2] - '0');
+            return 2 * (arr[0] - '0') * (arr[4] - '0') + 2 * (arr[1] - '0') * (arr[3] - '0') + (arr[2] - '0') * (arr[2] - '0');
         } else if (arr.length == 6) {
             return 2 * (arr[0] - '0') * (arr[5] - '0') + 2 * (arr[1] - '0') * (arr[4] - '0')
                     + 2 * (arr[2] - '0') * (arr[3] - '0');
         } else if (arr.length == 7) {
             return 2 * (arr[0] - '0') * (arr[6] - '0') + 2 * (arr[1] - '0') * (arr[5] - '0')
-                    + 2 * (arr[2] - '0') * (arr[4] - '0') + 2 * (arr[3] - '0') * (arr[3] - '0');
+                    + 2 * (arr[2] - '0') * (arr[4] - '0') + (arr[3] - '0') * (arr[3] - '0');
         }
         return -1;
     }
@@ -192,11 +192,13 @@ public class VedicSquares {
             } else {
                 Calculate c1 = new Calculate(number);
                 c1.run();
-            }
+            } 
 
             Instant end = Instant.now();
             Duration timeElapsed = Duration.between(start, end);
-            System.out.println("Time taken: "+ timeElapsed.toNanosPart() +" nano seconds");
+            System.out.println("Time taken: "+ timeElapsed.toNanos() +" nano seconds");
+            System.out.println("Time taken: "+ timeElapsed.toMillis() +" milli seconds");
+            System.out.println("Time taken: "+ timeElapsed.toSeconds() +"  seconds");
         }
 
         sc.close();

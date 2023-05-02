@@ -209,6 +209,14 @@ To write a Concurrent algorithm for finding squares using vedic maths
 
 ### Solved Example
 
+Duplex Example ( value = 478 )
+
+    duplex(4) = 4^2 = 16
+    duplex(47) = 2 x 4 x 7 = 56
+    duplex(478) = 2 x 4 x 8 + 7 ^ 2 = 113
+    duplex(78) = 2 x 7 x 8 = 112
+    duplex(8) = 8 ^ 2 = 64
+
 ### APPROACH
 
 1. The approach is to use string and character & typecast them whenever needed.
