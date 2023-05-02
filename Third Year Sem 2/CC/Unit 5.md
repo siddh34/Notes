@@ -19,7 +19,7 @@ Note:
 | Heavy Architecture | light architecture |
 | Guest OS concept | No Guest OS concept |
 | Runs just about any operating system inside the virtual machine | Runs on the same operating system version as the host |
-| 	Deploy individual VMs by using Hypervisor software | Deploy individual containers by using Docker or deploy multiple containers by using an orchestrator such as Kubernetes |
+| Deploy individual VMs by using Hypervisor software | Deploy individual containers by using Docker or deploy multiple containers by using an orchestrator such as Kubernetes |
 | Virtual machine load balancing is done by running VMs in other servers in a failover cluster | An orchestrator can automatically start or stop containers on cluster nodes to manage changes in load and availability |
 
 ### Virtualization Concepts
@@ -311,3 +311,5 @@ Security of Kubernetes is the process of ensuring that the Kubernetes clusters, 
         4. It supports templating to dynamically generate the configuration based on variables and functions
         5. It supports hooks to execute custom actions before or after installation, upgrade, deletion, or rollback of a chart
         6. It supports repositories to store and distribute charts publicly or privately
+
+Note: Helm can run on various platforms, such as Linux, macOS, Windows, and Docker. It can also integrate with various tools and services, such as Kubernetes Dashboard, Helm Operator, Helmfile, etc
