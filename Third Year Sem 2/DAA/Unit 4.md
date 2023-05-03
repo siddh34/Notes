@@ -150,7 +150,7 @@ The diagram also shows two possible scenarios for the relationship between P and
                 b) Remove all edges from E which are either incident on u or v.
         4) Return result
 
-    ![IMG](./Images/vertex%20cover.png)
+![IMG](./Images/vertex%20cover.png)
 
 * Terms of approximation algo
 
@@ -164,7 +164,7 @@ The diagram also shows two possible scenarios for the relationship between P and
 
 * Problem
 
-    ![IMG](./Images/vertex%20prb.png)
+![IMG](./Images/vertex%20prb.png)
 
         E = { (c,d), (b,c), (a,b) }
 
@@ -184,14 +184,14 @@ The diagram also shows two possible scenarios for the relationship between P and
 
 Example 1
 
-  ![IMG](./Images/Hamilton%20Cycle.png)
+![IMG](./Images/Hamilton%20Cycle.png)
 
     Hamilton Cycle --> 1 2 3 4 5 6 1
     Hamilton Cycle --> 1 2 6 5 4 3 1
 
 Example 2
 
-  ![IMG](./Images/H%20cycle%202.png)
+![IMG](./Images/H%20cycle%202.png)
 
     It is not a hamilton cycle
 
