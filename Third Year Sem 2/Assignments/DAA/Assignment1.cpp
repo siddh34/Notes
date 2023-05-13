@@ -107,6 +107,8 @@ void merge(int arr[],int low,int mid, int high){
         }
     }
 
+    // copying remaining elements
+
     while(i <= mid){
         Brr[k] = arr[i];
         i++;
