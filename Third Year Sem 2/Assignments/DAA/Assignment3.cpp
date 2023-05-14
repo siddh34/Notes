@@ -60,6 +60,7 @@ bool NQueens(int** arr,int x,int n){
             arr[x][col] = 0; // backtracking
         }
     }
+
     return false;
 }
 
