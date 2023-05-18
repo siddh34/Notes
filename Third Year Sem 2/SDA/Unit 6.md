@@ -1,6 +1,6 @@
 # Unit 6
 
-## what is architecture evaluation?
+## What is architecture evaluation?
 
 Architecture evaluation is the activity of evaluating the architectural design decisions of an (envisioned) system to build confidence that the system can fulfill the stakeholder concerns
 
