@@ -192,3 +192,21 @@ Example 3
   * In the verification of hardware and software systems, 3-SAT is used to find bugs and errors
   * In artificial intelligence, 3-SAT is used to solve problems such as planning and scheduling
 * There is no known polynomial-time algorithm for solving 3-SAT, and the best known algorithms run in exponential time
+
+## Max Clique
+
+* The maximum clique problem is an NP-hard problem in graph theory
+* Given an undirected graph, the task is to find the largest clique in the graph
+* A clique is a complete subgraph, which means that every pair of vertices in the clique is connected by an edge
+* Algorithms that can be used to solve this problem
+
+  * **Bron-Kerbosch algorithm:** This algorithm is a recursive algorithm that works by iteratively finding and removing vertices from the graph that are not part of any clique.
+  * **Greedy algorithm:** This algorithm works by greedily adding vertices to the clique that have the most edges connecting them to other vertices in the clique.
+  * **Local search algorithm:** This algorithm starts with an initial solution and then iteratively improves the solution by making local changes.
+* Some of the applications of the maximum clique problem
+
+  * **Scheduling problems:** The maximum clique problem can be used to find the largest set of tasks that can be scheduled on a given set of resources.
+  * **VLSI design:** The maximum clique problem can be used to find the largest set of cells that can be placed on a given chip layout.
+  * **Network security:** The maximum clique problem can be used to find the largest set of nodes that can be attacked by a given set of malicious nodes.
+
+The maximum clique problem is a powerful tool that can be used to solve a variety of problems. It is a valuable tool for computer scientists and engineers who are working on problems in scheduling, VLSI design, and network security.

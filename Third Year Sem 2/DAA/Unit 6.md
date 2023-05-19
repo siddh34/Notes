@@ -21,9 +21,7 @@
 * Example
 
   1. Parallel algorithms use multiple processing units (such as CPUs or cores) to divide a problem into smaller sub-problems that can be solved simultaneously. Parallel algorithms aim to improve the throughput and computational speed of the system by exploiting parallelism. An example of a parallel algorithm is the concurrency::parallel_for algorithm that repeatedly performs the same task in parallel for different iteration values
-
   2. Concurrency control techniques: These are techniques that ensure the correctness and consistency of data in a database system that allows concurrent access by multiple transactions. Some of the techniques are two-phase locking, timestamp ordering, optimistic concurrency control, and multiversion concurrency control
-
   3. Parallel expression evaluation: This is a technique that evaluates arithmetic expressions by breaking them into smaller sub-expressions that can be computed concurrently. The technique uses a dependency graph to determine the order of evaluation and a work-stealing scheduler to assign tasks to thread
 
 ## RAM
@@ -137,7 +135,6 @@ Example
 * Total Cost
 
   1. Total Cost = Time complexity × Number of processors used
-
   2. Efficiency of a parallel algorithm
 
   Worst case execution time of sequential algorithm / Worst case execution time of the parallel algorithm
@@ -152,15 +149,15 @@ Example
 
   f(n) = O(g(n))
 
-     1. Omega notation
+  1. Omega notation
 
-        Omega notation is a method of representing the lower bound of an algorithm’s execution time
+     Omega notation is a method of representing the lower bound of an algorithm’s execution time
 
   f(n) = Ω (g(n))
 
-   1. Theta Notation
+  1. Theta Notation
 
-        Theta notation is a method of representing both the lower bound and the upper bound of an algorithm’s execution time
+     Theta notation is a method of representing both the lower bound and the upper bound of an algorithm’s execution time
 
   f(n) = θ(g(n))
 
@@ -218,20 +215,20 @@ int main()
     for (i = 0; i < r1; i++)
             for (j = 0; j < c1; j++)
                    matA[i][j] = rand() % 10;
-         
+       
         // Generating random values in matB
     for (i = 0; i < r1; i++)
             for (j = 0; j < c1; j++)
                    matB[i][j] = rand() % 10;
   
-    // Displaying matA      
+    // Displaying matA    
     for (i = 0; i < r1; i++){
         for(j = 0; j < c1; j++)
             printf("%d ",matA[i][j]);
         printf("\n");
     }
-           
-    // Displaying matB             
+         
+    // Displaying matB           
     for (i = 0; i < r2; i++){
         for(j = 0; j < c2; j++)
             printf("%d ",matB[i][j]);
@@ -242,7 +239,7 @@ int main()
     int max = r1*c2;
    
    
-    //declaring array of threads of size r1*c2     
+    //declaring array of threads of size r1*c2   
     pthread_t *threads;
     threads = (pthread_t*)malloc(max*sizeof(pthread_t));
    
@@ -251,7 +248,7 @@ int main()
     for (i = 0; i < r1; i++)
         for (j = 0; j < c2; j++)
                {
-              
+            
                //storing row and column elements in data
             data = (int *)malloc((20)*sizeof(int));
             data[0] = c1;
@@ -261,22 +258,22 @@ int main()
    
             for (k = 0; k < r2; k++)
                 data[k+c1+1] = matB[k][j];
-            
+          
              //creating threads
                 pthread_create(&threads[count++], NULL,
                                mult, (void*)(data));
-               
+             
                     }
    
     printf("RESULTANT MATRIX IS :- \n");
     for (i = 0; i < max; i++)
     {
       void *k;
-     
+   
       //Joining all threads and collecting return value
       pthread_join(threads[i], &k);
-          
-         
+        
+       
           int *p = (int *)k;
       printf("%d ",*p);
       if ((i + 1) % c2 == 0)
@@ -311,8 +308,8 @@ Input & Output
 
 ### Important note
 
-    Time Complexity: O(MAX*MAX)
-    Auxiliary Space: O(MAX*MAX)
+    Time Complexity: O(MAX x MAX)
+    Auxiliary Space: O(MAX x MAX)
 
 ## Dinning Philosopher
 
