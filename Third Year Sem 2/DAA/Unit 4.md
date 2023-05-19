@@ -156,7 +156,7 @@ Example 3
       b) Remove all edges from E which are either incident on u or v.
    4) Return result
 
-    ![IMG](./Images/vertex%20cover.png)
+   ![IMG](./Images/vertex%20cover.png)
 
 * Terms of approximation algo
 
@@ -166,19 +166,19 @@ Example 3
   4. n --> i/p size
 * Problem![IMG](./Images/vertex%20prb.png)
 
-    E = { (c,d), (b,c), (a,b) }
+  E = { (c,d), (b,c), (a,b) }
 
-    C = fi
+  C = fi
 
-    C = fi U {b,c}
+  C = fi U {b,c}
 
-    furthur
+  furthur
 
-    (b,c) U (e,f)
+  (b,c) U (e,f)
 
-    {b,c,e,f} U {d, g }
+  {b,c,e,f} U {d, g }
 
-    {b,c,e,f,d,g}
+  {b,c,e,f,d,g}
 
 ## SAT-3
 
