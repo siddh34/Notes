@@ -44,9 +44,9 @@
             - DAA
             - SDA
             - EEF
-        
+      
     # WAY 2 to write list
-    
+  
     STUDENT2:
         name: Siddharth
         rollNo: 323054
@@ -98,7 +98,7 @@
 ```YAML
     # Start
     _ _ _
-    
+  
     . . .
     # End
 ```
@@ -123,7 +123,6 @@ Sample Script
 ## Ansible
 
 * Configuration Management Tool
-
 * It has two things Ansible tower & Ansible Galaxy
 
 ### Ansible workflow
@@ -131,46 +130,36 @@ Sample Script
 ![IMG](./Images/ansi.png)
 
 * It is a agentless tool
-
 * Host & master can be same
 
 ### Terminologies
 
 1. Ad-boc command
 
-        Single commands
-
+   Single commands
 2. Playbook
 
-        1. Collection of multiple commands
-        2. One playbook cantains of many plays
+   1. Collection of multiple commands
+   2. One playbook cantains of many plays
 
-    ![IMG](./Images/playbook.png)
-
+   ![IMG](./Images/playbook.png)
 3. Modules
 
-        1. Certains commands but not the collection
-
+   1. Certains commands but not the collection
 4. Roles
 
-        1. Well Organized structure of files
+   1. Well Organized structure of files
 
 ### Ansible workflow example
 
 Note: before starting you need to have another machine whether aws instance or another user on ubuntu
 
 1. Make a folder
-
 2. Take sudo access
-
 3. Make SSH keys & copy them from master to target
-
 4. Paste the keys in system files of target
-
 5. Write ansible playbook for the task
-
-6. Before running the task make sure you have hosts file in which you have to add the private ip address of EC2 instances which  
-
+6. Before running the task make sure you have hosts file in which you have to add the private ip address of EC2 instances which
 7. Run the playbook
 
 ### Example ansible playbook & Plugin configuration
@@ -205,11 +194,7 @@ hostnames:
 ## Roles
 
 * Roles is a Directory Structure
-
 * It is used when project becomes too big
-
 * Ansible roles are a way of organizing and reusing Ansible playbooks.
-
 * They allow you to group related tasks, variables, files, templates, and handlers into a standard directory structure
-
 * You can then use roles in your playbooks to apply the same configuration to different hosts or environments. Roles also help you share your Ansible code with other users through Ansible Galaxy
